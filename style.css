@@ -1,5 +1,5 @@
 /*
-	Theme Name: Boilerplate
+	Theme Name: Saraste 2012 (Boilerplate)
 	Theme URI: http://aarontgrogg.com/boilerplate/
 	Description: A merger created by Aaron T. Grogg (<a href="http://aarontgrogg.com/">http://aarontgrogg.com/</a>) of the HTML5 Boilerplate (<a href="http://html5boilerplate.com/">http://html5boilerplate.com/</a>) and the Starkers theme (<a href="http://starkerstheme.com/">http://starkerstheme.com/</a>), Boilerplate: Starkers provides developers with an ideal, bleeding-edge, clean-start theme.  Mark-up is minimal (thanks Elliott) and the most edge-case web technology is baked right in (thanks Paul, Divya and a large cast of supporting characters)!  Boilerplate themes are designed to serve as a Parent theme to whatever Child (<a href="http://codex.wordpress.org/Child_Themes">http://codex.wordpress.org/Child_Themes</a>) you care to add, but you could just as easily use this as a starting point and alter the PHP as your design needs.  More about this theme can be found at <a href="http://aarontgrogg.com/boilerplate/">http://aarontgrogg.com/boilerplate/</a>.
 	Author: Aaron T. Grogg, based on the work of Paul Irish, Divya Manian, and Elliot Jay Stocks
@@ -361,3 +361,35 @@ Verdana, Tahoma, Geneva, sans-serif - t
 .bypostauthor{}
 .sticky{}
 /** END WordPress-Defined CSS Classes **/
+#access {
+	position: absolute;
+	z-index: 100;
+	height: 50px;
+	width: 100%;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: #CCC;
+}
+#content {
+	width: 750px;
+	position: absolute;
+	z-index: 99;
+	top: 0px;
+	right: 25px;
+	bottom: 50px;
+	background-color: #999;
+	padding: 20px;
+	overflow-y: scroll;
+}
+header {
+	background-color: #666;
+	overflow: hidden;
+	position: absolute;
+	z-index: 101;
+	left: 25px;
+	top: 0px;
+}
+footer {
+	visibility: hidden;
+}
