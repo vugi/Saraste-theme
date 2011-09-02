@@ -373,8 +373,8 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	top: 0px;
 }
 #content-wrapper {
-	width: 1000px;
-	margin-left: -500px;
+	width: 940px;
+	margin-left: -470px;
 	position: absolute;
 	left: 50%;
 	top: 0px;
@@ -382,7 +382,7 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	overflow: overflow-y: scroll;
 }
 #content {
-	width: 700px;
+	width: 600px;
 	height: 100%;
 	float: right;
 	z-index: 99;
@@ -394,19 +394,20 @@ Verdana, Tahoma, Geneva, sans-serif - t
 #header-wrap {
 	position: absolute;
 	z-index: 102;
-	width: 1000px;
-	margin-left: -500px;
+	width: 940px;
+	margin-left: -470px;
 	left: 50%;
 	top: 0px;
 }
 header {
-	width: 250px !important;
+	width: 250px;
+	height: 220px;
 	background-color: #666;
 	float:left;
 }
 article {
 	float: left;
-	width: 500px;
+	width: 380px;
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
