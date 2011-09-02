@@ -382,6 +382,14 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	padding: 20px;
 	overflow-y: scroll;
 }
+article {
+	float: left;
+	width: 500px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
 header {
 	background-color: #666;
 	overflow: hidden;
@@ -392,4 +400,16 @@ header {
 }
 footer {
 	visibility: hidden;
+}
+.xoxo {
+	float: right;
+	width: 200px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+ul.xoxo {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
 }
