@@ -110,17 +110,6 @@
         
         <style type="text/css">
 		
-			p, ul{
-	color:#fff;
-	text-shadow: #000 0px 1px 0px;
-	line-height:120%;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 11pt;
-	padding-top: 0;
-	padding-right: 15px;
-	padding-bottom: 15px;
-	padding-left: 15px;
-}
 p a{ font-size:10pt; text-decoration:none; outline: none; color:#ddd; background:#222; border-top:1px solid #333; padding:5px 8px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; -moz-box-shadow: 0px 1px 1px #000; -webkit-box-shadow: 0px 1px 1px #000; box-shadow: 0px 1px 1px #000; }
 					p a:hover{ background-color:#427cb4; border-color:#5c94cb; color:#fff; }
 			h3{ padding:30px 30px 20px 30px; }
@@ -166,16 +155,22 @@ h2 {
 ?>
 	</head>
 	<body <?php body_class(); ?>>
-		<header role="banner">
-			<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<p><?php bloginfo( 'description' ); ?></p>
-		</header>
 		<nav id="access" role="navigation">
 		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-			<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
+			<!-- <a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a> -->
 			<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
 			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #access -->
+        
+        <div id="header-wrap">
+        <header role="banner">
+			<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<p><?php bloginfo( 'description' ); ?></p>
+		</header>
+        </div>
+        
+        <section id="content-wrapper">
+        
 		<section id="content" role="main">
         
         		<div id="about"><div class="close"><img src="img/closebox.png" onClick="plim()" width="30" height="30" alt="sulje" /></div>
@@ -271,11 +266,11 @@ Anna von Zansen / Vartiovuoren Tytöt</p>
     	<br />
       <input type="submit" name="submit" class="button" id="submit_btn" value="Osallistu" />
     </fieldset>
-  </form></div> --> 
+  </form></div>  
   <div id="content2">
 		<h2>Piirileiri Saraste 2012</h2>
 <p><strong>Pääkaupunkiseudun Partiolaisten Piirileiri 2012 järjestetään Evolla Hämeenlinnassa 30.7.-7.8.2012.</strong></p>
-<img src="img/saraste.png" width="300" height="208" alt="Saraste 2012" /></div>
+<img src="img/saraste.png" width="300" height="208" alt="Saraste 2012" /></div>-->
 
 <div id="prevthumb"></div> <div id="nextthumb"></div>
 	<div id="controls-wrapper">
@@ -283,13 +278,13 @@ Anna von Zansen / Vartiovuoren Tytöt</p>
 			<div id="slidecounter">
 				<span class="slidenumber"></span>/<span class="totalslides"></span>
 			</div>
-                <div class="links">
+                <!-- <div class="links">
                     <a href="javascript:void(null)" onClick="about()">Tietoa</a>
                     <a href="javascript:void(null)" onClick="info()">Lippukunnille</a>
                     <a href="javascript:void(null)" onClick="who()">Yhteys</a>
                     <a href="javascript:void(null)" onClick="english()">In English</a>
-                  <!--<a href="javascript:void(null)" onClick="contest()">Kilpailu</a> -->
-                </div>
+                  <!--<a href="javascript:void(null)" onClick="contest()">Kilpailu</a>
+                </div> -->
 			<div id="slidecaption"></div>
 			<div id="navigation">
 				<img id="prevslide" src="img/back_dull.png" alt="edellinen"/><img id="pauseplay" src="img/pause_dull.png" alt="pause"/><img id="nextslide" src="img/forward_dull.png" alt="seuraava"/>
@@ -297,4 +292,6 @@ Anna von Zansen / Vartiovuoren Tytöt</p>
 			
 		</div>
 	</div>
+    
+   </div>
         
