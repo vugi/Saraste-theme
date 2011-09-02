@@ -413,3 +413,18 @@ ul.xoxo {
 	padding: 0px;
 	list-style-type: none;
 }
+#skip {
+	visibility: hidden;
+}
+nav ul {
+	float: right;
+	margin-right: 20px;
+}
+
+nav li {
+	display: inline;
+	list-style-type: none;
+}
+nav li a {
+	margin-left: 20px;
+}
