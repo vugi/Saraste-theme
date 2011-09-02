@@ -374,7 +374,7 @@ Verdana, Tahoma, Geneva, sans-serif - t
 }
 #content-wrapper {
 	width: 1000px;
-	margin-left: -450px;
+	margin-left: -500px;
 	position: absolute;
 	left: 50%;
 	top: 0px;
@@ -430,15 +430,19 @@ ul.xoxo {
 #skip {
 	visibility: hidden;
 }
-nav ul {
+div.menu {
+	float: right;
+}
+div.menu ul {
 	float: right;
 	margin-right: 20px;
+	margin-top: 10px;
 }
 
-nav li {
+div.menu li {
 	display: inline;
 	list-style-type: none;
 }
-nav li a {
+div.menu li a {
 	margin-left: 20px;
 }
