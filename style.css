@@ -49,7 +49,11 @@ time, mark, audio, video {
 	font-size: 100%;
 	vertical-align: baseline;
 	overflow: hidden;
-	font-family: Verdana, Geneva, sans-serif;
+	font-family: arial;
+	font-size: 12px;
+	color: #6e6e6e;
+	line-height: 125%;
+	word-spacing: 1px;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
