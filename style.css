@@ -401,8 +401,8 @@ Verdana, Tahoma, Geneva, sans-serif - t
 }
 header {
 	width: 250px;
-	height: 220px;
-	background-color: #666;
+	height: 300px;
+	background: rgba(255,255,255,0.8) url('images/Logo_saraste_hamy_200px.png') no-repeat center;
 	float:left;
 }
 article {
