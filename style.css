@@ -421,10 +421,27 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	top: 0px;
 }
 header {
-	width: 250px;
-	height: 220px;
-	background-color: #666;
+	background: rgba(255,255,255,0.8);
 	float:left;
+	width: 200px;
+	padding: 25px;
+}
+header h1 a {
+  display: block;
+  width: 200px;
+	height: 239px;
+	padding: 0;
+	margin: 0;
+  background: url('images/Logo_saraste_hamy_200px.png') no-repeat center;
+  text-indent: -9999px;
+}
+
+header h1 a:hover {
+  opacity: 0.5;
+}
+
+header p {
+  display: none;
 }
 article {
 	float: left;
