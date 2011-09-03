@@ -403,6 +403,7 @@ Verdana, Tahoma, Geneva, sans-serif - t
 }
 #content {
 	height: 100%;
+	width: 100%;
 	float: left;
 	background-color: #fff;
 	padding: 20px;
