@@ -27,11 +27,11 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-        <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/saraste.css" type="text/css" media="screen" />
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/saraste.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/supersized.3.1.1.min.js"></script>
         
-        <script type="text/javascript">  
+    <script type="text/javascript">  
 			
 			jQuery(function($){
 				$.supersized({
@@ -75,70 +75,9 @@
 												]
 												
 				}); 
-		    });
+		  });
 		    
 		</script>
-        <script>
-			function about() {
-				plim();
-				$("#about").fadeIn("slow");
-			}
-			function info() {
-				plim();
-				$("#info").fadeIn("slow");
-			}
-			function who() {
-				plim();
-				$("#who").fadeIn("slow");
-			}
-			function contest() {
-				plim();
-				$("#contest").fadeIn("slow");
-			}
-			function english() {
-				plim();
-				$("#english").fadeIn("slow");
-			}
-			function plim() {
-				$("#about").fadeOut("slow");
-				$("#info").fadeOut("slow");
-				$("#who").fadeOut("slow");
-				$("#contest").fadeOut("slow");
-				$("#english").fadeOut("slow");
-			}
-		</script>
-        
-        <style type="text/css">
-		
-p a{ font-size:10pt; text-decoration:none; outline: none; color:#ddd; background:#222; border-top:1px solid #333; padding:5px 8px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; -moz-box-shadow: 0px 1px 1px #000; -webkit-box-shadow: 0px 1px 1px #000; box-shadow: 0px 1px 1px #000; }
-					p a:hover{ background-color:#427cb4; border-color:#5c94cb; color:#fff; }
-			h3{ padding:30px 30px 20px 30px; }
-h2 {
-	color: #FFF;
-	padding-top: 15px;
-	padding-right: 15px;
-	padding-bottom: 10px;
-	padding-left: 15px;
-	text-shadow: #000 0px 1px 0px;
-}
-			
-#content2 {
-	position: absolute;
-	top: 0px;
-	left: 20px;
-	width: 300px;
-	text-align: left;
-	z-index: 11;
-}
-#content2 p {
-	background:rgba(0,0,0,0.60);
-}
-#content2 H2 {
-	background:rgba(0,0,0,0.60);
-}
-.stamp { float: right; margin: 15px 30px 0 0;}
-			
-		</style>
 <?php
 		/* We add some JavaScript to pages with the comment form
 		 * to support sites with threaded comments (when in use).
