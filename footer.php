@@ -11,6 +11,7 @@
  */
 ?>
 		</section><!-- #content -->
+		</section><!-- #content-outer -->
 		</section><!-- #content-wrapper -->
 		
 		<!-- Supersized thumbs and controls-->
