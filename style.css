@@ -43,12 +43,13 @@ fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  overflow: hidden;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	overflow: hidden;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -363,14 +364,17 @@ Verdana, Tahoma, Geneva, sans-serif - t
 .sticky{}
 /** END WordPress-Defined CSS Classes **/
 #access {
+	color: #000000;
 	position: absolute;
 	z-index: 100;
-	height: 40px;
+	height: 64px;
 	width: 100%;
 	left: 0px;
 	right: 0px;
-	background-color: #CCC;
+	background-color: transparent;
 	top: 0px;
+	background-image: url(img/white.png);
+	background-repeat: repeat-x;
 }
 #content-wrapper {
 	width: 940px;
@@ -380,6 +384,9 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	top: 0px;
 	bottom: 0px;
 	overflow: overflow-y: scroll;
+	background-image: url(img/content_shadow.png);
+	background-repeat: repeat-y;
+	background-position: right 79px;
 }
 #content {
 	width: 600px;
@@ -389,7 +396,11 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	background-color: #fff;
 	padding: 20px;
 	margin-top: 80px;
-	
+	overflow-y: hidden;
+	background-image: url(img/content_bg.jpg);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+		
 }
 #header-wrap {
 	position: absolute;
@@ -455,7 +466,7 @@ div.menu {
 div.menu ul {
 	float: right;
 	margin-right: 20px;
-	margin-top: 10px;
+	margin-top: 12px;
 }
 
 div.menu li {
@@ -463,5 +474,10 @@ div.menu li {
 	list-style-type: none;
 }
 div.menu li a {
+	font-size: 18px;
+	color: #000;
+	letter-spacing: 0px;
 	margin-left: 20px;
+	text-decoration: none;
+	
 }

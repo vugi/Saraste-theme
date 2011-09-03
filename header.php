@@ -113,7 +113,7 @@
         
 		<section id="content" role="main">
         
-        		<div id="about"><div class="close"><img src="img/closebox.png" onClick="plim()" width="30" height="30" alt="sulje" /></div>
+        	<!--	<div id="about"><div class="close"><img src="img/closebox.png" onClick="plim()" width="30" height="30" alt="sulje" /></div>
 		  <h2>Mitä, missä, milloin?</h2>
 <p>Leiri pidetään Evolla Kilkkeeltä tutuissa maisemissa:<br />
   Esirakennusleiri pe 20. – su 22.7. (ennen Roverwaytä) ja rakennusleiri la 28. – ma 30.7.<br />
