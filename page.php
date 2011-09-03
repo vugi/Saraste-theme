@@ -28,5 +28,5 @@ get_header(); ?>
 				</article><!-- #post-## -->
 				<?php comments_template( '', true ); ?>
 <?php endwhile; ?>
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
