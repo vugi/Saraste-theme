@@ -384,23 +384,28 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	top: 0px;
 	bottom: 0px;
 	overflow: overflow-y: scroll;
-	background-image: url(img/content_shadow.png);
-	background-repeat: repeat-y;
-	background-position: right 79px;
 }
-#content {
+#content-outer {
 	width: 600px;
 	height: 100%;
 	float: right;
 	z-index: 99;
+	padding-left: 14px;
+	padding-right: 14px;
+	padding-top: 1px;
+	margin-top: 80px;
+	background-image: url(img/content_shadow.png);
+	background-repeat: repeat-y;
+}
+#content {
+	height: 100%;
+	float: left;
 	background-color: #fff;
 	padding: 20px;
-	margin-top: 80px;
-	overflow-y: hidden;
+	overflow-y: auto;
 	background-image: url(img/content_bg.jpg);
 	background-repeat: repeat-x;
-	background-position: left bottom;
-		
+	background-position: left bottom;	
 }
 #header-wrap {
 	position: absolute;
@@ -411,29 +416,11 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	top: 0px;
 }
 header {
-	background: rgba(255,255,255,0.8);
+	width: 250px;
+	height: 220px;
+	background-color: #666;
 	float:left;
-	width: 200px;
-	padding: 25px;
 }
-header h1 a {
-  display: block;
-  width: 200px;
-	height: 239px;
-	padding: 0;
-	margin: 0;
-  background: url('images/Logo_saraste_hamy_200px.png') no-repeat center;
-  text-indent: -9999px;
-}
-
-header h1 a:hover {
-  opacity: 0.5;
-}
-
-header p {
-  display: none;
-}
-
 article {
 	float: left;
 	width: 380px;

@@ -110,8 +110,10 @@
         </div>
         
         <section id="content-wrapper">
-        
+        <section id="content-outer" role="main">
 		<section id="content" role="main">
+        
+        
         
         	<!--	<div id="about"><div class="close"><img src="img/closebox.png" onClick="plim()" width="30" height="30" alt="sulje" /></div>
 		  <h2>Mitä, missä, milloin?</h2>
@@ -229,7 +231,7 @@ Anna von Zansen / Vartiovuoren Tytöt</p>
 			<div id="navigation">
 				<img id="prevslide" src="img/back_dull.png" alt="edellinen"/><img id="pauseplay" src="img/pause_dull.png" alt="pause"/><img id="nextslide" src="img/forward_dull.png" alt="seuraava"/>
 			</div>
-			
+		</div>	
 		</div>
 	</div>
     
