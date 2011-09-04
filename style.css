@@ -390,24 +390,27 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	overflow: overflow-y: scroll;
 }
 #content-outer {
-	width: 600px;
+	width: 640px;
 	height: 100%;
 	float: right;
 	z-index: 99;
-	padding-left: 14px;
+	/*padding-left: 14px;
 	padding-right: 14px;
-	padding-top: 1px;
+	padding-top: 1px;*/
 	margin-top: 80px;
-	background-image: url(img/content_shadow.png);
-	background-repeat: repeat-y;
+	/*background-image: url(img/content_shadow.png);
+	background-repeat: repeat-y;*/
+	-moz-box-shadow: 0 0 15px #000000;
+  -webkit-box-shadow: 0 0 15px #000000;
+  box-shadow: 0 0 15px #000000;
 }
 #content {
 	height: 100%;
 	width: 100%;
 	float: left;
-	background-color: #fff;
 	padding: 20px;
 	overflow-y: auto;
+	background-color: #fff;
 	background-image: url(img/content_bg.jpg);
 	background-repeat: repeat-x;
 	background-position: left bottom;	
