@@ -471,6 +471,7 @@ ul.xoxo {
 }
 div.menu {
 	float: right;
+	z-index: 110;
 }
 div.menu ul {
 	float: right;
@@ -488,5 +489,6 @@ div.menu li a {
 	letter-spacing: 0px;
 	margin-left: 20px;
 	text-decoration: none;
+	z-index: 111;
 	
 }
