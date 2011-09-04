@@ -388,6 +388,7 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	top: 0px;
 	bottom: 0px;
 	overflow: overflow-y: scroll;
+	z-index: 105;
 }
 #content-outer {
 	width: 640px;
@@ -398,11 +399,13 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	padding-right: 14px;
 	padding-top: 1px;*/
 	margin-top: 80px;
-	/*background-image: url(img/content_shadow.png);
-	background-repeat: repeat-y;*/
-	-moz-box-shadow: 0 0 15px #000000;
-  -webkit-box-shadow: 0 0 15px #000000;
-  box-shadow: 0 0 15px #000000;
+	background-image: url(img/content_shadow.png);
+	background-repeat: repeat-y;
+	-moz-box-shadow: -3px -3px -4px #000;
+	-webkit-box-shadow: -3px -3px -4px #000;
+	box-shadow: -3px -3px -4px #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
 }
 #content {
 	height: 100%;
