@@ -391,29 +391,24 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	z-index: 105;
 }
 #content-outer {
-	width: 640px;
+	width: 600px;
 	height: 100%;
 	float: right;
 	z-index: 99;
-	/*padding-left: 14px;
-	padding-right: 14px;
-	padding-top: 1px;*/
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
 	margin-top: 80px;
-	background-image: url(img/content_shadow.png);
-	background-repeat: repeat-y;
-	-moz-box-shadow: -3px -3px -4px #000;
-	-webkit-box-shadow: -3px -3px -4px #000;
-	box-shadow: -3px -3px -4px #000;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
-	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	background: rgba(255,255,255,0.8);
+	/*background-image: url(img/whiteish.png);
+	background-repeat: repeat;*/
 }
 #content {
 	height: 100%;
 	width: 100%;
 	float: left;
-	padding: 20px;
-	overflow-y: auto;
 	background-color: #fff;
+	overflow-y: hidden;
 	background-image: url(img/content_bg.jpg);
 	background-repeat: repeat-x;
 	background-position: left bottom;	
@@ -451,11 +446,10 @@ header p {
 }
 article {
 	float: left;
-	width: 380px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	margin: 0px;
 }
 footer {
 	visibility: hidden;
