@@ -68,14 +68,14 @@
 					slide_counter           :   1,		//Display slide numbers
 					slide_captions          :   1,		//Slide caption (Pull from "title" in slides array)
 					slides 					:  	[		//Slideshow Images
-														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste1.jpg', title : '', url : ''},
 														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste2.jpg', title : '', url : ''},
 														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste3.jpg', title : '', url : ''},
 														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste4.jpg', title : '', url : ''},
 														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste5.jpg', title : '', url : ''},
 														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste6.jpg', title : '', url : ''},
 														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste7.jpg', title : '', url : ''},
-														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste8.jpg', title : '', url : ''}
+														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste8.jpg', title : '', url : ''},
+														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste1.jpg', title : '', url : ''}
 												]
 												
 				}); 
