@@ -367,6 +367,11 @@ Verdana, Tahoma, Geneva, sans-serif - t
 .bypostauthor{}
 .sticky{}
 /** END WordPress-Defined CSS Classes **/
+
+/**
+  Saraste styles
+**/
+
 #access {
 	color: #000000;
 	position: absolute;
@@ -380,38 +385,18 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	background-image: url(img/white.png);
 	background-repeat: repeat-x;
 }
-#content-wrapper {
-	width: 940px;
-	margin-left: -470px;
-	position: absolute;
-	left: 50%;
-	top: 0px;
-	bottom: 0px;
-	overflow: overflow-y: scroll;
-	z-index: 105;
-}
-#content-outer {
-	width: 600px;
-	height: 100%;
-	float: right;
-	z-index: 99;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
-	margin-top: 80px;
-	background: rgba(255,255,255,0.8);
-	/*background-image: url(img/whiteish.png);
-	background-repeat: repeat;*/
-}
+
 #content {
-	height: 100%;
-	width: 100%;
-	float: left;
-	background-color: #fff;
-	overflow-y: hidden;
-	background-image: url(img/content_bg.jpg);
-	background-repeat: repeat-x;
-	background-position: left bottom;	
+  position: absolute;
+	left: 50%;
+	top: 80px;
+	z-index: 105;
+	
+	width: 600px;
+	margin-left: -160px;
+	padding: 20px;
+	
+	background-color: rgba(255,255,255,0.95);
 }
 #header-wrap {
 	position: absolute;
