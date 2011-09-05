@@ -49,11 +49,11 @@ time, mark, audio, video {
 	font-size: 100%;
 	vertical-align: baseline;
 	overflow: hidden;
-	font-family: arial;
-	font-size: 12px;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+  line-height: 1.625;
 	color: #6e6e6e;
-	line-height: 125%;
-	word-spacing: 1px;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -175,8 +175,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 /* These selection declarations have to be separate
    No text-shadow: twitter.com/miketaylr/status/12228805301
    Also: hot pink! */
-::-moz-selection { background: #fe57a1; color:#fff; text-shadow: none; }
-::selection { background:#fe57a1; color:#fff; text-shadow: none; }
+::-moz-selection { background: #607890; color:#fff; text-shadow: none; }
+::selection { background:#607890; color:#fff; text-shadow: none; }
 
 /**
  * Primary styles
@@ -392,9 +392,9 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	top: 80px;
 	z-index: 105;
 	
-	width: 600px;
+	width: 560px;
 	margin-left: -160px;
-	padding: 20px;
+	padding: 40px;
 	
 	background-color: rgba(255,255,255,0.95);
 }
@@ -430,7 +430,6 @@ header p {
   display: none;
 }
 article {
-	float: left;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 20px;
@@ -470,10 +469,26 @@ div.menu li {
 }
 div.menu li a {
 	font-size: 18px;
-	color: #000;
-	letter-spacing: 0px;
+	color: #252525;
 	margin-left: 20px;
 	text-decoration: none;
 	z-index: 111;
-	
+}
+
+div.menu li a:hover {
+  color: gray;
+}
+
+/* Saraste fonts etc */
+
+p {
+  margin-bottom: 1.625em;
+}
+
+h1 { font-size: 18pt; }
+h2 { font-size: 16pt; }
+h3 { font-size: 15pt; }
+
+a{
+  text-decoration: none;
 }

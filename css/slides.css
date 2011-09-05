@@ -1,10 +1,8 @@
 #slides {
 	margin: -5px -5px 10px -5px;
-	/*margin: -20px;
+	margin: -20px;
 	margin-bottom: 20px;
-	padding: 20px;*/
 	overflow:hidden;
-	/*background-color: #000;*/
 }
 
 .kwicks {
@@ -66,3 +64,9 @@
 	display:none;
 	width:50%;
 }
+
+.kwicks .post .entry-container * {
+  color: white;
+} 
+
+  
