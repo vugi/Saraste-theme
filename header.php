@@ -27,7 +27,7 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/saraste.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/saraste.css" type="text/css" media="screen" />
     <link rel='stylesheet' href='<?php bloginfo( 'template_directory' ); ?>/css/slides.css' type='text/css' media='all' />
     
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery-1.6.1.min.js"></script>
@@ -36,7 +36,6 @@
 		<script type='text/javascript' src='<?php bloginfo( 'template_directory' ); ?>/js/saraste.js'></script>
         
     <script type="text/javascript">  
-			
 			jQuery(function($){
 				$.supersized({
 				
