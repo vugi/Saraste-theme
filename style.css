@@ -372,23 +372,37 @@ Verdana, Tahoma, Geneva, sans-serif - t
   Saraste styles
 **/
 
+/* Saraste fonts etc general */
+
+p {
+  margin-bottom: 1em;
+}
+
+h1 { font-size: 18pt; }
+h2 { font-size: 16pt; }
+h3 { font-size: 15pt; }
+
+a{
+  text-decoration: none;
+}
+
 /* Header */
 
 #access {
 	color: #000000;
-	position: absolute;
-	z-index: 100;
-	height: 64px;
+	position: fixed;
+	z-index: 101;
+	height: 50px;
 	width: 100%;
 	left: 0px;
 	right: 0px;
-	background-color: transparent;
+	background-color: #EDEBEB;
 	top: 0px;
-	background-image: url(img/white.png);
-	background-repeat: repeat-x;
+	/*background-image: url(img/white.png);
+	background-repeat: repeat-x;*/
 }
 #header-wrap {
-	position: absolute;
+	position: fixed;
 	z-index: 102;
 	width: 940px;
 	margin-left: -470px;
@@ -399,12 +413,12 @@ header {
 	background: rgba(255,255,255,1);
 	float:left;
 	width: 200px;
-	padding: 25px;
+	padding: 10px 20px;
 }
 header h1 a {
   display: block;
   width: 200px;
-	height: 239px;
+    height: 239px;
 	padding: 0;
 	margin: 0;
   background: url('images/Logo_saraste_hamy_200px.png') no-repeat center;
@@ -416,34 +430,7 @@ header h1 a:hover {
 }
 
 header p {
-  display: none;
-}
 
-/* Content */
-
-#content {
-    position: absolute;
-    left: 50%;
-    top: 80px;
-    z-index: 100;
-
-    width: 520px;
-    margin-left: -160px;
-    padding: 60px 60px;
-
-    background-color: white; /* TODO: light gray */
-}
-
-article {
-	padding: 20px 0;
-	margin: 0px;
-    border-bottom: 1px solid #d3d3d3;
-}
-footer {
-	visibility: hidden;
-}
-#skip {
-	visibility: hidden;
 }
 
 /* Menu */
@@ -508,16 +495,41 @@ div.menu ul li:hover ul {
     display: block;
 }
 
-/* Saraste fonts etc */
+/* Content */
 
-p {
-  margin-bottom: 1em;
+#content {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    z-index: 100;
+
+    width: 520px;
+    margin-left: -160px;
+    padding: 60px 60px;
+
+    background-color: white; /* TODO: light gray */
 }
 
-h1 { font-size: 18pt; }
-h2 { font-size: 16pt; }
-h3 { font-size: 15pt; }
+article {
+	padding: 20px 0;
+	margin: 0px;
+    border-bottom: 1px solid #d3d3d3;
+}
+footer {
+	/*visibility: hidden;*/
+}
+#skip {
+	visibility: hidden;
+}
 
-a{
-  text-decoration: none;
+/* Image Gallery */
+
+.gallery .gallery-item {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.gallery-size-thumbnail .gallery-item {
+    width: 150px;
 }

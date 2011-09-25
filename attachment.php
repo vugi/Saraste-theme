@@ -93,7 +93,6 @@ get_header(); ?>
 							<?php boilerplate_posted_in(); ?>
 							<?php edit_post_link( __( 'Edit', 'boilerplate' ), ' <span class="edit-link">', '</span>' ); ?>
 						</footer><!-- .entry-utility -->
-<?php comments_template(); ?>
 					</div><!-- .entry-content -->
 				</article>
 <?php endwhile; ?>
