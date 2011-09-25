@@ -372,6 +372,8 @@ Verdana, Tahoma, Geneva, sans-serif - t
   Saraste styles
 **/
 
+/* Header */
+
 #access {
 	color: #000000;
 	position: absolute;
@@ -385,19 +387,6 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	background-image: url(img/white.png);
 	background-repeat: repeat-x;
 }
-
-#content {
-  position: absolute;
-	left: 50%;
-	top: 80px;
-	z-index: 100;
-	
-	width: 560px;
-	margin-left: -160px;
-	padding: 40px;
-	
-	background-color: rgba(255,255,255,0.95);
-}
 #header-wrap {
 	position: absolute;
 	z-index: 102;
@@ -407,7 +396,7 @@ Verdana, Tahoma, Geneva, sans-serif - t
 	top: 0px;
 }
 header {
-	background: rgba(255,255,255,0.8);
+	background: rgba(255,255,255,1);
 	float:left;
 	width: 200px;
 	padding: 25px;
@@ -429,26 +418,29 @@ header h1 a:hover {
 header p {
   display: none;
 }
+
+/* Content */
+
+#content {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    z-index: 100;
+
+    width: 520px;
+    margin-left: -160px;
+    padding: 60px 60px;
+
+    background-color: white; /* TODO: light gray */
+}
+
 article {
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 20px;
+	padding: 20px 0;
 	margin: 0px;
+    border-bottom: 1px solid #d3d3d3;
 }
 footer {
 	visibility: hidden;
-}
-.xoxo {
-	float: right;
-	width: 200px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-ul.xoxo {
-	margin: 0px;
-	padding: 0px;
-	list-style-type: none;
 }
 #skip {
 	visibility: hidden;
@@ -519,7 +511,7 @@ div.menu ul li:hover ul {
 /* Saraste fonts etc */
 
 p {
-  margin-bottom: 1.625em;
+  margin-bottom: 1em;
 }
 
 h1 { font-size: 18pt; }

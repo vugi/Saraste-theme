@@ -64,7 +64,6 @@
 	 */
 	if ( ! comments_open() ) :
 ?>
-	<p><?php _e( 'Comments are closed.', 'boilerplate' ); ?></p>
 <?php endif; // end ! comments_open() ?>
 
 <?php endif; // end have_comments() ?>

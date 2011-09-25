@@ -43,5 +43,5 @@ get_header(); ?>
 				</nav><!-- #nav-below -->
 				<?php comments_template( '', true ); ?>
 <?php endwhile; // end of the loop. ?>
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

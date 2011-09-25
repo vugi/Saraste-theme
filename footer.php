@@ -21,10 +21,6 @@
   				<span class="slidenumber"></span>/<span class="totalslides"></span>
   			</div>
   			<div id="slidecaption"></div>
-  			<div id="navigation">
-  				<img id="prevslide" src="img/back_dull.png" alt="edellinen"/><img id="pauseplay" src="img/pause_dull.png" alt="pause"/><img id="nextslide" src="img/forward_dull.png" alt="seuraava"/>
-  			</div>
-
   		</div>
   	</div>
 		
