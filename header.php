@@ -27,7 +27,6 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-        <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/saraste.css" type="text/css" media="screen" />
     <link rel='stylesheet' href='<?php bloginfo( 'template_directory' ); ?>/css/slides.css' type='text/css' media='all' />
     
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery-1.6.1.min.js"></script>
@@ -67,14 +66,7 @@
 					slide_counter           :   1,		//Display slide numbers
 					slide_captions          :   1,		//Slide caption (Pull from "title" in slides array)
 					slides 					:  	[		//Slideshow Images
-														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste2.jpg', title : '', url : ''},
-														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste3.jpg', title : '', url : ''},
-														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste4.jpg', title : '', url : ''},
-														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste5.jpg', title : '', url : ''},
-														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste6.jpg', title : '', url : ''},
-														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste7.jpg', title : '', url : ''},
-														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste8.jpg', title : '', url : ''},
-														{image : '<?php bloginfo( 'template_directory' ); ?>/sarastus/saraste1.jpg', title : '', url : ''}
+														{image : '<?php bloginfo( 'template_directory' ); ?>/images/Vaeltajia_KuvaJuhoVainio_1280px.jpg', title : '', url : ''},
 												]
 												
 				}); 
