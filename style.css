@@ -405,7 +405,7 @@ a{
 	position: fixed;
 	z-index: 102;
 	width: 940px;
-	margin-left: -470px;
+	margin-left: -490px;
 	left: 50%;
 	top: 0px;
 }
@@ -413,7 +413,7 @@ header {
 	background: rgba(255,255,255,1);
 	float:left;
 	width: 200px;
-	padding: 10px 20px;
+	padding: 10px 30px;
 }
 header h1 a {
   display: block;
@@ -516,7 +516,7 @@ article {
     border-bottom: 1px solid #d3d3d3;
 }
 footer {
-	/*visibility: hidden;*/
+	
 }
 #skip {
 	visibility: hidden;
