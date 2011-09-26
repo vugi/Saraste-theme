@@ -451,7 +451,7 @@ if ( ! function_exists( 'boilerplate_posted_on' ) ) :
  * @since Twenty Ten 1.0
  */
 function boilerplate_posted_on() {
-	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'boilerplate' ),
+	printf( __( '<span class="%1$s"></span> %2$s <span class="meta-sep"></span> %3$s', 'boilerplate' ),
 		'meta-prep meta-prep-author',
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
 			get_permalink(),

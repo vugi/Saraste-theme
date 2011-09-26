@@ -414,15 +414,20 @@ a{
 header {
     position: absolute;
 	background: rgba(255,255,255,1);
-	width: 200px;
-	padding: 10px 30px;
+	width: 220px;
+	padding: 10px 20px;
 }
+
+header h1 {
+    margin: 0 10px;
+}
+
 header h1 a {
   display: block;
   width: 200px;
-    height: 239px;
-    padding: 0;
-    margin: 0;
+  height: 239px;
+  padding: 0;
+  margin: 0;
   background: url('images/Logo_saraste_hamy_200px.png') no-repeat center;
   text-indent: -9999px;
 }
@@ -432,7 +437,7 @@ header h1 a:hover {
 }
 
 header p {
-
+    text-align:center;
 }
 
 /* Menu */

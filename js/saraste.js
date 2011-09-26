@@ -31,4 +31,12 @@ jQuery().ready(function() {
         jQuery(this).delay(1000).animate({bottom:'-200px',width:'260px'}, "slow")
       }
     );
+    jQuery("header").hover(function(){
+        jQuery("#counter").toggle("slow");
+    })
+    var startDate = new Date(2012,7,30);
+    var now = new Date();
+    var diff = Math.ceil((startDate - now) / 1000 / 60 / 60 / 24 );
+    jQuery("#count").html(diff)
+
 });
