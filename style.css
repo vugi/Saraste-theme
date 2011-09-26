@@ -393,7 +393,6 @@ a{
 /* Header */
 
 #access {
-	color: #000000;
 	position: fixed;
 	z-index: 101;
 	height: 50px;
@@ -402,20 +401,19 @@ a{
 	right: 0px;
 	background-color: #EDEBEB;
 	top: 0px;
-	/*background-image: url(img/white.png);
-	background-repeat: repeat-x;*/
 }
 #header-wrap {
 	position: fixed;
 	z-index: 102;
-	width: 940px;
+	width: 960px;
 	margin-left: -490px;
 	left: 50%;
 	top: 0px;
+    overflow: visible;
 }
 header {
+    position: absolute;
 	background: rgba(255,255,255,1);
-	float:left;
 	width: 200px;
 	padding: 10px 30px;
 }
@@ -423,8 +421,8 @@ header h1 a {
   display: block;
   width: 200px;
     height: 239px;
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
   background: url('images/Logo_saraste_hamy_200px.png') no-repeat center;
   text-indent: -9999px;
 }
@@ -442,7 +440,11 @@ header p {
 div.menu {
 	z-index: 110;
     overflow: visible;
-    float: left;
+    position: absolute;
+    left: 340px;
+    top:10px;
+    /*width: 640px;*/
+    
 }
 
 ul, li {
@@ -450,44 +452,52 @@ ul, li {
 }
 
 div.menu > ul {
-	margin-top: 12px;
-    margin-left: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 div.menu > ul > li {
 	display: inline;
 	list-style-type: none;
     position: relative;
+    margin: 0 10px;
+    padding: 0 5px;
 }
 
-div.menu li a {
+div.menu > ul > li > a {
 	font-size: 18px;
 	color: #252525;
-	margin-left: 5px;
 	text-decoration: none;
 	z-index: 111;
-    padding: 5px 10px;
-    border-radius: 40px;
 }
 
-div.menu li a:hover {
-    background-color: lightgray;
-    color: gray;
+div.menu > ul > li.current_page_item, div.menu > ul > li.current_page_ancestor {
+    border-bottom: 5px solid lightgray;
+}
+
+div.menu > ul > li > a:hover, div.menu ul li:hover > a {
+    color: darkgray;
 }
 
 /* Submenus */
 
-div.menu ul li ul.children {
+div.menu ul li:hover ul.children {
+    display: block;
+}
+
+ul.children {
+    background-color: #E6E6E6;
     display: none;
     position: absolute;
     z-index: 120;
-    background-color: white;
-    top:20px;
-    left:0;
+    top:15px;
+    left:5px;
     margin: 0;
-    padding: 0;
-    padding-bottom: 10px;
+    padding: 10px 0;
     min-width: 150px;
+    /*border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;*/
 }
 
 ul.children li {
@@ -495,9 +505,7 @@ ul.children li {
     margin: 0 10px;
 }
 
-div.menu ul li:hover ul {
-    display: block;
-}
+
 
 /* Content */
 
