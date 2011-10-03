@@ -25,10 +25,10 @@ jQuery().ready(function() {
     jQuery("#fb").delay(1000).animate({bottom:'-200px'}, "slow");
     jQuery("#fb").hover(
       function () {
-        jQuery(this).animate({bottom:'0px',width:'320px'}, "slow");
+        jQuery(this).stop(true, true).animate({bottom:'0px',width:'320px'}, "slow");
       },
       function () {
-        jQuery(this).delay(1000).animate({bottom:'-200px',width:'260px'}, "slow")
+        jQuery(this).stop(true, true).delay(1000).animate({bottom:'-200px',width:'260px'}, "slow")
       }
     );
     jQuery("header").hover(function(){
