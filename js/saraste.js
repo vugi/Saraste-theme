@@ -32,7 +32,7 @@ jQuery().ready(function() {
       }
     );
     jQuery("header").hover(function(){
-        jQuery("#counter").toggle("slow");
+        jQuery("#counter").stop(true, true).toggle("slow");
     })
     var startDate = new Date(2012,7,30);
     var now = new Date();
