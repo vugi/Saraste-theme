@@ -10,6 +10,7 @@
  * @since Boilerplate 1.0
  */
 ?>
+			<a href="#top" id="top" style="float: right;">&uarr; Siirry ylös</a>
 		</section><!-- #content -->
 		
         <!-- Supersized thumbs and controls-->
