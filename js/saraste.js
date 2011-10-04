@@ -39,6 +39,6 @@ jQuery().ready(function() {
     var diff = Math.ceil((startDate - now) / 1000 / 60 / 60 / 24 );
     jQuery("#count").html(diff)
 		jQuery("#top").click(function(){
-			$('html,body').animate({scrollTop: 0}, 500);
+			jQuery('html,body').animate({scrollTop: 0}, 500);
 		})
 });
