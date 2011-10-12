@@ -558,8 +558,9 @@ footer {
 }
 
 .comment {
-	padding-left: 45px;
+	padding: 0 0 10px 45px;
 	position: relative;
+	border-bottom-width: 0;
 }
 
 	.comment .avatar {
@@ -569,7 +570,7 @@ footer {
 	}
 	
 	.comment .comment-author {
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
 	
 		.comment .comment-author .edit-comment {
@@ -591,16 +592,26 @@ footer {
 }
 
 #commentform p textarea {
-	width: 350px;
+	width: 400px;
 }
 
 #commentform p .required {
 	color: #c96e6e;
 	font-size: 0.8em;
+	margin-left: 5px;
+}
+
+#commentform p #submit {
+	width: 150px;
+	margin-left: 100px;
 }
 
 #commentform .comment-notes, #commentform .form-allowed-tags {
 	display: none;
+}
+
+.comments-title, .reply-title {
+	margin: 10px 0;
 }
 
 /* Image Gallery */

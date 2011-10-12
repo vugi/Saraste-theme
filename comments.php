@@ -72,7 +72,7 @@
 $fields =  array(
 	'author' => '<p class="comment-form-author"><label for="author">Nimi</label><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' . ( $req ? '<span class="required">(pakollinen)</span>' : '' ) . '</p>',
 	'email'  => '<p class="comment-form-email"><label for="email">Sähköposti</label><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' . ( $req ? '<span class="required">(pakollinen, ei näytetä)</span>' : '' ) . '</p>',
-	'url'    => '<p class="comment-form-url"><label for="url">Kotisivu</label><input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" />' . ( $req ? '<span class="required">(pakollinen)</span>' : '' ) . '</p>',
+	'url'    => '<p class="comment-form-url"><label for="url">Kotisivu</label><input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
 );
 
 $args = array('title-reply' => 'Kommentoi', 'fields' => $fields);
