@@ -549,6 +549,29 @@ footer {
 	text-align: right;
 }
 
+.nav-previous, .nav-next {
+	display: inline;
+}
+
+.nav-next {
+	float: right;
+}
+
+.comment {
+	padding-left: 45px;
+	position: relative;
+}
+
+	.comment .avatar {
+		display: absolute;
+		left: 0;
+		top: 0;
+	}
+	
+	.comment .comment-author .comment-meta {
+		font-size: 0.8em;
+	}
+
 /* Image Gallery */
 
 .gallery .gallery-item {

@@ -31,16 +31,16 @@
 <?php if ( have_comments() ) : ?>
 			<!-- STARKERS NOTE: The following h3 id is left intact so that comments can be referenced on the page -->
 			<h3 id="comments-title"><?php
-				printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'boilerplate' ),
-				number_format_i18n( get_comments_number() ), '' . get_the_title() . '' );
+				if(get_comments_number() > 0){
+					echo 'Kommentit';
+				}
 			?></h3>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-				<?php previous_comments_link( __( '&larr; Older Comments', 'boilerplate' ) ); ?>
-				<?php next_comments_link( __( 'Newer Comments &rarr;', 'boilerplate' ) ); ?>
+				<?php previous_comments_link( __( '&larr; Vanhemmat kommentit', 'boilerplate' ) ); ?>
+				<?php next_comments_link( __( 'Uudemmat kommentit &rarr;', 'boilerplate' ) ); ?>
 <?php endif; // check for comment navigation ?>
 
-			<ol>
 				<?php
 					/* Loop through and list the comments. Tell wp_list_comments()
 					 * to use boilerplate_comment() to format the comments.
@@ -50,11 +50,10 @@
 					 */
 					wp_list_comments( array( 'callback' => 'boilerplate_comment' ) );
 				?>
-			</ol>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-				<?php previous_comments_link( __( '&larr; Older Comments', 'boilerplate' ) ); ?>
-				<?php next_comments_link( __( 'Newer Comments &rarr;', 'boilerplate' ) ); ?>
+				<?php previous_comments_link( __( '&larr; Vanhemmat kommentit', 'boilerplate' ) ); ?>
+				<?php next_comments_link( __( 'Uudemmat kommentit &rarr;', 'boilerplate' ) ); ?>
 <?php endif; // check for comment navigation ?>
 
 <?php else : // or, if we don't have comments:
