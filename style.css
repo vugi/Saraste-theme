@@ -530,13 +530,21 @@ ul.children li {
 article {
 	padding: 20px 0;
 	margin: 0px;
-    border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
 }
+
+	artcile:first-child {
+		padding-top: 0;
+	}
 footer {
 	
 }
 #skip {
 	visibility: hidden;
+}
+
+.edit-link {
+	text-align: right;
 }
 
 /* Image Gallery */
