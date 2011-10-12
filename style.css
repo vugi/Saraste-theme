@@ -533,12 +533,14 @@ article {
   border-bottom: 1px solid #d3d3d3;
 }
 
-	artcile:first-child {
+	article:first-child {
 		padding-top: 0;
 	}
+	
 footer {
 	
 }
+
 #skip {
 	visibility: hidden;
 }

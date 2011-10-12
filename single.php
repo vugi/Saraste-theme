@@ -29,12 +29,12 @@ get_header(); ?>
 					</footer><!-- #entry-author-info -->
 <?php endif; ?>
 					<footer class="entry-utility">
-						<?php edit_post_link('Muokkaa', '<span class="edit-link">', '</span>'); ?>
+						<?php edit_post_link('Muokkaa artikkelia', '<p class="edit-link">', '</p>'); ?>
+						<nav id="nav-below" class="navigation">
+							<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'boilerplate' ) . '</span> %title' ); ?></div>
+							<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'boilerplate' ) . '</span>' ); ?></div>
+						</nav><!-- #nav-below -->
 					</footer><!-- .entry-utility -->
-					<nav id="nav-below" class="navigation">
-						<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'boilerplate' ) . '</span> %title' ); ?></div>
-						<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'boilerplate' ) . '</span>' ); ?></div>
-					</nav><!-- #nav-below -->
 				</article><!-- #post-## -->
 				<?php comments_template( '', true ); ?>
 <?php endwhile; // end of the loop. ?>
