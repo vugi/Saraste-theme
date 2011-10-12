@@ -563,14 +563,45 @@ footer {
 }
 
 	.comment .avatar {
-		display: absolute;
+		position: absolute;
 		left: 0;
 		top: 0;
 	}
 	
-	.comment .comment-author .comment-meta {
-		font-size: 0.8em;
+	.comment .comment-author {
+		margin-bottom: 10px;
 	}
+	
+		.comment .comment-author .edit-comment {
+			float: right;
+		}
+	
+		.comment .comment-author .comment-meta {
+			font-size: 0.8em;
+		}
+
+#commentform p label {
+	display: inline-block;
+	width: 100px;
+	cursor: default;
+}
+
+#commentform p input {
+	width: 250px;
+}
+
+#commentform p textarea {
+	width: 350px;
+}
+
+#commentform p .required {
+	color: #c96e6e;
+	font-size: 0.8em;
+}
+
+#commentform .comment-notes, #commentform .form-allowed-tags {
+	display: none;
+}
 
 /* Image Gallery */
 

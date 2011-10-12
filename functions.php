@@ -321,8 +321,9 @@ function boilerplate_comment( $comment, $args, $depth ) {
 			<?php echo get_avatar($comment, 40); ?>
 			<div class="comment-author vcard">
 				<?php printf( __( '%s <span class="says">kirjoitti:</span>', 'boilerplate' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+				<?php edit_comment_link('(muokkaa)', '<span class="edit-comment">', '</span>');?>
 				<footer class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-					<?php	printf( __( '%1$s klo %2$s', 'boilerplate' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(muokkaa)', 'boilerplate' ), ' ' );?>
+					<?php	printf( __( '%1$s klo %2$s', 'boilerplate' ), get_comment_date(),  get_comment_time() ); ?></a>
 				</footer><!-- .comment-meta .commentmetadata -->
 			</div><!-- .comment-author .vcard -->
 			<?php if ( $comment->comment_approved == '0' ) : ?>
