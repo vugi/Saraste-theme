@@ -18,8 +18,8 @@ get_header(); ?>
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'boilerplate' ), 'after' => '' ) ); ?>
 						<p>
-							<iframe src="//www.facebook.com/plugins/like.php?href&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
-							<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-via="Saraste2012">Twitter</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+							<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-via="Saraste2012">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+							<iframe style="margin-top: 1px;" src="//www.facebook.com/plugins/like.php?href&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
 						</p>
 					</div><!-- .entry-content -->
 <?php if ( get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries  ?>
