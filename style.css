@@ -610,7 +610,7 @@ footer {
 	display: none;
 }
 
-.comments-title, .reply-title {
+#comments-title, #reply-title {
 	margin: 10px 0;
 }
 
