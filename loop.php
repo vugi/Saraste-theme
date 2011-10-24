@@ -30,9 +30,9 @@
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if ( ! have_posts() ) : ?>
 	<article id="post-0" class="post error404 not-found">
-		<h1 class="entry-title"><?php _e( 'Not Found', 'boilerplate' ); ?></h1>
+		<h1 class="entry-title">Ei löytynyt</h1>
 		<div class="entry-content">
-			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'boilerplate' ); ?></p>
+			<p>Sivua ei löytynyt hakemillasi ehdoilla (virhe 404)</p>
 			<?php get_search_form(); ?>
 		</div><!-- .entry-content -->
 	</article><!-- #post-0 -->
@@ -91,8 +91,8 @@
 			<footer class="entry-utility">
 				<a href="<?php echo get_term_link( _x('gallery', 'gallery category slug', 'boilerplate'), 'category' ); ?>" title="<?php esc_attr_e( 'View posts in the Gallery category', 'boilerplate' ); ?>"><?php _e( 'More Galleries', 'boilerplate' ); ?></a>
 				|
-				<?php comments_popup_link( __( 'Leave a comment', 'boilerplate' ), __( '1 Comment', 'boilerplate' ), __( '% Comments', 'boilerplate' ) ); ?>
-				<?php edit_post_link( __( 'Edit', 'boilerplate' ), '|', '' ); ?>
+				<?php comments_popup_link( __( 'Kommentoi', 'boilerplate' ), __( '1 kommentti', 'boilerplate' ), __( '% kommenttia', 'boilerplate' ) ); ?>
+				<?php Muokkaa_post_link( __( 'Muokkaa', 'boilerplate' ), '|', '' ); ?>
 			</footer><!-- .entry-utility -->
 		</article><!-- #post-## -->
 
@@ -107,15 +107,15 @@
 			</div><!-- .entry-summary -->
 		<?php else : ?>
 			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'boilerplate' ) ); ?>
+				<?php the_content( __( 'Jatka lukemista <span class="meta-nav">&rarr;</span>', 'boilerplate' ) ); ?>
 			</div><!-- .entry-content -->
 		<?php endif; ?>
 
 			<footer class="entry-utility">
 				<?php boilerplate_posted_on(); ?>
 				|
-				<?php comments_popup_link( __( 'Leave a comment', 'boilerplate' ), __( '1 Comment', 'boilerplate' ), __( '% Comments', 'boilerplate' ) ); ?>
-				<?php edit_post_link( __( 'Edit', 'boilerplate' ), '| ', '' ); ?>
+				<?php comments_popup_link( __( 'Kommentoi', 'boilerplate' ), __( '1 kommentti', 'boilerplate' ), __( '% kommenttia', 'boilerplate' ) ); ?>
+				<?php Muokkaa_post_link( __( 'Muokkaa', 'boilerplate' ), '| ', '' ); ?>
 			</footer><!-- .entry-utility -->
 		</article><!-- #post-## -->
 
@@ -135,8 +135,12 @@
 			</div><!-- .entry-summary -->
 	<?php else : ?>
 			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'boilerplate' ) ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'boilerplate' ), 'after' => '</div>' ) ); ?>
+				<?php the_content( __( 'Jatka lukemista <span class="meta-nav">&rarr;</span>', 'boilerplate' ) ); ?>
+				<p>
+					<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-via="Saraste2012">Tweet</a>
+					<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink());?>&send=false&layout=button_count&width=110&show_faces=false&action=like&colorscheme=light&font&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px; margin-bottom: -1px;" allowTransparency="true"></iframe>
+				</p>
 			</div><!-- .entry-content -->
 	<?php endif; ?>
 
@@ -153,8 +157,8 @@
 					<?php printf( __( 'Tagged %2$s', 'boilerplate' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
 					|
 				<?php endif; ?>
-				<?php comments_popup_link( __( 'Leave a comment', 'boilerplate' ), __( '1 Comment', 'boilerplate' ), __( '% Comments', 'boilerplate' ) ); ?>
-				<?php edit_post_link( __( 'Edit', 'boilerplate' ), '| ', '' ); ?>
+				<?php comments_popup_link( __( 'Kommentoi', 'boilerplate' ), __( '1 kommentti', 'boilerplate' ), __( '% kommenttia', 'boilerplate' ) ); ?>
+				<?php Muokkaa_post_link( __( 'Muokkaa', 'boilerplate' ), '| ', '' ); ?>
 			</footer><!-- .entry-utility -->
         <?php endif; ?>
 		</article><!-- #post-## -->
