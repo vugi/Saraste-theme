@@ -541,6 +541,23 @@ footer {
 	
 }
 
+	footer #buttons-rss, footer #buttons-twitter, footer #buttons-facebook {
+		display: inline-block;
+		height: 24px;
+		width: 24px;
+		margin: 0 5px 0 0;
+	}
+
+	footer #buttons-rss {
+		background: url('images/rss.png');
+	}
+	footer #buttons-twitter {
+		background: url('images/twitter.png');
+	}
+	footer #buttons-facebook {
+		background: url('images/facebook.png');
+	}
+
 #skip {
 	visibility: hidden;
 }

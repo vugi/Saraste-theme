@@ -10,6 +10,9 @@
  * @since Boilerplate 1.0
  */
 ?>
+			<a href="<?php bloginfo('rss2_url'); ?>" id="buttons-rss"></a>
+			<a href="http://www.facebook.com/pages/Saraste-2012/247896551907822" id="buttons-facebook"></a>
+			<a href="http://www.twitter.com/Saraste2012" id="buttons-twitter"></a>
 			<a href="#top" id="top" style="float: right; margin-top: 15px;">&uarr; Siirry ylös</a>
 		</section><!-- #content -->
 		
