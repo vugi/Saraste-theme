@@ -541,20 +541,20 @@ footer {
 	
 }
 
-	footer #buttons-rss, footer #buttons-twitter, footer #buttons-facebook {
+	#buttons-rss, #buttons-twitter, #buttons-facebook {
 		display: inline-block;
 		height: 24px;
 		width: 24px;
 		margin: 0 5px 0 0;
 	}
 
-	footer #buttons-rss {
+	#buttons-rss {
 		background: url('images/rss.png');
 	}
-	footer #buttons-twitter {
+	#buttons-twitter {
 		background: url('images/twitter.png');
 	}
-	footer #buttons-facebook {
+	#buttons-facebook {
 		background: url('images/facebook.png');
 	}
 
