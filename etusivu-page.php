@@ -65,16 +65,30 @@ get_header();
 
 <?php
 
+
+
 $facebook = fetch_feed('http://www.facebook.com/feeds/page.php?id=247896551907822&format=rss20');
 if(!is_wp_error($facebook)){
     $max = $facebook->get_item_quantity(10); 
     $facebook = $facebook->get_items(0, $max); 
 }
 
-
 foreach($facebook as $fb){
 	$feed[$fb->get_date("U")] = array("title" => $fb->get_title(), "date" => $fb->get_date("j.n.Y"), "link" => $fb->get_link(), "author" => "Facebook", "content" => $fb->get_content(), "wp" => 0);
 }
+
+/*
+$youtube = fetch_feed('http://gdata.youtube.com/feeds/base/users/Saraste2012/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile');
+if(!is_wp_error($youtube)){
+    $max = $youtube->get_item_quantity(10); 
+    $youtube = $youtube->get_items(0, $max); 
+}
+
+foreach($youtube as $fb){
+	$feed[$fb->get_date("U")] = array("title" => $fb->get_title(), "date" => $fb->get_date("j.n.Y"), "link" => $fb->get_link(), "author" => "YouTube", "content" => $fb->get_content(), "wp" => 0);
+}
+*/
+
 
 $posts = get_posts(array('numberposts' => 10));
 
