@@ -537,13 +537,21 @@ article {
 		padding-top: 0;
 	}
 	
+<<<<<<< HEAD
 .entry-date, .entry-meta .author a {
+=======
+.entry-meta .entry-date, .entry-meta .author a {
+>>>>>>> f50f48658d0e5673be1e1c063d640e0b59e27db5
 	font-size: 11px;
 	font-weight: bold;
 }	
 
 .entry-meta {
+<<<<<<< HEAD
 	margin: 5px 0;
+=======
+	margin: 0 5px;
+>>>>>>> f50f48658d0e5673be1e1c063d640e0b59e27db5
 }
 	
 footer {
