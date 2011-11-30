@@ -38,6 +38,22 @@
  * @since Boilerplate 1.0
  */
 
+if(function_exists('register_post_type' )){
+	$args = array(
+						'label' => 'purkit',
+						'labels' => array('name' => 'Purkit', 'singular_name' => 'Purkki'),
+						'description' => 'Sarastekätköt, kavereiden kesken Sarastepurkit',
+						'public' => true,
+						'show_ui' => true,
+						'show_in_menu' => true,
+						'menu_position' => 25,
+						'supports' => array('title', 'custom-fields', 'comments'),
+						'has_archive' => true,
+								);
+
+	register_post_type("Purkit", $args);
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
