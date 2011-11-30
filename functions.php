@@ -38,6 +38,22 @@
  * @since Boilerplate 1.0
  */
 
+if(function_exists('register_post_type' )){
+	$args = array(
+						'label' => 'katkot',
+						'labels' => array('name' => 'Kätköt', 'singular_name' => 'Kätkö'),
+						'description' => 'Sarastekätköt, kavereiden kesken Sarastepurkit',
+						'public' => true,
+						'show_ui' => true,
+						'show_in_menu' => true,
+						'menu_position' => 25,
+						'supports' => array('title', 'custom-fields', 'comments'),
+						'has_archive' => true,
+								);
+
+	register_post_type("Kätköt", $args);
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
