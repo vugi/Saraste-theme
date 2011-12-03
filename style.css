@@ -671,3 +671,39 @@ footer {
         #nextthumb img, #prevthumb img { width:150px; height:auto;  }
         #nextthumb:active, #prevthumb:active { bottom:10px; }
         #navigation > :hover,#nextthumb:hover, #prevthumb:hover { cursor:pointer; }
+
+
+/* Purkkisivut */
+
+#purkit tr {
+	height: 20px;
+}
+
+#purkit th {
+	text-align: left;
+}
+
+#purkit td:first-child {
+	padding-right: 15px;
+}
+
+.purkit h1 a#return {
+	font-size: 14px;
+	float: right;
+	margin-top: 8px;
+	font-weight: normal;
+}
+
+.purkit p {
+	margin: 15px 0;
+}
+
+.purkit .meta {
+	margin: 3px 0;
+}
+
+	.purkit .meta span:first-child {
+		width: 7em;
+		display: inline-block;
+		font-weight: bold;
+	}

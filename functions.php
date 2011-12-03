@@ -38,10 +38,24 @@
  * @since Boilerplate 1.0
  */
 
-if(function_exists('register_post_type' )){
+if(function_exists('register_post_type')){
+	$labels = array(
+							'name' => 'Purkit', 
+							'singular_name' => 'Purkki',
+							'add_new' => 'Lisää uusi',
+							'all_items' => 'Kaikki purkit',
+							'add_new_item' => 'Lisää uusi purkki',
+							'edit_item' => 'Muokkaa purkkia',
+							'new_item' => 'Uusi purkki',
+							'view_item' => 'Näytä purkki',
+							'search_items' => 'Etsi purkkeja',
+							'not_found' => 'Purkkeja ei löytynyt',
+							'not_found_in_trash' => 'Purkkeja ei löytynyt roskakorista'
+								);
+
 	$args = array(
-						'label' => 'katkot',
-						'labels' => array('name' => 'Kätköt', 'singular_name' => 'Kätkö'),
+						'label' => 'purkit',
+						'labels' => $labels,
 						'description' => 'Sarastekätköt, kavereiden kesken Sarastepurkit',
 						'public' => true,
 						'show_ui' => true,
@@ -51,7 +65,7 @@ if(function_exists('register_post_type' )){
 						'has_archive' => true,
 								);
 
-	register_post_type("Kätköt", $args);
+	register_post_type('purkit', $args);
 }
 
 /**
