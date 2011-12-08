@@ -103,7 +103,7 @@
                 <p id="counter" style="display:none">Leiriin aikaa <b id="count"></b> päivää</p>
             </header>
 
-            <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+            <?php wp_nav_menu( array( 'container_class' => 'menu', 'theme_location' => 'primary' ) ); ?>
         </div>
 
 		<section id="content" role="main">
