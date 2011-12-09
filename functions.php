@@ -68,6 +68,41 @@ if(function_exists('register_post_type')){
 	register_post_type('purkit', $args);
 }
 
+function purkit_taso($str){
+	return "<span class=\"purkit_vaikeusaste " . strtolower($str) . "\">" . $str . "</span>";
+}
+
+add_action ('comment_post', 'add_meta_settings', 1);
+
+function add_meta_settings($comment_id) {
+	add_comment_meta($comment_id, 'lippukunta', $_POST['lpk'], true);
+	add_comment_meta($comment_id, 'arvio', $_POST['arvio'], true);
+	add_comment_meta($comment_id, 'loytopvm', $_POST['loytopvm'], true);
+}
+
+function purkit_comments( $comment, $args, $depth ) {
+	$GLOBALS['comment'] = $comment;
+	
+	$lpk = get_comment_meta(get_comment_ID(), "lippukunta", true);	
+	$pvm = get_comment_meta(get_comment_ID(), "loytopvm", true);
+	
+	switch ( $comment->comment_type ) :
+		case '' :
+	?>
+		<div class="loyto">
+			<p><strong><?php comment_author(); ?></strong> (<?php echo $lpk; ?>) löysi purkin <?php echo $pvm; ?></p>
+			<div class="kommentti"><?php comment_text(); ?></div>		
+		</div>
+	<?php
+			break;
+		case 'pingback'  :
+		case 'trackback' :
+	?>
+	<?php
+			break;
+	endswitch;
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *

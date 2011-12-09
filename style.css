@@ -384,7 +384,7 @@ p {
 
 h1 { font-size: 18pt; }
 h2 { font-size: 16pt; }
-h3 { font-size: 15pt; }
+h3 { font-size: 14pt; margin: 10px 0; }
 
 a{
   text-decoration: none;
@@ -679,11 +679,8 @@ footer {
 	height: 20px;
 }
 
-#purkit th {
+#purkit th, td {
 	text-align: left;
-}
-
-#purkit td:first-child {
 	padding-right: 15px;
 }
 
@@ -706,4 +703,40 @@ footer {
 		width: 7em;
 		display: inline-block;
 		font-weight: bold;
+	}
+
+.purkit_vaikeusaste {
+	text-transform: uppercase;
+	color: rgb(37, 55, 100);
+	font-size: 10px;
+	font-weight: bold;
+}
+
+	.purkit_vaikeusaste.sudenpentu {
+		color: rgb(189, 181, 36);
+	}
+	.purkit_vaikeusaste.seikkailija {
+		color: rgb(212, 121, 30);
+	}
+	.purkit_vaikeusaste.tarpoja {
+		color: rgb(94, 15, 117);
+	}
+	.purkit_vaikeusaste.samoaja {
+		color: rgb(51, 101, 46);
+	}
+	.purkit_vaikeusaste.vaeltaja {
+		color: rgb(110, 71, 10);
+	}
+
+.loyto > p {
+	margin: 5px 0;
+}
+	
+.loyto .kommentti {
+	margin: 0 0 10px 20px;
+	font-style: italic;
+}
+
+	.loyto .kommentti > p {
+		display: inline;
 	}

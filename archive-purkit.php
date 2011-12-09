@@ -23,7 +23,7 @@ get_header(); ?>
 	if ( have_posts() )
 		the_post();
 ?>
-					<h1 class="page-title">Purkit</h1>
+<h1 class="page-title">Purkit</h1>
 <?php
 	/* Since we called the_post() above, we need to
 	 * rewind the loop back to the beginning that way
@@ -33,15 +33,16 @@ get_header(); ?>
 ?>
 
 <table id="purkit">
-<tr><th>Kätkön nimi</th><th>Lippukunta</th></tr>
+<tr><th>Kätkön nimi</th><th>Vaikeusaste</th><th>Lippukunta</th></tr>
 <?php while ( have_posts() ) : the_post(); ?>
 	<tr>
 		<td><a href="<?php the_permalink(); ?>"><?php	echo the_title(); ?></a></td>
+		<td><?php echo purkit_taso(get_post_meta($post->ID, 'Vaikeusaste', true)); ?></td>
 		<td><?php echo get_post_meta($post->ID, 'Lippukunta', true); ?></td>
 	</tr>
 
 <?php endwhile; ?>
-
 </table>
+
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>
