@@ -64,7 +64,7 @@ $fields =  array(
 	'email'  => '<p><label for="email">Sähköposti</label><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' . ( $req ? '<span class="required">(pakollinen, ei näytetä)</span>' : '' ) . '</p>',
 	'lippukunta' => '<p><label for="lippukunta">Lippukunta</label><select name="lpk"' . $aria_req . '><option value="Nettitiimi">Nettitiimi</option><option value="Purkkitiimi">Purkkitiimi</option></select>'. ( $req ? '<span class="required">(pakollinen)</span>' : '' ) . '</p>',
 	'loytopvm' => '<p><label>Päivämäärä</label><input type="text" name="loytopvm" ' . $aria_req . ' value="' . date("j.n.Y") . '">' . ( $req ? '<span class="required">(pakollinen)</span>' : '' ) . '</p>',
-	'arvio' => '<p><label for="arvio">Arvio</label><select name="arvio"><option value="1">Peukku ylös</option><option value="-1">Peukku alas</option></select></p>'
+	'arvio' => '<p><label for="arvio">Arvio</label><a class="tahti blue" title="1"></a><a class="tahti" title="2"></a><a class="tahti" title="3"></a><a class="tahti" title="4"></a><a class="tahti" title="5"></a><input type="hidden" id="arvio" name="arvio" value="1" /></p>'
 );
 
 $args = array('title-reply' => 'Kommentoi', 'fields' => $fields);

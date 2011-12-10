@@ -732,11 +732,32 @@ footer {
 	margin: 5px 0;
 }
 	
+.loyto .tahdet {
+	margin: 0 0 10px 20px; 
+}
+	
 .loyto .kommentti {
-	margin: 0 0 10px 20px;
+	margin: 0 0 0 20px;
 	font-style: italic;
 }
 
 	.loyto .kommentti > p {
 		display: inline;
+	}
+	
+.tahti, .tahti2 {
+	display: inline-block;
+	width: 21px;
+	height: 20px;
+	background: url('images/star.png');
+	margin-bottom: -5px;
+	cursor: pointer;
+}
+
+.tahti2 {
+	cursor: default;
+}
+
+	.blue, .blue2 {
+		background: url('images/star-2.png') !important;
 	}

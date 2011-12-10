@@ -41,4 +41,20 @@ jQuery().ready(function() {
 		jQuery("#top").click(function(){
 			jQuery('html,body').animate({scrollTop: 0}, 500);
 		})
+		
+		jQuery(".tahti").hover(
+			function(){
+				jQuery(this).prevAll(".tahti").andSelf().addClass("blue")
+				jQuery(this).nextAll(".tahti").removeClass("blue")
+			},
+			function(){
+				jQuery(".tahti").removeClass("blue")
+				var arvio = jQuery("#arvio").val()
+				jQuery(".tahti:lt(" + arvio + ")").addClass("blue")
+			}
+		)
+		
+		jQuery(".tahti").click(function(){
+			jQuery("#arvio").val(jQuery(this).attr("title"))
+		})
 });

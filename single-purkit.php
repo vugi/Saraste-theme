@@ -11,7 +11,7 @@ get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h1><?php the_title(); ?><a href="#" id="return">&larr; Palaa purkkilistaan</a></h1>
+					<h1><?php the_title(); ?><a href="javascript: history.go(-1);" id="return">&larr; Palaa</a></h1>
 					<p><?php	echo get_post_meta(get_the_ID(), 'Kuvaus', true);	?></p>
 					<?php
 						$fields = array("Lippukunta", "Vaikeusaste", "Koordinaatit", "Ohjeet");

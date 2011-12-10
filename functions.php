@@ -72,11 +72,32 @@ function purkit_taso($str){
 	return "<span class=\"purkit_vaikeusaste " . strtolower($str) . "\">" . $str . "</span>";
 }
 
+function purkit_arvio($x){
+	$x = round($x);
+	if($x > 5){
+		$x = NULL;
+	} elseif($x < 1) {
+		$x = NULL;
+	}
+	return $x;
+}
+
+function purkit_tahdet($x){
+	$str = '';
+	for($i = $x; $i > 0; $i--){
+		$str .= '<a class="tahti2 blue"></a>';
+	}
+	for($i = 0; $i < 5 - $x; $i++){
+		$str .= '<a class="tahti2"></a>';
+	}
+	return $str;
+}
+
 add_action ('comment_post', 'add_meta_settings', 1);
 
 function add_meta_settings($comment_id) {
 	add_comment_meta($comment_id, 'lippukunta', $_POST['lpk'], true);
-	add_comment_meta($comment_id, 'arvio', $_POST['arvio'], true);
+	add_comment_meta($comment_id, 'arvio', purkit_arvio($_POST['arvio']), true);
 	add_comment_meta($comment_id, 'loytopvm', $_POST['loytopvm'], true);
 }
 
@@ -84,6 +105,7 @@ function purkit_comments( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	
 	$lpk = get_comment_meta(get_comment_ID(), "lippukunta", true);	
+	$arvio = get_comment_meta(get_comment_ID(), "arvio", true);	
 	$pvm = get_comment_meta(get_comment_ID(), "loytopvm", true);
 	
 	switch ( $comment->comment_type ) :
@@ -91,7 +113,8 @@ function purkit_comments( $comment, $args, $depth ) {
 	?>
 		<div class="loyto">
 			<p><strong><?php comment_author(); ?></strong> (<?php echo $lpk; ?>) löysi purkin <?php echo $pvm; ?></p>
-			<div class="kommentti"><?php comment_text(); ?></div>		
+			<div class="kommentti"><?php comment_text(); ?></div>
+			<div class="tahdet"><?php echo purkit_tahdet($arvio); ?></div>		
 		</div>
 	<?php
 			break;
