@@ -451,7 +451,7 @@ div.menu {
     /*width: 640px;*/
 }
 
-ul, li {
+ul, ol {
     overflow: visible;
 }
 
@@ -548,20 +548,18 @@ div.menu > ul > li > ul > li {
 article {
 	padding: 20px 0;
 	margin: 0px;
-  border-bottom: 1px solid #d3d3d3;
+  border-top: 1px solid #d3d3d3;
 }
 
-	article:first-child {
+	article.first {
 		padding-top: 0;
+		border-top: none;
 	}
-	
-.entry-date, .entry-meta .author a {
-	font-size: 11px;
-	font-weight: bold;
-}	
 
 .entry-meta {
-	margin: 0 5px;
+	margin: 5px 0;
+	font-size: 11px;
+	font-weight: bold;
 }
 	
 footer {

@@ -52,7 +52,10 @@
 	 * the rest of the loop that is shared.
 	 *
 	 * Without further ado, the loop:
-	 */ ?>
+	 */
+	 
+	 $first = 1;
+	 ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
 <?php /* How to display posts in the Gallery category. */ ?>
@@ -122,11 +125,12 @@
 <?php /* How to display all other posts. */ ?>
 
 	<?php else : ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php if($first) { echo ' class="first"'; } ?>>
 			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'boilerplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 			<div class="entry-meta">
-				<?php boilerplate_posted_on(); ?>
+				<?php the_date(); ?>
+				<?php	the_author_meta('first_name'); ?>
 			</div><!-- .entry-meta -->
 
 	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
@@ -166,7 +170,7 @@
 		<?php comments_template( '', true ); ?>
 
 	<?php endif; // This was the if statement that broke the loop into three parts based on categories. ?>
-
+<?php $first = 0; ?>
 <?php endwhile; // End the loop. Whew. ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
