@@ -90,8 +90,7 @@
 		    
 		</script>
 	</head>
-	<a name="top"></a>
-	<body <?php body_class(); ?>>
+	<body id="top" <?php body_class(); ?>>
 		<nav id="access" role="navigation">
             <a href="http://www.papa.partio.fi"><img src="<?php bloginfo( 'template_directory' ); ?>/images/PAPA_logo_rgb_web_transparent_100px.png" alt="Pääkaupunkiseudun Partiolaiset ry " style="float:right; padding: 5px 10px"/></a>
         </nav><!-- #access -->
@@ -103,7 +102,8 @@
                 <p id="counter" style="display:none">Leiriin aikaa <b id="count"></b> päivää</p>
             </header>
 
-            <?php wp_nav_menu( array( 'container_class' => 'menu', 'theme_location' => 'primary' ) ); ?>
+            <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
         </div>
 
 		<section id="content" role="main">
+		<?php echo saraste_polku(); ?>

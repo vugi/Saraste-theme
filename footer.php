@@ -10,10 +10,6 @@
  * @since Boilerplate 1.0
  */
 ?>
-			<a href="<?php bloginfo('rss2_url'); ?>" id="buttons-rss"></a>
-			<a href="http://www.facebook.com/pages/Saraste-2012/247896551907822" id="buttons-facebook"></a>
-			<a href="http://www.twitter.com/Saraste2012" id="buttons-twitter"></a>
-			<a href="#top" id="top" style="float: right; margin-top: 15px;">&uarr; Siirry ylös</a>
 		</section><!-- #content -->
 		
         <!-- Supersized thumbs and controls-->
@@ -29,7 +25,9 @@
             </div>
         </div>
         -->
+<?php 
 
+if ( !is_page_template('etusivu-page.php') ) { ?>
         <div id="fb" style="position: fixed; height: 350px; width:260px; left: 50%; bottom: -350px; margin-left: -490px; background:white; z-index: 200;">
             <!--<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FSaraste-2012%2F247896551907822&amp;width=280&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=true&amp;header=false&amp;height=300" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:280px; height:300px;" allowTransparency="true"></iframe>-->
 
@@ -44,6 +42,7 @@
 
             <div class="fb-like-box" data-href="http://www.facebook.com/pages/Saraste-2012/247896551907822" data-width="320" data-show-faces="false" data-stream="true" data-header="false"></div>
         </div>
+<?php } ?>
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which
