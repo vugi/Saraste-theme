@@ -38,21 +38,33 @@
  * @since Boilerplate 1.0
  */
 
-if(function_exists('register_post_type' )){
-	$args = array(
-						'label' => 'purkit',
-						'labels' => array('name' => 'Purkit', 'singular_name' => 'Purkki'),
-						'description' => 'Sarastekätköt, kavereiden kesken Sarastepurkit',
-						'public' => true,
-						'show_ui' => true,
-						'show_in_menu' => true,
-						'menu_position' => 25,
-						'supports' => array('title', 'custom-fields', 'comments'),
-						'has_archive' => true,
-								);
+function saraste_polku($id = "") {
+	if(!is_home() && (is_page() || is_single())){
+		if(!empty($id)){
+			$post = get_post($id);
+		} else {
+			global $post;
+		}
+	
+		if(is_page()){
+			$str = '<a href="' . get_permalink($post->ID) . '"> ' . $post->post_title . '</a>';
+			if($post->post_parent){
+				$str = saraste_polku($post->post_parent) . ' &raquo; ' . $str;
+			}
+		} elseif(is_single()){
+			$str = '<a href="' . get_permalink($post->ID) . '">' . $post->post_title . '</a>';
+		}
+	
+		if(empty($id)){
+			$pre = '<p id="breadcrumb"><a href="' . get_bloginfo('url') . '" id="home"></a> &raquo ';
+			$pos = '</p>';
+			return $pre . $str . $pos;
+		}
 
-	register_post_type("Purkit", $args);
+		return $str;
+	}
 }
+
 
 /**
  * Set the content width based on the theme's design and stylesheet.

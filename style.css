@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 .aligncenter { display:block; margin:0 auto }
 .alignleft { float:left }
 .alignright { float:right }
-.wp-caption { border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px }
+.wp-caption { text-align:center; margin:10px }
 
 /* You might find the following useful */
 /* div, ul, li { position:relative } This will save you having to declare each div / ul / li's position as 'relative' and allows you to absolutely position elements inside them
@@ -362,7 +362,7 @@ Verdana, Tahoma, Geneva, sans-serif - t
 /** END Starkers CSS **/
 
 /** START WordPress-Defined CSS Classes **/
-.wp-caption-text{}
+.wp-caption-text{ font-size: 12px; }
 .gallery-caption{}
 .bypostauthor{}
 .sticky{}
@@ -400,7 +400,6 @@ a{
 	left: 0px;
 	right: 0px;
 	background-color: #EDEBEB;
-	top: 0px;
 }
 #header-wrap {
 	position: fixed;
@@ -408,11 +407,10 @@ a{
 	width: 960px;
 	margin-left: -490px;
 	left: 50%;
-	top: 0px;
-    overflow: visible;
+	overflow: visible;
 }
 header {
-    position: absolute;
+  position: absolute;
 	background: rgba(255,255,255,1);
 	width: 220px;
 	padding: 10px 20px;
@@ -535,25 +533,36 @@ div.menu > ul > li > ul > li {
 #content {
     position: absolute;
     left: 50%;
-    top: 80px;
     z-index: 100;
 
     width: 520px;
-    margin-left: -160px;
-    padding: 60px 60px;
+    margin: 80px 0 0 -160px;
+    padding: 40px 60px;
 
     background-color: white; /* TODO: light gray */
 }
 
+#breadcrumb {
+	font-size: 11px;
+	margin: 0;
+	color: #bfbfbf;
+}
+
+	#breadcrumb #home {
+		display: inline-block;
+		height: 14px;
+		width: 16px;
+		background: url('images/home_small.png');
+		margin-bottom: -2px;
+	}
+
 article {
 	padding: 20px 0;
 	margin: 0px;
-  border-top: 1px solid #d3d3d3;
 }
 
 	article.first {
 		padding-top: 0;
-		border-top: none;
 	}
 
 .entry-meta {
