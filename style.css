@@ -442,23 +442,23 @@ header p {
 
 div.menu-header {
 	z-index: 110;
-  overflow: visible;
-  position: absolute;
-  left: 330px;
-  top:10px;
-  width: 640px;
+	overflow: visible;
+	position: absolute;
+	left: 330px;
+	top:10px;
+	width: 640px;
 }
 
 ul, ol {
     overflow: visible;
 }
 
-div.menu > ul {
+div.menu-header > ul {
     margin: 0;
     padding: 0;
 }
 
-div.menu > ul > li {
+div.menu-header > ul > li {
 	display: inline;
 	list-style-type: none;
     position: relative;
@@ -469,7 +469,7 @@ div.menu > ul > li {
     vertical-align: middle;
 }
 
-div.menu > ul > li > a {
+div.menu-header > ul > li > a {
 	font-size: 18px;
 	color: #252525;
 	text-decoration: none;
@@ -478,14 +478,14 @@ div.menu > ul > li > a {
 	padding: 0;
 }
 
-div.menu > ul > li.menu-item-home {
+div.menu-header > ul > li.menu-item-home {
 	border-left: none;
 	float: left;
 	display: block;
 	padding: 0 10px 0 0;
 }
 
-div.menu > ul > li.menu-item-home > a {
+div.menu-header > ul > li.menu-item-home > a {
 	display: block;
 	background: url(images/home.png) no-repeat;
 	width: 32px;
@@ -494,21 +494,21 @@ div.menu > ul > li.menu-item-home > a {
 	text-indent: -999em;
 }
 
-div.menu > ul > li.current_page_item a, div.menu > ul > li.current_page_ancestor a {
+div.menu-header > ul > li.current_page_item a, div.menu-header > ul > li.current_page_ancestor a {
     border-bottom: 5px solid lightgray;
 }
 
-div.menu > ul > li > a:hover, div.menu ul li:hover > a {
+div.menu-header > ul > li > a:hover, div.menu-header ul li:hover > a {
     color: darkgray;
 }
 
 /* Submenus */
 
-div.menu > ul > li:hover > ul {
+div.menu-header > ul > li:hover > ul {
     display: block;
 }
 
-div.menu > ul > li > ul {
+div.menu-header > ul > li > ul {
     background-color: #E6E6E6;
     display: none;
     position: absolute;
@@ -523,7 +523,7 @@ div.menu > ul > li > ul {
     border-top-right-radius: 10px;*/
 }
 
-div.menu > ul > li > ul > li {
+div.menu-header > ul > li > ul > li {
     list-style-type: none;
     margin: 0 10px;
 }
