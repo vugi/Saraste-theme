@@ -440,13 +440,13 @@ header p {
 
 /* Menu */
 
-div.menu {
+div.menu-header {
 	z-index: 110;
-    overflow: visible;
-    position: absolute;
-    left: 330px;
-    top:10px;
-    /*width: 640px;*/
+  overflow: visible;
+  position: absolute;
+  left: 330px;
+  top:10px;
+  width: 640px;
 }
 
 ul, ol {
