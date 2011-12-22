@@ -11,10 +11,10 @@ get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h1><?php the_title(); ?><a href="javascript: history.go(-1);" id="return">&larr; Palaa</a></h1>
+					<h1><?php the_title(); ?></h1>
 					<p><?php	echo get_post_meta(get_the_ID(), 'Kuvaus', true);	?></p>
 					<?php
-						$fields = array("Lippukunta", "Vaikeusaste", "Koordinaatit", "Ohjeet");
+						$fields = array("Lippukunta", "Vaikeusaste", "Ohjeet");
 						
 						foreach($fields as $field){
 							if(get_post_meta($post->ID, $field, true)){
@@ -22,6 +22,11 @@ get_header(); ?>
 								echo '<p class="meta ' . $field . '"><span>' . $field . '</span><span>' . ($field == "Vaikeusaste" ? purkit_taso($meta) : $meta) . '</span></p>';
 							}
 						}
+						
+						if(is_admin()){
+							echo '<p class="meta"><span>Arvio</span><span>' . get_post_meta(get_the_ID(), "arvio", true) . '</span></p>';
+						}
+						
 					?>
 					
 					<p>

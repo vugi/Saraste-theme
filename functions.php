@@ -72,16 +72,6 @@ function purkit_taso($str){
 	return "<span class=\"purkit_vaikeusaste " . strtolower($str) . "\">" . $str . "</span>";
 }
 
-function purkit_arvio($x){
-	$x = round($x);
-	if($x > 5){
-		$x = NULL;
-	} elseif($x < 1) {
-		$x = NULL;
-	}
-	return $x;
-}
-
 function purkit_tahdet($x){
 	$str = '';
 	for($i = $x; $i > 0; $i--){
@@ -93,30 +83,88 @@ function purkit_tahdet($x){
 	return $str;
 }
 
-add_action ('comment_post', 'add_meta_settings', 1);
+add_action('comment_post', 'purkit_comments_meta', 1);
 
-function add_meta_settings($comment_id) {
-	add_comment_meta($comment_id, 'lippukunta', $_POST['lpk'], true);
-	add_comment_meta($comment_id, 'arvio', purkit_arvio($_POST['arvio']), true);
-	add_comment_meta($comment_id, 'loytopvm', $_POST['loytopvm'], true);
+function purkit_comments_meta($comment_id) {
+	$comment = get_comment($comment_id);
+	$post = $comment->comment_post_ID;
+
+	if($_POST["status"] == 1) { //Löytyi
+		add_comment_meta($comment_id, 'status', $_POST["status"], true);
+		add_comment_meta($comment_id, 'lippukunta', $_POST['lpk'], true);
+		add_comment_meta($comment_id, 'loytopvm', $_POST['loytopvm'], true);
+		
+		if($_POST["arvio"] < 6 && $_POST["arvio"] > 0){
+			add_comment_meta($comment_id, 'arvio', $_POST['arvio'], true);
+			purkit_rate_up($post, $_POST["arvio"]);
+		}
+	} elseif($_POST["status"] == 0){ // Ei löytynyt
+		add_comment_meta($comment_id, 'loytopvm', $_POST['loytopvm'], true);
+		add_comment_meta($comment_id, 'status', $_POST["status"], true);
+	} else { //Pelkkä kommentti
+		add_comment_meta($comment_id, 'status', $_POST["status"], true);
+	}
+}
+
+function purkit_rate_up($post, $x){
+	$arvio_vanha = get_post_meta($post, 'arvio', true);
+	$maara_vanha = get_post_meta($post, 'arvio_maara', true);
+	
+	update_post_meta($post, 'arvio', $arvio_vanha + $x);
+	update_post_meta($post, 'arvio_maara', $maara_vanha + 1);
+}
+
+add_action('trash_comment', 'purkit_rate_down', 1);
+
+function purkit_rate_down($comment_id){
+	$comment = get_comment($comment_id);
+	$post = $comment->comment_post_ID;
+	
+	$x = get_comment_meta($comment_id, "arvio", true);
+	
+	$arvio_vanha = get_post_meta($post, 'arvio', true);
+	$maara_vanha = get_post_meta($post, 'arvio_maara', true);
+	
+	update_post_meta($post, 'arvio', $arvio_vanha - $x);
+	update_post_meta($post, 'arvio_maara', $maara_vanha - 1);
 }
 
 function purkit_comments( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	
-	$lpk = get_comment_meta(get_comment_ID(), "lippukunta", true);	
-	$arvio = get_comment_meta(get_comment_ID(), "arvio", true);	
-	$pvm = get_comment_meta(get_comment_ID(), "loytopvm", true);
+	$status = get_comment_meta(get_comment_ID(), "status", true);
 	
 	switch ( $comment->comment_type ) :
 		case '' :
-	?>
-		<div class="loyto">
-			<p><strong><?php comment_author(); ?></strong> (<?php echo $lpk; ?>) löysi purkin <?php echo $pvm; ?></p>
-			<div class="kommentti"><?php comment_text(); ?></div>
-			<div class="tahdet"><?php echo purkit_tahdet($arvio); ?></div>		
-		</div>
-	<?php
+		
+			if($status == 1){ // Löytyi
+				$lpk = get_comment_meta(get_comment_ID(), "lippukunta", true);	
+				$arvio = get_comment_meta(get_comment_ID(), "arvio", true);	
+				$pvm = get_comment_meta(get_comment_ID(), "loytopvm", true);
+				?>
+				<div class="loyto">
+					<p><strong><?php comment_author(); ?></strong> (<?php echo $lpk; ?>) löysi purkin <?php echo $pvm; ?></p>
+					<div class="kommentti"><?php comment_text(); ?></div>
+					<?php if(!empty($arvio)) { ?><div class="tahdet"><?php echo purkit_tahdet($arvio); ?></div><?php } ?>
+				</div>
+				<?php
+			} elseif($status == 0){ // Ei löytynyt
+				$pvm = get_comment_meta(get_comment_ID(), "loytopvm", true);
+				?>
+				<div class="loyto">
+					<p><strong><?php comment_author(); ?></strong> ei löytänyt purkkia <?php echo $pvm; ?></p>
+					<div class="kommentti"><?php comment_text(); ?></div>
+				</div>
+				<?php
+			} else { // Pelkkä kommentti
+				?>
+				<div class="loyto">
+					<p><strong><?php comment_author(); ?></strong> kommentoi <?php echo comment_date(); ?></p>
+					<div class="kommentti"><?php comment_text(); ?></div>		
+				</div>
+				<?php
+			}
+			
 			break;
 		case 'pingback'  :
 		case 'trackback' :

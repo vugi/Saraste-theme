@@ -604,7 +604,12 @@ footer {
 	cursor: default;
 }
 
-#commentform p input {
+	#commentform p label.radio {
+		margin-left: 100px;
+		width: auto;
+	}
+
+#commentform p input[type=text], #commentform p select {
 	width: 250px;
 }
 
@@ -681,7 +686,7 @@ footer {
 
 #purkit th, td {
 	text-align: left;
-	padding-right: 15px;
+	padding-right: 25px;
 }
 
 .purkit h1 a#return {
