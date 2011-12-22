@@ -9,7 +9,7 @@
 
 get_header(); ?>
 			<article id="post-0" class="post error404 not-found" role="main">
-				<h1>Ei löytnyt</h1>
+				<h1>Ei löytynyt</h1>
 				<p>Hakemaasi sivua ei löytynyt (virhe 404).</p>
 				<?php get_search_form(); ?>
 				<script>

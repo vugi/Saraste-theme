@@ -38,6 +38,34 @@
  * @since Boilerplate 1.0
  */
 
+function saraste_polku($id = "") {
+	if(!is_home() && (is_page() || is_single())){
+		if(!empty($id)){
+			$post = get_post($id);
+		} else {
+			global $post;
+		}
+	
+		if(is_page()){
+			$str = '<a href="' . get_permalink($post->ID) . '"> ' . $post->post_title . '</a>';
+			if($post->post_parent){
+				$str = saraste_polku($post->post_parent) . ' &raquo; ' . $str;
+			}
+		} elseif(is_single()){
+			$str = '<a href="' . get_permalink($post->ID) . '">' . $post->post_title . '</a>';
+		}
+	
+		if(empty($id)){
+			$pre = '<p id="breadcrumb"><a href="' . get_bloginfo('url') . '" id="home"></a> &raquo ';
+			$pos = '</p>';
+			return $pre . $str . $pos;
+		}
+
+		return $str;
+	}
+}
+
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
