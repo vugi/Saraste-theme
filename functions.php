@@ -134,7 +134,7 @@ function purkit_comments( $comment, $args, $depth ) {
 	
 	$status = get_comment_meta(get_comment_ID(), "status", true);
 	
-	switch ( $comment->comment_type ) :
+	switch ($comment->comment_type) :
 		case '' :
 		
 			if($status == 1){ // Löytyi
