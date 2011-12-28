@@ -57,6 +57,13 @@ function saraste_polku($id = "") {
 	
 		if(empty($id)){
 			$pre = '<p id="breadcrumb"><a href="' . get_bloginfo('url') . '" id="home"></a> &raquo ';
+			
+			if(get_post_type($post->ID) == 'purkit') {
+				// Linkit toimivat vain tuotantoversiossa
+				$pre .= '<a href="' . get_permalink(348) . '">Lippukunnille</a> &raquo ';
+				$pre .= '<a href="' . get_permalink(430) . '">Saraste-kätköt</a> &raquo ';
+			}
+			
 			$pos = '</p>';
 			return $pre . $str . $pos;
 		}
@@ -83,7 +90,7 @@ if(function_exists('register_post_type')){
 	$args = array(
 						'label' => 'purkit',
 						'labels' => $labels,
-						'description' => 'Sarastekätköt, kavereiden kesken Sarastepurkit',
+						'description' => 'Saraste-kätköt, kavereiden kesken Sarastepurkit',
 						'public' => true,
 						'show_ui' => true,
 						'show_in_menu' => true,

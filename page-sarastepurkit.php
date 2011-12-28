@@ -44,7 +44,7 @@ get_header(); ?>
 					
 					$purkit = get_posts($args);
 					?>
-					<h2>Kaikki purkit</h2>
+					<h2>Kaikki kätköt</h2>
 					<table id="purkit">
 					<tr><th>Nimi</th><th>Vaikeusaste</th><th>Lippukunta</th></tr>
 					<?php foreach($purkit as $post) :	setup_postdata($post); ?>
