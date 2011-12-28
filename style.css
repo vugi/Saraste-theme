@@ -384,7 +384,7 @@ p {
 
 h1 { font-size: 18pt; }
 h2 { font-size: 16pt; }
-h3 { font-size: 15pt; }
+h3 { font-size: 14pt; margin: 10px 0; }
 
 a{
   text-decoration: none;
@@ -638,7 +638,12 @@ footer {
 	cursor: default;
 }
 
-#commentform p input {
+	#commentform p label.radio {
+		margin-left: 100px;
+		width: auto;
+	}
+
+#commentform p input[type=text], #commentform p select {
 	width: 250px;
 }
 
@@ -705,3 +710,93 @@ footer {
         #nextthumb img, #prevthumb img { width:150px; height:auto;  }
         #nextthumb:active, #prevthumb:active { bottom:10px; }
         #navigation > :hover,#nextthumb:hover, #prevthumb:hover { cursor:pointer; }
+
+
+/* Purkkisivut */
+
+#purkit tr {
+	height: 20px;
+}
+
+#purkit th, td {
+	text-align: left;
+	padding-right: 25px;
+}
+
+.purkit h1 a#return {
+	font-size: 14px;
+	float: right;
+	margin-top: 8px;
+	font-weight: normal;
+}
+
+.purkit p {
+	margin: 15px 0;
+}
+
+.purkit .meta {
+	margin: 3px 0;
+}
+
+	.purkit .meta span:first-child {
+		width: 7em;
+		display: inline-block;
+		font-weight: bold;
+	}
+
+.purkit_vaikeusaste {
+	text-transform: uppercase;
+	color: rgb(37, 55, 100);
+	font-size: 10px;
+	font-weight: bold;
+}
+
+	.purkit_vaikeusaste.sudenpentu {
+		color: rgb(189, 181, 36);
+	}
+	.purkit_vaikeusaste.seikkailija {
+		color: rgb(212, 121, 30);
+	}
+	.purkit_vaikeusaste.tarpoja {
+		color: rgb(94, 15, 117);
+	}
+	.purkit_vaikeusaste.samoaja {
+		color: rgb(51, 101, 46);
+	}
+	.purkit_vaikeusaste.vaeltaja {
+		color: rgb(110, 71, 10);
+	}
+
+.loyto > p {
+	margin: 5px 0;
+}
+	
+.loyto .tahdet {
+	margin: 0 0 10px 20px; 
+}
+	
+.loyto .kommentti {
+	margin: 0 0 0 20px;
+	font-style: italic;
+}
+
+	.loyto .kommentti > p {
+		display: inline;
+	}
+	
+.tahti, .tahti2 {
+	display: inline-block;
+	width: 21px;
+	height: 20px;
+	background: url('images/star.png');
+	margin-bottom: -5px;
+	cursor: pointer;
+}
+
+.tahti2 {
+	cursor: default;
+}
+
+	.blue, .blue2 {
+		background: url('images/star-2.png') !important;
+	}

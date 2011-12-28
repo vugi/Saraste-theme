@@ -41,4 +41,31 @@ jQuery().ready(function() {
 		jQuery("#top").click(function(){
 			jQuery('html,body').animate({scrollTop: 0}, 500);
 		})
+		
+		jQuery("input:radio[name=status]").change(function(){
+			if(jQuery('input:radio[name=status]:checked').val() == 1){
+				jQuery(".loytyi, .ei_loytynyt").slideDown()
+			} else if(jQuery('input:radio[name=status]:checked').val() == 0) {
+				jQuery(".loytyi").slideUp()
+				jQuery(".ei_loytynyt").slideDown()
+			}	 else {
+				jQuery(".loytyi, .ei_loytynyt").slideUp()
+			}		
+		})
+		
+		jQuery(".tahti").hover(
+			function(){
+				jQuery(this).prevAll(".tahti").andSelf().addClass("blue")
+				jQuery(this).nextAll(".tahti").removeClass("blue")
+			},
+			function(){
+				jQuery(".tahti").removeClass("blue")
+				var arvio = jQuery("#arvio").val()
+				jQuery(".tahti:lt(" + arvio + ")").addClass("blue")
+			}
+		)
+		
+		jQuery(".tahti").click(function(){
+			jQuery("#arvio").val(jQuery(this).attr("name"))
+		})
 });
