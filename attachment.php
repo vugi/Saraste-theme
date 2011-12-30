@@ -75,7 +75,7 @@ get_header(); ?>
 	}
 ?>
 							<p><a href="<?php echo $next_attachment_url; ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php
-								$attachment_size = apply_filters( 'boilerplate_attachment_size', 900 );
+								$attachment_size = apply_filters( 'boilerplate_attachment_size', 520 );
 								echo wp_get_attachment_image( $post->ID, array( $attachment_size, 9999 ) ); // filterable image width with, essentially, no limit for image height.
 							?></a></p>
 							<nav id="nav-below" class="navigation">
