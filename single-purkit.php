@@ -8,6 +8,49 @@
  */
 
 get_header(); ?>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+	function mapInit(){
+		var options = {
+			zoom: 10,
+			center: new google.maps.LatLng(60.23163, 24.908752),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(document.getElementById("map_small"), options)
+		
+		var coord = jQuery(".hidden").text()
+		coord = coord.split(",")
+		
+		var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(coord[0], coord[1]),
+			map: map,
+			title: jQuery("td:first-child", jQuery(this)).text(),
+			clickable: false,
+			icon: "<?php bloginfo('template_directory'); ?>/images/purkit/marker.png"
+		})
+	}
+	
+	var init = 0
+	
+	jQuery(document).ready(function(){
+		jQuery("#map_container").hide()
+		
+		jQuery("#show_map").click(function(){
+			jQuery("#map_container").slideToggle()
+			
+			if(jQuery(this).text() == "▼ Näytä"){ //Entities didn't work :P
+				jQuery(this).text("▲ Piilota")
+			} else {
+				jQuery(this).text("▼ Näytä")
+			}
+			
+			if(!init){
+				mapInit()
+				init = 1
+			}
+		})
+	})
+</script>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -23,8 +66,10 @@ get_header(); ?>
 							}
 						}
 						
-						if(is_admin()){
-							echo '<p class="meta"><span>Arvio</span><span>' . get_post_meta(get_the_ID(), "arvio", true) . '</span></p>';
+						if(get_post_meta($post->ID, "Sijainti", true)){
+							echo '<p class="meta"><span>Sijainti</span><span><a id="show_map">&#9660; Näytä</a></span></p>';
+							echo '<div id="map_container"><div id="map_small"></div></div>';
+							echo '<span class="hidden">' . get_post_meta(get_the_ID(), "Sijainti", true) . '</span><div style="clear: both;"></div>';
 						}
 						
 					?>

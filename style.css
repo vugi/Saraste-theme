@@ -17,7 +17,7 @@
 /** START HTML5 Boilerplate CSS **/
 
 /**
- * HTML5 ✰ Boilerplate
+ * HTML5 âœ° Boilerplate
  *
  * style.css contains a reset, font normalization and some base styles.
  *
@@ -48,11 +48,10 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	vertical-align: baseline;
-	overflow: hidden;
 	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: 300;
-    line-height: 1.625;
+  line-height: 1.625;
 	color: #6e6e6e;
 }
 
@@ -400,6 +399,7 @@ a{
 	left: 0px;
 	right: 0px;
 	background-color: #EDEBEB;
+	overflow: hidden;
 }
 #header-wrap {
 	position: fixed;
@@ -526,6 +526,12 @@ div.menu-header > ul > li > ul {
 div.menu-header > ul > li > ul > li {
     list-style-type: none;
     margin: 0 10px;
+}
+
+/* Facebook */
+
+#fb {
+	overflow: hidden;
 }
 
 /* Content */
@@ -738,14 +744,24 @@ footer {
 	margin: 15px 0;
 }
 
-.purkit .meta {
+.purkit > .meta {
 	margin: 3px 0;
+	position: relative;
 }
 
-	.purkit .meta span:first-child {
+	.purkit > .meta > span:first-child {
 		width: 7em;
-		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		padding: 0;
 		font-weight: bold;
+	}
+	
+	.purkit > .meta > span {
+		padding-left: 100px;
+		display: block;
 	}
 
 .purkit_vaikeusaste {
@@ -804,3 +820,25 @@ footer {
 	.blue, .blue2 {
 		background: url('images/star-2.png') !important;
 	}
+	
+#map {
+	width: 520px;
+	height: 350px;
+	overflow: auto;
+	margin-top: 20px;
+}
+
+#show_map {
+	cursor: pointer;
+}
+
+#map_small, #map_container {
+	width: 420px;
+	height: 300px;
+	float: right;
+}
+
+#map_container {
+	width: 520px;
+	text-align: right;
+}
