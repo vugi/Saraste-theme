@@ -59,7 +59,7 @@
 
 <?php
 
-$lpkt = file(get_bloginfo('template_directory') . '/lippukunnat.txt');
+$lpkt = file(ABSPATH. '/wp-content/themes/Saraste-theme/lippukunnat.txt');
 $options = '';
 
 foreach($lpkt as $lpk){
