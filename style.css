@@ -528,6 +528,10 @@ div.menu-header > ul > li > ul > li {
     margin: 0 10px;
 }
 
+div.menu-header > ul > li > ul > li.current_page_item > a {
+	font-weight: bold;
+}
+
 /* Facebook */
 
 #fb {
