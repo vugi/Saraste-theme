@@ -527,7 +527,7 @@ div.menu-header > ul > li > ul {
 }
 
 div.menu-header > ul > li:hover > ul {
-    display: visible;
+    visibility: visible;
     opacity: 1;
     
     /* Nice hack to enable fade-out: http://www.greywyvern.com/?post=337 */
