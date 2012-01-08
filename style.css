@@ -494,7 +494,7 @@ div.menu-header > ul > li.menu-item-home > a {
 	text-indent: -999em;
 }
 
-div.menu-header > ul > li.current_page_item a, div.menu-header > ul > li.current_page_ancestor a {
+div.menu-header > ul > li.current_page_item > a, div.menu-header > ul > li.current_page_ancestor > a {
     border-bottom: 5px solid lightgray;
 }
 
