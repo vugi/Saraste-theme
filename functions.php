@@ -46,12 +46,12 @@ function saraste_polku($id = "") {
 			global $post;
 		}
 	
-		if(is_page()){
+		if(is_page() or is_attachment()){
 			$str = '<a href="' . get_permalink($post->ID) . '"> ' . $post->post_title . '</a>';
 			if($post->post_parent){
 				$str = saraste_polku($post->post_parent) . ' &raquo; ' . $str;
 			}
-		} elseif(is_single()){
+		} else {
 			$str = '<a href="' . get_permalink($post->ID) . '">' . $post->post_title . '</a>';
 		}
 	

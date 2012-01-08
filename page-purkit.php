@@ -13,6 +13,50 @@
  */
 
 get_header(); ?>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+
+function mapInit(){
+	var options = {
+		zoom: 10,
+		center: new google.maps.LatLng(60.23163, 24.908752),
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map = new google.maps.Map(document.getElementById("map"), options)
+	
+	jQuery("#purkit tr:not(:first-child)").each(function(){
+		var coord = jQuery(".hidden", jQuery(this)).text()
+		coord = coord.split(",")
+		
+		var icon = jQuery("td:nth-child(2)", jQuery(this)).text()
+		icon = icon.toLowerCase()
+		
+		if(icon == "sudenpentu" || icon == "seikkailija" || icon == "tarpoja" || icon == "samoaja" || icon == "vaeltaja"){
+			icon = "<?php bloginfo('template_directory'); ?>/images/purkit/marker_" + icon + ".png"
+		} else {
+			icon = "<?php bloginfo('template_directory'); ?>/images/purkit/marker.png"
+		}
+		
+		var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(coord[0], coord[1]),
+			map: map,
+			title: jQuery("td:first-child", jQuery(this)).text(),
+			url: jQuery("td:first-child a", jQuery(this)).attr("href"),
+			icon: icon
+		})
+		
+		google.maps.event.addListener(marker, 'click', function(){
+			window.location.href = marker.url
+		})
+  })
+  
+}
+
+jQuery(function(){
+	mapInit()
+})
+
+</script>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -46,15 +90,18 @@ get_header(); ?>
 					?>
 					<h2>Kaikki kätköt</h2>
 					<table id="purkit">
-					<tr><th>Nimi</th><th>Vaikeusaste</th><th>Lippukunta</th></tr>
+					<tr><th>Nimi</th><th>Vaikeusaste</th><th>Lippukunta</th><th class="hidden">Sijainti</th></tr>
 					<?php foreach($purkit as $post) :	setup_postdata($post); ?>
 						<tr>
 							<td><a href="<?php the_permalink(); ?>"><?php	echo the_title(); ?></a></td>
 							<td><?php echo purkit_taso(get_post_meta($post->ID, 'Vaikeusaste', true)); ?></td>
 							<td><?php echo get_post_meta($post->ID, 'Lippukunta', true); ?></td>
+							<td class="hidden"><?php echo get_post_meta($post->ID, 'Sijainti', true); ?></td>
 						</tr>
 					<?php endforeach; ?>
 					</table>
+					
+					<div id="map"></div>
 				</article><!-- #post-## -->
 <?php endwhile; ?>
 <?php //get_sidebar(); ?>
