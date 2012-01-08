@@ -517,18 +517,20 @@ div.menu-header > ul > li > ul {
     /* Using visibility&opacity instead of display:hidden to enable transitions */
     visibility: hidden;
     opacity: 0;
+    height: 0;
     
     /* CSS3 transitions */
-  	transition: visibility 0s linear 0.5s,opacity 0.5s linear;
-  	-webkit-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
-  	-moz-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
-  	-o-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
-  	-ms-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+  	transition: visibility 0s linear 0.3s,opacity 0.3s linear,height 0.3s linear;
+  	-webkit-transition: visibility 0s linear 0.3s,opacity 0.3s linear,height 0.3s linear;
+  	-moz-transition: visibility 0s linear 0.3s,opacity 0.3s linear,height 0.3s linear;
+  	-o-transition: visibility 0s linear 0.3s,opacity 0.3s linear,height 0.3s linear;
+  	-ms-transition: visibility 0s linear 0.3s,opacity 0.3s linear,height 0.3s linear;
 }
 
 div.menu-header > ul > li:hover > ul {
     visibility: visible;
     opacity: 1;
+    height: auto;
     
     /* Nice hack to enable fade-out: http://www.greywyvern.com/?post=337 */
   	transition-delay: 0s;
