@@ -504,13 +504,8 @@ div.menu-header > ul > li > a:hover, div.menu-header ul li:hover > a {
 
 /* Submenus */
 
-div.menu-header > ul > li:hover > ul {
-    display: block;
-}
-
 div.menu-header > ul > li > ul {
     background-color: #E6E6E6;
-    display: none;
     position: absolute;
     z-index: 120;
     top:22px;
@@ -518,9 +513,29 @@ div.menu-header > ul > li > ul {
     margin: 0;
     padding: 10px 0;
     min-width: 150px;
-    /*border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;*/
+    
+    /* Using visibility&opacity instead of display:hidden to enable transitions */
+    visibility: hidden;
+    opacity: 0;
+    
+    /* CSS3 transitions */
+  	transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+  	-webkit-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+  	-moz-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+  	-o-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+  	-ms-transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+}
+
+div.menu-header > ul > li:hover > ul {
+    display: visible;
+    opacity: 1;
+    
+    /* Nice hack to enable fade-out: http://www.greywyvern.com/?post=337 */
+  	transition-delay: 0s;
+  	-webkit-transition-delay: 0s;
+  	-moz-transition-delay: 0s;
+  	-o-transition-delay: 0s;
+  	-ms-transition-delay: 0s;
 }
 
 div.menu-header > ul > li > ul > li {
