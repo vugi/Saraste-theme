@@ -46,6 +46,7 @@
 		wp_head();
 ?>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta property="og:image" content="<?php bloginfo( 'template_directory' ); ?>/images/logo_facebook_like.gif"/>
 		
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/supersized.3.1.1.min.js"></script>
 		<script type='text/javascript' src='<?php bloginfo( 'template_directory' ); ?>/js/kwicks.js'></script>
