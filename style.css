@@ -105,7 +105,7 @@ a:hover, a:active { outline: none; }
 a, a:active, a:visited { color: #607890; }
 a:hover { color: #036; }
 
-ul, ol { margin-left: 2em; }
+ul, ol { margin: 0 0 1em 2em; }
 ol { list-style-type: decimal; }
 
 /* Remove margins for navigation lists */

@@ -19,14 +19,6 @@
  */
 ?>
 
-<?php /* Display navigation to next/previous pages when applicable */ ?>
-<?php if ( $wp_query->max_num_pages > 1 ) : ?>
-	<nav id="nav-above" class="navigation">
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'boilerplate' ) ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'boilerplate' ) ); ?></div>
-	</nav><!-- #nav-above -->
-<?php endif; ?>
-
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if ( ! have_posts() ) : ?>
 	<article id="post-0" class="post error404 not-found">
@@ -176,7 +168,7 @@
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
 	<nav id="nav-below" class="navigation">
-		<?php next_posts_link( __( '&larr; Older posts', 'boilerplate' ) ); ?>
-		<?php previous_posts_link( __( 'Newer posts &rarr;', 'boilerplate' ) ); ?>
+		<?php next_posts_link( __( '&larr; Vanhemmat artikkelit', 'boilerplate' ) ); ?>
+		<?php previous_posts_link( __( 'Uudemmat artikkelit &rarr;', 'boilerplate' ) ); ?>
 	</nav><!-- #nav-below -->
 <?php endif; ?>
