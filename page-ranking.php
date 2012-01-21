@@ -34,9 +34,8 @@ if($lpkt){
 	echo '</ol>';
 }
 
-?>
-<h3>Eniten löydetyt kätköt</h3>
-<?php
+/*
+echo '<h3>Eniten löydetyt kätköt</h3>';
 $query = new WP_Query('orderby=comment_count&post_type=purkit');
 
 echo '<ol>';
@@ -50,25 +49,25 @@ endwhile;
 echo '</ol>';
 
 wp_reset_postdata();
-?>
-<?php
+*/
+
 $query = "SELECT purkki, ID, AVG(_avg) AS __avg
 					FROM
 					(
-						SELECT wp_test_posts.post_title AS purkki, wp_test_posts.ID, wp_test_commentmeta.meta_value AS lpk, AVG(stars.meta_value) AS _avg
-						FROM wp_test_posts, wp_test_comments, wp_test_commentmeta,
+						SELECT $wpdb->posts.post_title AS purkki, $wpdb->posts.ID, $wpdb->commentmeta.meta_value AS lpk, AVG(stars.meta_value) AS _avg
+						FROM $wpdb->posts, $wpdb->comments, $wpdb->commentmeta,
 						(
 							SELECT meta_value, comment_id 
-							FROM wp_test_commentmeta
+							FROM $wpdb->commentmeta
 							WHERE meta_key = 'arvio'
 						) AS stars
-						WHERE wp_test_posts.ID = wp_test_comments.comment_post_ID
-						AND wp_test_comments.comment_id = wp_test_commentmeta.comment_id
-						AND wp_test_posts.post_type = 'purkit'
-						AND wp_test_comments.comment_approved = 1
-						AND wp_test_commentmeta.meta_key = 'lippukunta'
-						AND stars.comment_id = wp_test_comments.comment_id
-						GROUP BY wp_test_posts.post_title, wp_test_commentmeta.meta_value
+						WHERE $wpdb->posts.ID = $wpdb->comments.comment_post_ID
+						AND $wpdb->comments.comment_id = $wpdb->commentmeta.comment_id
+						AND $wpdb->posts.post_type = 'purkit'
+						AND $wpdb->comments.comment_approved = 1
+						AND $wpdb->commentmeta.meta_key = 'lippukunta'
+						AND stars.comment_id = $wpdb->comments.comment_id
+						GROUP BY $wpdb->posts.post_title, $wpdb->commentmeta.meta_value
 					) AS purkit
 					GROUP BY purkki
 					ORDER BY __avg DESC
