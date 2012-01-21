@@ -11,7 +11,12 @@ get_header();
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php the_content(); ?>
 	<?php endwhile; ?>
+	<div style="clear: both;"></div>
 </div>
+
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.countdown.pack.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/saraste-counter.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/featured.css">
 <!--[if lt IE 8]><style type="text/css">#countdown { display: none; }</style><![endif]-->
 
 
