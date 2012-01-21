@@ -372,7 +372,11 @@ Verdana, Tahoma, Geneva, sans-serif - t
 **/
 
 body {
-	background:#cccccc; /*#F0F0F0*/
+	background: url(images/bg-green.jpg) no-repeat center center fixed #cccccc; /*#F0F0F0*/
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* Saraste fonts etc general */
