@@ -572,6 +572,8 @@ div.menu-header > ul > li > ul > li.current_page_item > a {
 	font-size: 11px;
 	margin: 0;
 	color: #bfbfbf;
+	background-color: white;
+	padding: 30px 40px 0 40px;
 }
 
 	#breadcrumb #home {

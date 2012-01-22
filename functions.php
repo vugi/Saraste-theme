@@ -39,7 +39,7 @@
  */
 
 function saraste_polku($id = "") {
-	if(!is_home() && (is_page() || is_single())){
+	if(!is_front_page() && (is_page() || is_single())){
 		if(!empty($id)){
 			$post = get_post($id);
 		} else {
@@ -56,7 +56,7 @@ function saraste_polku($id = "") {
 		}
 	
 		if(empty($id)){
-			$pre = '<p id="breadcrumb"><a href="' . get_bloginfo('url') . '" id="home"></a> &raquo ';
+			$pre = '<div id="breadcrumb"><a href="' . get_bloginfo('url') . '" id="home"></a> &raquo ';
 			
 			if(get_post_type($post->ID) == 'purkit') {
 				// Linkit toimivat vain tuotantoversiossa
@@ -64,7 +64,7 @@ function saraste_polku($id = "") {
 				$pre .= '<a href="' . get_permalink(430) . '">Saraste-kätköt</a> &raquo ';
 			}
 			
-			$pos = '</p>';
+			$pos = '</div>';
 			return $pre . $str . $pos;
 		}
 
