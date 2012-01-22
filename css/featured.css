@@ -1,9 +1,9 @@
 @font-face { font-family: Memphis LT Std Medium; src: url('../fonts/MemphisLTStd-Bold.otf'); }
 
-#featured {
+#featured > div {
 	width: 550px;
 	padding: 15px 25px;
-	margin: -40px 0 0 -40px;
+	margin: -10px 0 -10px -20px;
 	z-index: 10;
 	background: url('../images/featured.jpg') center center;
 	font-family: "Helvetica";

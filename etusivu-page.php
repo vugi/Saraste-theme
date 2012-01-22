@@ -7,12 +7,14 @@ get_header();
 
 ?>
 
-<div id="featured">
+<article id="featured">
+	<div>
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php the_content(); ?>
 	<?php endwhile; ?>
 	<div style="clear: both;"></div>
-</div>
+	</div>
+</article>
 
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.countdown.pack.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/saraste-counter.js"></script>
