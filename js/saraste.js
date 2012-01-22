@@ -34,9 +34,9 @@ jQuery().ready(function() {
     jQuery("header").hover(function(){
         jQuery("#counter").stop(true, true).toggle("slow");
     })
-    var startDate = new Date(2012,7,30);
+    var startDate = new Date(2012,6,30,0,0,0);
     var now = new Date();
-    var diff = Math.ceil((startDate - now) / 1000 / 60 / 60 / 24 );
+    var diff = Math.ceil((startDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24) );
     jQuery("#count").html(diff)
 		
 		jQuery("input:radio[name=status]").change(function(){
