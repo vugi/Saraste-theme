@@ -11,9 +11,20 @@
  */
 ?>
 		</section><!-- #content -->
+		
+		<?php
+		$sarasteet = array("green" => "Kajo", "blue" => "Humu", "yellow" => "Hämy", "purple" => "Syvi");
+		$saraste = $sarasteet[$_COOKIE["sarastevari"]];
+		?>
+		<div id="colorselect">
+			<a id="green" title="Kajo"></a>
+			<a id="blue" title="Humu"></a>
+			<a id="yellow" title="Hämy"></a>
+			<a id="purple" title="Syvi"></a>
+			<span><strong>Nyt:</strong> <span><?php echo $saraste; ?></span></span>
+		</div>
 
-        <div id="fb" style="position: fixed; height: 350px; width:260px; left: 50%; bottom: -350px; margin-left: -490px; background:white; z-index: 200;">
-            <!--<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FSaraste-2012%2F247896551907822&amp;width=280&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=true&amp;header=false&amp;height=300" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:280px; height:300px;" allowTransparency="true"></iframe>-->
+        <!--<div id="fb" style="position: fixed; height: 350px; width:260px; left: 50%; bottom: -350px; margin-left: -490px; background:white; z-index: 200;">
 
             <div id="fb-root"></div>
             <script>(function(d, s, id) {
@@ -25,7 +36,7 @@
             }(document, 'script', 'facebook-jssdk'));</script>
 
             <div class="fb-like-box" data-href="http://www.facebook.com/pages/Saraste-2012/247896551907822" data-width="320" data-show-faces="false" data-stream="true" data-header="false"></div>
-        </div>
+        </div>-->
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which

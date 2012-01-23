@@ -135,7 +135,7 @@ h3 {
 	margin-right: 0;
 }
 
-span {
+#timer_labels span {
 	display: inline-block;
 	font-size: 10px;
 	width: 59px;

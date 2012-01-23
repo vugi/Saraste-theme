@@ -54,7 +54,16 @@
 	</head>
 	<body id="top" <?php 
 	$arr = array("green", "blue", "yellow", "purple");
-	body_class("bg-".$arr[array_rand($arr)]);
+	
+	//body_class("bg-".$arr[array_rand($arr)]);
+	
+	if(!in_array($_COOKIE["sarastevari"], $arr)){
+		$_COOKIE["sarastevari"] = "yellow";
+	}
+	
+	$color = $_COOKIE["sarastevari"];
+	
+	body_class("bg-" . $color);
 	?>>
 		<nav id="access" role="navigation">
             <a href="http://www.papa.partio.fi"><img src="<?php bloginfo( 'template_directory' ); ?>/images/PAPA_logo_rgb_web_transparent_100px.png" alt="Pääkaupunkiseudun Partiolaiset ry " style="float:right; padding: 5px 10px"/></a>

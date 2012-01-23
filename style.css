@@ -622,27 +622,54 @@ article {
 .post-edit-link {
 	float: right;
 }
-	
-footer {
-	
+
+/* Color selecting */
+
+#colorselect {
+	width: 220px;
+	padding: 20px;
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -490px;
+	background: white;
+	height: 30px;
 }
 
-	#buttons-rss, #buttons-twitter, #buttons-facebook {
+	#colorselect > span {
+		position: absolute;
+		right: 20px;
+		top: 26px;
+	}
+	
+	#colorselect a {
 		display: inline-block;
-		height: 24px;
-		width: 24px;
-		margin: 15px 5px 0 0;
+		height: 28px;
+		width: 28px;
+		margin: 0 3px 0 0;
+		padding: 0;
+		background: url('images/colors.jpg');
+		cursor: pointer;
+		border: 2px solid white;
 	}
+		
+		#colorselect a:hover {
+			border: 2px solid #6e6e6e;
+		}
+	
+		#colorselect #green {
+			background-position: 0 0;
+		}
+		#colorselect #blue {
+			background-position: -30px 0;
+		}
+		#colorselect #yellow {
+			background-position: -60px 0;
+		}
+		#colorselect #purple {
+			background-position: -90px 0;
+		}
 
-	#buttons-rss {
-		background: url('images/rss.png');
-	}
-	#buttons-twitter {
-		background: url('images/twitter.png');
-	}
-	#buttons-facebook {
-		background: url('images/facebook.png');
-	}
 
 #skip {
 	visibility: hidden;
