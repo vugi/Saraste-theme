@@ -434,7 +434,7 @@ a{
 }
 header {
   position: absolute;
-	background: rgba(255,255,255,1);
+	background: white;
 	width: 220px;
 	padding: 10px 20px;
 }
