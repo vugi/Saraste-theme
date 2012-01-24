@@ -27,7 +27,6 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    	<link rel='stylesheet' href='<?php bloginfo( 'template_directory' ); ?>/css/slides.css' type='text/css' media='all' />
 <?php
 		/* We add some JavaScript to pages with the comment form
 		 * to support sites with threaded comments (when in use).
