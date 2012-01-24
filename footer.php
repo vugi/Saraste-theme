@@ -24,7 +24,7 @@
 			<span><strong>Nyt:</strong> <span><?php echo $saraste; ?></span></span>
 		</div>
 
-        <!--<div id="fb" style="position: fixed; height: 350px; width:260px; left: 50%; bottom: -350px; margin-left: -490px; background:white; z-index: 200;">
+        <div id="fb" style="position: fixed; height: 350px; width:260px; left: 50%; bottom: -350px; margin-left: -490px; background:white; z-index: 200;">
 
             <div id="fb-root"></div>
             <script>(function(d, s, id) {
@@ -36,7 +36,7 @@
             }(document, 'script', 'facebook-jssdk'));</script>
 
             <div class="fb-like-box" data-href="http://www.facebook.com/pages/Saraste-2012/247896551907822" data-width="320" data-show-faces="false" data-stream="true" data-header="false"></div>
-        </div>-->
+        </div>
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which

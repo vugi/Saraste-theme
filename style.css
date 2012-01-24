@@ -629,7 +629,8 @@ article {
 	width: 220px;
 	padding: 20px;
 	position: fixed;
-	bottom: 20px;
+	/*bottom: 20px;*/
+	top: 350px;
 	left: 50%;
 	margin-left: -490px;
 	background: white;
