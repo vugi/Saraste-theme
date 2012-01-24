@@ -13,6 +13,7 @@
  */
  
 get_header(); ?>
+<article>
 <h1>Ranking</h1>
 <?php
 $query = "SELECT $wpdb->commentmeta.meta_value AS nimi, COUNT(DISTINCT $wpdb->comments.comment_post_ID) AS maara
@@ -90,6 +91,6 @@ if($purkit){
 
 
 
-
+</article>
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>
