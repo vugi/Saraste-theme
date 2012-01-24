@@ -21,8 +21,6 @@ get_header();
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/featured.css">
 <!--[if lt IE 8]><style type="text/css">#countdown { display: none; }</style><![endif]-->
 
-
-
 <?php	$posts = get_posts(); ?>
 <?php	foreach($posts as $post) : setup_postdata($post); ?>
 		<article id="post-<?php the_ID(); ?>" <?php if($first) { echo ' class="first"'; } ?>>
