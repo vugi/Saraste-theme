@@ -1,0 +1,30 @@
+/* IE (all versions) */
+/* Boilerplate makes it easy to target different versions of IE, such as:
+html.ie6 { text-align: center; }
+html.ie6 body { text-align: left; }
+*/
+
+body {
+	width: 100%; 
+	height: 100%; 
+}
+
+body.bg-green {
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.images/bg-green.jpg', sizingMethod='scale'); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-green.jpg', sizingMethod='scale')"; 
+}
+
+body.bg-blue {
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.images/bg-blue.jpg', sizingMethod='scale'); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-blue.jpg', sizingMethod='scale')"; 
+}
+
+body.bg-yellow {
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.images/bg-yellow.jpg', sizingMethod='scale'); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-yellow.jpg', sizingMethod='scale')"; 
+}
+
+body.bg-purple {
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.images/bg-purple.jpg', sizingMethod='scale'); 
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-purple.jpg', sizingMethod='scale')"; 
+}

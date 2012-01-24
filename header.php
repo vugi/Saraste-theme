@@ -44,10 +44,10 @@
 		 */
 		wp_head();
 ?>
+		<!--[if IE ]><link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/style-ie.css" /><![endif]-->
 		<meta property="og:image" content="<?php bloginfo( 'template_directory' ); ?>/images/logo_facebook_like.gif"/>
 		
 		<script type='text/javascript' src='<?php bloginfo( 'template_directory' ); ?>/js/saraste.js'></script>
-    
 	</head>
 	<body id="top" <?php 
 	$arr = array("green", "blue", "yellow", "purple");
