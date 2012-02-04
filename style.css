@@ -534,9 +534,10 @@ div.menu-header {
 	z-index: 110;
 	overflow: visible;
 	position: absolute;
-	left: 330px;
-	top:10px;
-	width: 640px;
+	left: 30px;
+	top: 10px;
+	width: 960px;
+	text-align: center;
 }
 
 ul, ol {
@@ -557,6 +558,7 @@ div.menu-header > ul > li {
     border-left: 1px solid lightgray;
     padding-right: 5px;
     vertical-align: middle;
+    text-align: left;
 }
 
 div.menu-header > ul > li > a {
