@@ -37,6 +37,12 @@
  * @subpackage Boilerplate
  * @since Boilerplate 1.0
  */
+ 
+add_theme_support('post-thumbnails');
+
+set_post_thumbnail_size(260, 100, true); // Etusivun kuvat
+add_image_size('featured', 178, 100, true); // Pikkunostojen koko
+
 
 function saraste_polku($id = "") {
 	if(!is_front_page() && (is_page() || is_single())){
@@ -691,10 +697,5 @@ endif;
 		return $form;
 	}
 	add_filter( 'get_search_form', 'boilerplate_search_form' );
-
-// added per WP upload process request
-if ( function_exists( 'add_theme_support' ) ) {
-	add_theme_support( 'post-thumbnails' );
-}
 
 ?>
