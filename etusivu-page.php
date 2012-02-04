@@ -38,6 +38,21 @@ get_header();
 			<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 			<?php the_excerpt(); ?>
 		</div>
+		<?php if($count == 3){ ?>
+			<div id="fb" style="float: left; width: 260px; margin-top: 20px;">
+				<div id="fb-root"></div>
+					<script>
+						(function(d, s, id) {
+							var js, fjs = d.getElementsByTagName(s)[0];
+							if (d.getElementById(id)) {return;}
+							js = d.createElement(s); js.id = id;
+							js.src = "//connect.facebook.net/fi_FI/all.js#xfbml=1";
+							fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));
+					</script>
+				<div class="fb-like-box" data-href="http://www.facebook.com/pages/Saraste-2012/247896551907822" data-width="260" data-show-faces="false" data-stream="true" data-header="false"></div>
+			</div>
+		<?php } ?>
 		<?php $count++; ?>
 	<?php endforeach; ?>
 	<br class="clear">

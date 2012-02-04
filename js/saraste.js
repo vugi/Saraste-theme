@@ -1,5 +1,5 @@
 jQuery().ready(function() {
-    jQuery("#fb").delay(1000).animate({bottom:'-200px'}, "slow");
+    /*jQuery("#fb").delay(1000).animate({bottom:'-200px'}, "slow");
     jQuery("#fb").hover(
       function () {
         jQuery(this).stop(true, true).animate({bottom:'0px',width:'320px'}, "slow");
@@ -7,7 +7,7 @@ jQuery().ready(function() {
       function () {
         jQuery(this).stop(true, true).delay(1000).animate({bottom:'-200px',width:'260px'}, "slow")
       }
-    );
+    );*/
     jQuery("header").hover(function(){
         jQuery("#counter").stop(true, true).toggle("slow");
     })
