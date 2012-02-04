@@ -419,7 +419,7 @@ add_filter( 'wp_page_menu_args', 'boilerplate_page_menu_args' );
  * @return int
  */
 function boilerplate_excerpt_length( $length ) {
-	return 40;
+	return 10;
 }
 add_filter( 'excerpt_length', 'boilerplate_excerpt_length' );
 
@@ -430,7 +430,7 @@ add_filter( 'excerpt_length', 'boilerplate_excerpt_length' );
  * @return string "Continue Reading" link
  */
 function boilerplate_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'boilerplate' ) . '</a>';
+	return ' <a href="'. get_permalink() . '">' . __( 'Lue lisää <span class="meta-nav">&rarr;</span>', 'boilerplate' ) . '</a>';
 }
 
 /**
