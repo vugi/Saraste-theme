@@ -432,6 +432,7 @@ a{
 	left: 50%;
 	overflow: visible;
 }
+
 header {
   position: absolute;
 	background: white;
@@ -460,6 +461,50 @@ header h1 a:hover {
 header p {
     text-align:center;
 }
+
+#featured-wrapper {
+	width: 640px;
+	margin: 20px 0;
+}
+
+	#featured-wrapper > div {
+		width: 178px;
+		height: 100px;
+		padding: 10px;
+		margin-left: 23px;
+		background: white;
+		float: left;
+	}
+	
+		#featured-wrapper > div:first-child {
+			margin: 0;
+		}
+		
+		#featured-wrapper > div > a {
+			display: block;
+			width: 178px;
+			height: 100%;
+			background: url('images/featured-default.png');
+			position: relative;
+		}
+		
+			#featured-wrapper > div > a > span {
+				background: rgba(0, 0, 0, 0.3);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				text-align: right;
+				color: #fff;
+				font-weight: bold;
+				padding: 0 5px;
+			}
+		
+		
+
+.clear {
+	clear: both;
+}		
 
 /* Menu */
 

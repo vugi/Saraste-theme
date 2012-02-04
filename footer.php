@@ -37,15 +37,16 @@
 
             <div class="fb-like-box" data-href="http://www.facebook.com/pages/Saraste-2012/247896551907822" data-width="320" data-show-faces="false" data-stream="true" data-header="false"></div>
         </div>
-        
-        <script type="text/javascript">
-		  var uvOptions = {};
-		  (function() {
-		    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-		    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/r8jUU5AswoWR2rz4WLhFVg.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-		  })();
-		</script>
+        <!--
+					<script type="text/javascript">
+						var uvOptions = {};
+						(function() {
+							var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+							uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/r8jUU5AswoWR2rz4WLhFVg.js';
+							var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+						})();
+					</script>
+				-->
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which
