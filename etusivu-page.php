@@ -34,7 +34,7 @@ get_header();
 <article>
 	<h2>Nyt ajankohtaista</h2>
 	<?php $count = 1; ?>
-	<?php	$posts = get_posts(); ?>
+	<?php	$posts = get_posts(array('numberposts' => 10)); ?>
 	<?php	foreach($posts as $post) : setup_postdata($post); ?>
 		<div class="post-excerpt <?php if($count%2 == 0) echo 'second'; ?>">
 			<?php the_post_thumbnail(); ?>
@@ -42,7 +42,7 @@ get_header();
 			<?php the_excerpt(); ?>
 		</div>
 		<?php if($count == 3){ ?>
-			<div id="fb" style="float: left; width: 260px; margin-top: 20px;">
+			<div id="fb" style="float: right; width: 260px; margin-top: 20px;">
 				<div id="fb-root"></div>
 					<script>
 						(function(d, s, id) {
@@ -55,6 +55,9 @@ get_header();
 					</script>
 				<div class="fb-like-box" data-href="http://www.facebook.com/pages/Saraste-2012/247896551907822" data-width="260" data-show-faces="false" data-stream="true" data-header="false"></div>
 			</div>
+		<?php } ?>
+		<?php if($count == 4){ ?>
+			<br class="clear">
 		<?php } ?>
 		<?php $count++; ?>
 	<?php endforeach; ?>

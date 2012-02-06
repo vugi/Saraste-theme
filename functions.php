@@ -420,7 +420,7 @@ add_filter( 'wp_page_menu_args', 'boilerplate_page_menu_args' );
  * @return int
  */
 function boilerplate_excerpt_length( $length ) {
-	return 10;
+	return 7;
 }
 add_filter( 'excerpt_length', 'boilerplate_excerpt_length' );
 

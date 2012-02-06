@@ -13,15 +13,36 @@
  * @since Boilerplate 1.0
  */
 
-get_header(); ?>
+get_header();
 
-<?php
-/* Run the loop to output the posts.
- * If you want to overload this in a child theme then include a file
- * called loop-index.php and that will be used instead.
- */
- get_template_part( 'loop', 'index' );
+$second = $first = 1;
 ?>
-
-<?php //get_sidebar(); ?>
+<article>
+	<h1>Ajankohtaista</h1>
+	<?php while (have_posts()) : the_post(); ?>
+		<?php if($first || $second) { ?> 
+			<div class="post-excerpt <?php if(!$first) echo 'second'; ?>">
+				<?php the_post_thumbnail(); ?>
+				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<?php the_excerpt(); ?>
+			</div>
+			<?php
+				if(!$first) {
+					$second = 0;
+					echo '<br class="clear">';
+				}
+				$first = 0;
+			?>
+		<?php } else { ?>
+			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			<?php the_excerpt(); ?>
+		<?php } ?>
+	<?php endwhile; ?>
+	<?php if (  $wp_query->max_num_pages > 1 ) : ?>
+		<nav id="nav-below" class="navigation">
+			<?php next_posts_link( __( '&larr; Vanhemmat artikkelit', 'boilerplate' ) ); ?>
+			<?php previous_posts_link( __( 'Uudemmat artikkelit &rarr;', 'boilerplate' ) ); ?>
+		</nav><!-- #nav-below -->
+	<?php endif; ?>
+</article>
 <?php get_footer(); ?>
