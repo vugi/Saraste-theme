@@ -16,17 +16,6 @@ jQuery().ready(function() {
     var diff = Math.ceil((startDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24) );
     jQuery("#count").html(diff)
 		
-		/* Värin valinta */ 
-		
-		jQuery("#colorselect a").click(function(){
-			var color = jQuery(this).attr("id")
-			var name = jQuery(this).attr("title")
-			jQuery("body").removeClass("bg-blue bg-green bg-purple bg-yellow")
-			jQuery("body").addClass("bg-" + color)
-			jQuery("#colorselect span span").text(name)
-			document.cookie = "sarastevari=" + color + "; expires=Thu, 2 Aug 2020 20:47:11 UTC; path=/"
-		})
-		
 		/* Purkit */
 		
 		jQuery("input:radio[name=status]").change(function(){

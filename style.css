@@ -447,19 +447,32 @@ header h1 {
 header h1 a {
   display: block;
   width: 200px;
-  height: 239px;
+  height: 236px;
   padding: 0;
   margin: 0;
-  background: url('images/Logo_saraste_hamy_200px.png') no-repeat center;
   text-indent: -9999px;
 }
+
+	header h1 a#green {
+		background: url('images/logo-green.jpg');
+	}
+	header h1 a#blue {
+		background: url('images/logo-blue.jpg');
+	}
+	header h1 a#yellow {
+		background: url('images/logo-yellow.jpg');
+	}
+	header h1 a#purple {
+		background: url('images/logo-purple.jpg');
+	}
 
 header h1 a:hover {
   opacity: 0.5;
 }
 
 header p {
-    text-align:center;
+	text-align:center;
+	margin: 10px 0;
 }
 
 #featured-wrapper {
@@ -700,28 +713,19 @@ article {
 	margin-left: -490px;
 	background: white;
 	height: 30px;
+	line-height: 30px;
 }
-
-	#colorselect > span {
-		position: absolute;
-		right: 20px;
-		top: 26px;
-	}
 	
-	#colorselect a {
+	#colorselect span {
 		display: inline-block;
 		height: 28px;
 		width: 28px;
 		margin: 0 3px 0 0;
 		padding: 0;
 		background: url('images/colors.jpg');
-		cursor: pointer;
 		border: 2px solid white;
+		float: left;
 	}
-		
-		#colorselect a:hover {
-			border: 2px solid #6e6e6e;
-		}
 	
 		#colorselect #green {
 			background-position: 0 0;

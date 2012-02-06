@@ -13,15 +13,24 @@
 		</section><!-- #content -->
 		
 		<?php
-		$sarasteet = array("green" => "Kajo", "blue" => "Humu", "yellow" => "Hämy", "purple" => "Syvi");
-		$saraste = $sarasteet[$_COOKIE["sarastevari"]];
+		
+		$h = date("H");
+	
+		if($h >= 6 && $h < 12){
+			$bg_color = "green";
+		}	elseif($h >= 12 && $h < 17){
+			$bg_color = "blue";
+		}	elseif($h >= 17 && $h < 22){
+			$bg_color = "yellow";
+		} else {
+			$bg_color = "purple";
+		}
+		
+		$sarasteet = array("green" => "Aamun kajo", "blue" => "Päivän humu", "yellow" => "Illan hämy", "purple" => "Yön syvi");
+		$saraste = $sarasteet[$bg_color];
 		?>
 		<div id="colorselect">
-			<a id="green" title="Kajo"></a>
-			<a id="blue" title="Humu"></a>
-			<a id="yellow" title="Hämy"></a>
-			<a id="purple" title="Syvi"></a>
-			<span><strong>Nyt:</strong> <span><?php echo $saraste; ?></span></span>
+			<span id="<?php echo $bg_color; ?>"></span><strong>Nyt teemana:</strong> <?php echo $saraste; ?>
 		</div>
         <!--
 					<script type="text/javascript">

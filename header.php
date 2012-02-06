@@ -50,17 +50,20 @@
 		<script type='text/javascript' src='<?php bloginfo( 'template_directory' ); ?>/js/saraste.js'></script>
 	</head>
 	<body id="top" <?php 
-	$arr = array("green", "blue", "yellow", "purple");
+	$h = date("H");
 	
-	//body_class("bg-".$arr[array_rand($arr)]);
-	
-	if(!in_array($_COOKIE["sarastevari"], $arr)){
-		$_COOKIE["sarastevari"] = "yellow";
+	if($h >= 6 && $h < 12){
+		$bg_color = "green";
+	}	elseif($h >= 12 && $h < 17){
+		$bg_color = "blue";
+	}	elseif($h >= 17 && $h < 22){
+		$bg_color = "yellow";
+	} else {
+		$bg_color = "purple";
 	}
+
 	
-	$color = $_COOKIE["sarastevari"];
-	
-	body_class("bg-" . $color);
+	body_class("bg-" . $bg_color);
 	?>>
 		<nav id="access" role="navigation">
             <a href="http://www.papa.partio.fi"><img src="<?php bloginfo( 'template_directory' ); ?>/images/PAPA_logo_rgb_web_transparent_100px.png" alt="Pääkaupunkiseudun Partiolaiset ry " style="float:right; padding: 5px 10px"/></a>
@@ -68,7 +71,7 @@
 
         <div id="header-wrap">
             <header role="banner">
-                <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <h1><a id="<?php echo $bg_color; ?>" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                 <p><?php bloginfo( 'description' ); ?></p>
                 <p id="counter" style="display:none">Leiriin aikaa <b id="count"></b> päivää</p>
             </header>
