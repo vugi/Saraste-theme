@@ -38,11 +38,12 @@
  * @since Boilerplate 1.0
  */
  
+require_once (get_template_directory() . '/theme-options.php');
+
 add_theme_support('post-thumbnails');
 
 set_post_thumbnail_size(260, 100, true); // Etusivun kuvat
 add_image_size('featured', 178, 100, true); // Pikkunostojen koko
-
 
 function saraste_polku($id = "") {
 	if(!is_front_page() && (is_page() || is_single())){

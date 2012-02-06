@@ -22,9 +22,12 @@ get_header();
 <!--[if lt IE 8]><style type="text/css">#countdown { display: none; }</style><![endif]-->
 
 <div id="featured-wrapper">
-	<div><a href="#"><span>Katso kuvat!</span></a></div>
-	<div><a href="#"><span>Perustiedot leiristä</span></a></div>
-	<div><a href="#"><span>Saraste-kätköjen etsintä on alkanut!</span></a></div>
+	<?php
+		$o = get_option('saraste_theme_options');
+	?>
+	<div><a <?php echo (empty($o["nosto1_kuva"]) ? '' : 'style="background: url(' . $o["nosto1_kuva"] . ');"'); ?> href="<?php echo $o["nosto1_linkki"]; ?>"><span><?php echo $o["nosto1_teksti"]; ?></span></a></div>
+	<div><a <?php echo (empty($o["nosto2_kuva"]) ? '' : 'style="background: url(' . $o["nosto2_kuva"] . ');"'); ?>href="<?php echo $o["nosto2_linkki"]; ?>"><span><?php echo $o["nosto2_teksti"]; ?></span></a></div>
+	<div><a <?php echo (empty($o["nosto3_kuva"]) ? '' : 'style="background: url(' . $o["nosto3_kuva"] . ');"'); ?>href="<?php echo $o["nosto3_linkki"]; ?>"><span><?php echo $o["nosto3_teksti"]; ?></span></a></div>
 	<br class="clear">
 </div>
 
