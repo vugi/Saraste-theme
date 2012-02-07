@@ -30,7 +30,7 @@
 		$saraste = $sarasteet[$bg_color];
 		?>
 		<div id="colorselect">
-			<span id="<?php echo $bg_color; ?>"></span><strong>Nyt teemana:</strong> <?php echo $saraste; ?>
+			<span id="<?php echo $bg_color; ?>"></span><strong>Nyt teemana:</strong> <?php echo date("H"); ?>
 		</div>
         <!--
 					<script type="text/javascript">
