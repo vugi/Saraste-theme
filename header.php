@@ -50,6 +50,7 @@
 		<script type='text/javascript' src='<?php bloginfo( 'template_directory' ); ?>/js/saraste.js'></script>
 	</head>
 	<body id="top" <?php 
+	date_default_timezone_set('Europe/Helsinki');
 	$h = date("H");
 	
 	if($h >= 6 && $h < 12){
