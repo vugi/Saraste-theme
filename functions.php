@@ -38,6 +38,14 @@
  * @since Boilerplate 1.0
  */
  
+add_action('admin_notices', 'my_admin_notice');
+function my_admin_notice(){
+	global $current_screen;
+	if($current_screen->id == "theme-editor"){
+		echo '<div class="error"><p><strong>Muista</strong>: Teeman muokkaaminen tästä estää päivittämisen GitHubin kautta.</p></div>';
+	}	
+}
+ 
 require_once (get_template_directory() . '/theme-options.php');
 
 add_theme_support('post-thumbnails');
