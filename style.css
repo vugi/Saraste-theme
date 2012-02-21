@@ -519,6 +519,19 @@ header p {
 	clear: both;
 }
 
+.archive {
+	margin: 5px 0;
+}
+
+.archive:last-of-type {
+	margin-bottom: 15px;
+}
+
+.archive span {
+	display: inline-block;
+	width: 80px;
+}
+
 .post-excerpt {
 	width: 260px;
 	float: left;

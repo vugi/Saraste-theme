@@ -34,8 +34,7 @@ $second = $first = 1;
 				$first = 0;
 			?>
 		<?php } else { ?>
-			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			<?php the_excerpt(); ?>
+			<p class="archive"><span><?php the_date(); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><p>
 		<?php } ?>
 	<?php endwhile; ?>
 	<?php if (  $wp_query->max_num_pages > 1 ) : ?>
