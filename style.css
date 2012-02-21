@@ -519,15 +519,15 @@ header p {
 	clear: both;
 }
 
-.archive {
+#recent .archive #titles {
+	margin: 20px 0;
+}
+
+#recent .archive {
 	margin: 5px 0;
 }
 
-.archive:last-of-type {
-	margin-bottom: 15px;
-}
-
-.archive span {
+#recent .archive span {
 	display: inline-block;
 	width: 80px;
 }

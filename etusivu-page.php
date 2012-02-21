@@ -62,6 +62,6 @@ get_header();
 		<?php $count++; ?>
 	<?php endforeach; ?>
 	<br class="clear">
-	<p style="text-align"><a href="/ajankohtaista/">Siirry arkistoon</a></p>
+	<p style="text-align: center;"><a href="/ajankohtaista/">Siirry arkistoon</a></p>
 </article>
 <?php	get_footer(); ?>

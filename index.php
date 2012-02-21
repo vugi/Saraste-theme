@@ -17,7 +17,7 @@ get_header();
 
 $second = $first = 1;
 ?>
-<article>
+<article id="recent">
 	<h1>Ajankohtaista</h1>
 	<?php while (have_posts()) : the_post(); ?>
 		<?php if($first || $second) { ?> 
@@ -29,7 +29,7 @@ $second = $first = 1;
 			<?php
 				if(!$first) {
 					$second = 0;
-					echo '<br class="clear">';
+					echo '<br class="clear"><div id="titles">';
 				}
 				$first = 0;
 			?>
@@ -37,6 +37,7 @@ $second = $first = 1;
 			<p class="archive"><span><?php the_date(); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><p>
 		<?php } ?>
 	<?php endwhile; ?>
+	</div>
 	<?php if (  $wp_query->max_num_pages > 1 ) : ?>
 		<nav id="nav-below" class="navigation">
 			<?php next_posts_link( __( '&larr; Vanhemmat artikkelit', 'boilerplate' ) ); ?>
