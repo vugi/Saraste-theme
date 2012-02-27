@@ -520,7 +520,7 @@ header p {
 }
 
 .ajankohtaista_linkki {
-	margin: 20px 0;
+	padding-top: 20px;
 	text-align: center;
 }
 
@@ -557,7 +557,7 @@ header p {
 		height: 100px;
 	}
 	
-	.post-excerpt a {
+	.post-excerpt p a {
 		white-space: nowrap;
 	}
 

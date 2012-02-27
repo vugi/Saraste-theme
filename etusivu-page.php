@@ -46,13 +46,10 @@ get_header();
 				'oranssi',
 				'lila'
 			);
+			$randomthumb = array_rand($thumbnails);
 			?>
-			<img src="<?php echo home_url( '' ); ?>/wp-content/uploads/2011/11/01_saraste_banneri_180x50_<?php echo array_rand($thumbnails); ?>.gif" alt="<?php the_title(); ?>" />
-			<?php } ?>
-
-			
-			<?php the_post_thumbnail(); ?>
-			
+			<img src="<?php echo home_url( '' ); ?>/wp-content/uploads/2011/11/01_saraste_banneri_180x50_<?php echo $randomthumb[0]; ?>.gif" alt="<?php the_title(); ?>" />
+			<?php } ?>			
 			
 			<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 			<?php the_excerpt(); ?>
