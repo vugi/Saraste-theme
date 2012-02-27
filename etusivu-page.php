@@ -37,7 +37,23 @@ get_header();
 	<?php	$posts = get_posts(array('numberposts' => 10)); ?>
 	<?php	foreach($posts as $post) : setup_postdata($post); ?>
 		<div class="post-excerpt <?php if($count%2 == 0) echo 'second'; ?>">
+			<?php if ( has_post_thumbnail() ) {
+			the_post_thumbnail();
+			} else { 
+			$thumbnails = array(
+				'wihrea',
+				'sininen',
+				'oranssi',
+				'lila'
+			);
+			?>
+			<img src="<?php echo home_url( '' ); ?>/wp-content/uploads/2011/11/01_saraste_banneri_180x50_<?php echo array_rand($thumbnails); ?>.gif" alt="<?php the_title(); ?>" />
+			<?php } ?>
+
+			
 			<?php the_post_thumbnail(); ?>
+			
+			
 			<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 			<?php the_excerpt(); ?>
 		</div>
@@ -61,7 +77,6 @@ get_header();
 		<?php } ?>
 		<?php $count++; ?>
 	<?php endforeach; ?>
-	<br class="clear">
-	<p style="text-align: center;"><a href="/ajankohtaista/">Siirry arkistoon</a></p>
+	<p class="ajankohtaista_linkki clear"<a href="/ajankohtaista/">Siirry arkistoon</a></p>
 </article>
 <?php	get_footer(); ?>

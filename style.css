@@ -404,9 +404,9 @@ p {
   margin-bottom: 1em;
 }
 
-h1 { font-size: 18pt; }
-h2 { font-size: 16pt; }
-h3 { font-size: 13pt; margin: 10px 0; }
+h1 { font-size: 18pt; line-height: 1.4; }
+h2 { font-size: 16pt; line-height: 1.4; }
+h3 { font-size: 13pt; line-height: 1.4; margin: 10px 0; }
 
 a{
   text-decoration: none;
@@ -519,6 +519,11 @@ header p {
 	clear: both;
 }
 
+.ajankohtaista_linkki {
+	margin: 20px 0;
+	text-align: center;
+}
+
 #recent .archive #titles {
 	margin: 20px 0;
 }
@@ -550,6 +555,10 @@ header p {
 	.post-excerpt img {
 		width: 260px;
 		height: 100px;
+	}
+	
+	.post-excerpt a {
+		white-space: nowrap;
 	}
 
 /* Menu */
