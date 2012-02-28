@@ -34,23 +34,26 @@ get_header();
 <article>
 	<h2>Nyt ajankohtaista</h2>
 	<?php $count = 1; ?>
+	<?php $randomthumb = 0; ?>
 	<?php	$posts = get_posts(array('numberposts' => 10)); ?>
 	<?php	foreach($posts as $post) : setup_postdata($post); ?>
 		<div class="post-excerpt <?php if($count%2 == 0) echo 'second'; ?>">
-			<?php if ( has_post_thumbnail() ) {
-			the_post_thumbnail();
-			} else { 
-			$thumbnails = array(
-				'blue',
-				'green',
-				'purple',
-				'yellow'
-			);
-			$randomthumb = array_rand($thumbnails);
-			?>
-			<img src="<?php echo bloginfo('template_directory'); ?>/images/thumb_default_<?php echo $thumbnails[$randomthumb]; ?>.png" alt="<?php the_title(); ?>" />
-			<?php } ?>			
-			
+			<a href="<?php the_permalink(); ?>
+				<?php if ( has_post_thumbnail() ) {
+					the_post_thumbnail('post-thumbnail', array('title' => get_the_title());
+				} else { 
+					$thumbnails = array('blue',	'green', 'purple', 'yellow');
+				?>
+					<img src="<?php echo bloginfo('template_directory'); ?>/images/thumb_default_<?php echo $thumbnails[$randomthumb]; ?>.png" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+				<?php	
+					if($randomthumb >= 3){
+						$randomthumb = 0;
+					} else {
+						$randomthumb++;
+					}
+				?>
+				<?php } ?>			
+			</a>
 			<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 			<?php the_excerpt(); ?>
 		</div>
