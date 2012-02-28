@@ -74,6 +74,6 @@ get_header();
 		<?php } ?>
 		<?php $count++; ?>
 	<?php endforeach; ?>
-	<p class="ajankohtaista_linkki clear"<a href="/ajankohtaista/">Siirry arkistoon</a></p>
+	<p class="ajankohtaista_linkki clear"><a href="/ajankohtaista/">Siirry arkistoon</a></p>
 </article>
 <?php	get_footer(); ?>
