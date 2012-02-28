@@ -40,7 +40,7 @@ get_header();
 		<div class="post-excerpt <?php if($count%2 == 0) echo 'second'; ?>">
 			<a href="<?php the_permalink(); ?>
 				<?php if ( has_post_thumbnail() ) {
-					the_post_thumbnail('post-thumbnail', array('title' => get_the_title());
+					the_post_thumbnail('post-thumbnail', array('title' => get_the_title()));
 				} else { 
 					$thumbnails = array('blue',	'green', 'purple', 'yellow');
 				?>
