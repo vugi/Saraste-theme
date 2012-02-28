@@ -38,7 +38,7 @@ get_header();
 	<?php	$posts = get_posts(array('numberposts' => 10)); ?>
 	<?php	foreach($posts as $post) : setup_postdata($post); ?>
 		<div class="post-excerpt <?php if($count%2 == 0) echo 'second'; ?>">
-			<a href="<?php the_permalink(); ?>
+			<a href="<?php the_permalink(); ?>">
 				<?php if ( has_post_thumbnail() ) {
 					the_post_thumbnail('post-thumbnail', array('title' => get_the_title()));
 				} else { 
