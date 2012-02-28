@@ -41,14 +41,14 @@ get_header();
 			the_post_thumbnail();
 			} else { 
 			$thumbnails = array(
-				'wihrea',
-				'sininen',
-				'oranssi',
-				'lila'
+				'blue',
+				'green',
+				'purple',
+				'yellow'
 			);
 			$randomthumb = array_rand($thumbnails);
 			?>
-			<img src="<?php echo home_url( '' ); ?>/wp-content/uploads/2011/11/01_saraste_banneri_180x50_<?php echo $thumbnails[$randomthumb]; ?>.gif" alt="<?php the_title(); ?>" />
+			<img src="<?php echo bloginfo('template_directory'); ?>/images/thumb_default_<?php echo $thumbnails[$randomthumb]; ?>.png" alt="<?php the_title(); ?>" />
 			<?php } ?>			
 			
 			<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
