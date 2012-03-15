@@ -19,10 +19,24 @@ $second = $first = 1;
 ?>
 <article id="recent">
 	<h1>Ajankohtaista</h1>
+	<?php $randomthumb = 0; ?>
 	<?php while (have_posts()) : the_post(); ?>
 		<?php if($first || $second) { ?> 
 			<div class="post-excerpt <?php if(!$first) echo 'second'; ?>">
-				<?php the_post_thumbnail(); ?>
+				<?php if ( has_post_thumbnail() ) {
+					the_post_thumbnail('frontpage-thumb', array('title' => get_the_title()));
+				} else { 
+					$thumbnails = array('blue',	'green', 'purple', 'yellow');
+				?>
+					<img src="<?php echo bloginfo('template_directory'); ?>/images/thumb_default_<?php echo $thumbnails[$randomthumb]; ?>.png" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+				<?php	
+					if($randomthumb >= 3){
+						$randomthumb = 0;
+					} else {
+						$randomthumb++;
+					}
+				?>
+				<?php } ?>
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<?php the_excerpt(); ?>
 			</div>
