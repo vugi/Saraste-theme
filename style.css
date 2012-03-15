@@ -692,8 +692,9 @@ div.menu-header > ul > li > ul > li.current_page_item > a {
 	font-size: 11px;
 	margin: 0;
 	color: #bfbfbf;
-	background-color: white;
-	padding: 30px 40px 0 40px;
+    position: absolute;
+    top: 30px;
+    left: 40px;
 }
 
 	#breadcrumb #home {
@@ -705,7 +706,7 @@ div.menu-header > ul > li > ul > li.current_page_item > a {
 	}
 
 article {
-	padding: 30px 40px;
+	padding: 50px 40px;
 	margin-bottom: 20px;
 	background-color: white;
 }
@@ -713,6 +714,10 @@ article {
 	article.first {
 		padding-top: 0;
 	}
+
+h1.entry-title {
+    margin: 20px 0;
+}
 
 .entry-meta {
 	margin: 5px 0;
@@ -722,6 +727,11 @@ article {
 
 .post-edit-link {
 	float: right;
+}
+
+.attachment-post-thumbnail {
+    margin-left: -20px;
+    margin-top: -30px;
 }
 
 /* Color selecting */

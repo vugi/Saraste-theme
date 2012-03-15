@@ -291,7 +291,7 @@ function boilerplate_setup() {
 
 	// The height and width of your custom header. You can hook into the theme's own filters to change these values.
 	// Add a filter to boilerplate_header_image_width and boilerplate_header_image_height to change these values.
-	define( 'HEADER_IMAGE_WIDTH', apply_filters( 'boilerplate_header_image_width', 940 ) );
+	define( 'HEADER_IMAGE_WIDTH', apply_filters( 'boilerplate_header_image_width', 600 ) );
 	define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'boilerplate_header_image_height', 198 ) );
 
 	// We'll be using post thumbnails for custom header images on posts and pages.
