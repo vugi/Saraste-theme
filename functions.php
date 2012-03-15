@@ -50,7 +50,8 @@ require_once (get_template_directory() . '/theme-options.php');
 
 add_theme_support('post-thumbnails');
 
-add_image_size('frontpage-thumb', 260, 100, true); // Etusivun kuvat
+add_image_size('frontpage-thumb', 260, 100, true); // Etusivun artikkeleiden kuvat
+add_image_size('featured-thumb', 178, 100, true); // Etusivun pikkunostot
 
 function saraste_polku($id = "") {
 	if(!is_front_page() && (is_page() || is_single())){
