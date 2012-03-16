@@ -547,14 +547,8 @@ header p {
 	margin-right: 0;
 }
 
-	.post-excerpt h3, p {
+	.post-excerpt h3, .post-excerpt p {
 		margin: 0;
-	}
-
-	/* Vain pikainen korjaus - täytyy selvittää, miksei thumbnailit skaalaudu kunnolla! */
-	.post-excerpt img {
-		width: 260px;
-		height: 100px;
 	}
 	
 	.post-excerpt p a {
