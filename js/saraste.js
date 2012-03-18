@@ -41,6 +41,33 @@ jQuery().ready(function() {
 			}
 		)
 		
+		jQuery("#colorselect").hover(function(){
+			jQuery("#colors").stop(true, true).toggle("slow")
+		})
+		
+		jQuery("#colorselect #colors a").click(function(){
+			var color = jQuery(this).attr("class")
+			document.cookie = 'saraste_color=' + color + '; expires=Thu, 2 Aug 2021 20:47:11 UTC; path=/'
+			
+			if(color == "time"){
+				var d = new Date()
+				var h = d.getHours()
+				if(h >= 6 && h < 12){
+					color = "green"
+				}	else if(h >= 12 && h < 17){
+					color = "blue"
+				}	else if(h >= 17 && h < 22){
+					color = "yellow"
+				} else {
+					color = "purple"
+				}
+			}
+			
+			jQuery("body").removeClass("bg-green bg-yellow bg-blue bg-purple")
+			jQuery("body").addClass("bg-" + color)
+			jQuery("#header-wrap header h1 a").attr("id", color)
+		})
+		
 		jQuery(".tahti").click(function(){
 			jQuery("#arvio").val(jQuery(this).attr("name"))
 		})

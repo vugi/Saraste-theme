@@ -739,32 +739,57 @@ article > h1 {
 	left: 50%;
 	margin-left: -490px;
 	background: white;
-	height: 30px;
 	line-height: 30px;
 }
+
+	#colors {
+		display: none;
+	}
 	
-	#colorselect span {
+	#colorselect span, #colorselect #colors a {
 		display: inline-block;
 		height: 28px;
 		width: 28px;
 		margin: 0 3px 0 0;
 		padding: 0;
-		background: url('images/colors.jpg');
 		border: 2px solid white;
 		float: left;
 	}
 	
-		#colorselect #green {
+	#colorselect #colors a {
+		margin: 0 10px 0 0;
+		cursor: pointer;
+		border: 2px solid #fff;
+	}
+
+		#colorselect #colors a:hover {
+			border: 2px solid #6e6e6e;
+		}
+	
+	#colorselect #colors p {
+		margin: 10px 0;
+		padding: 0 2px;
+	}
+	
+		#colorselect .green {
+			background: url('images/colors.jpg');
 			background-position: 0 0;
 		}
-		#colorselect #blue {
+		#colorselect .blue {
+			background: url('images/colors.jpg');
 			background-position: -30px 0;
 		}
-		#colorselect #yellow {
+		#colorselect .yellow {
+			background: url('images/colors.jpg');
 			background-position: -60px 0;
 		}
-		#colorselect #purple {
+		#colorselect .purple {
+			background: url('images/colors.jpg');
 			background-position: -90px 0;
+		}
+		#colorselect .time {
+			background: url('images/colors.jpg');
+			background-position: -120px 0;
 		}
 
 
@@ -954,7 +979,7 @@ article > h1 {
 	cursor: default;
 }
 
-	.blue, .blue2 {
+	.loytyi .blue, .loytyi .blue2 {
 		background: url('images/star-2.png') !important;
 	}
 	

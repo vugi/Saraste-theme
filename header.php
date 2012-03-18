@@ -53,14 +53,18 @@
 	date_default_timezone_set('Europe/Helsinki');
 	$h = date("H");
 	
-	if($h >= 6 && $h < 12){
-		$bg_color = "green";
-	}	elseif($h >= 12 && $h < 17){
-		$bg_color = "blue";
-	}	elseif($h >= 17 && $h < 22){
-		$bg_color = "yellow";
+	if(empty($_COOKIE["saraste_color"]) || $_COOKIE["saraste_color"] == "time"){
+		if($h >= 6 && $h < 12){
+			$bg_color = "green";
+		}	elseif($h >= 12 && $h < 17){
+			$bg_color = "blue";
+		}	elseif($h >= 17 && $h < 22){
+			$bg_color = "yellow";
+		} else {
+			$bg_color = "purple";
+		}
 	} else {
-		$bg_color = "purple";
+		$bg_color = $_COOKIE["saraste_color"];
 	}
 
 	
