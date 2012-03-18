@@ -88,6 +88,7 @@ jQuery(function(){
 					
 					$purkit = get_posts($args);
 					?>
+					<div id="map"></div>
 					<h2>Kaikki kätköt</h2>
 					<table id="purkit">
 					<tr><th>Nimi</th><th>Vaikeusaste</th><th>Lippukunta</th><th class="hidden">Sijainti</th></tr>
@@ -100,8 +101,6 @@ jQuery(function(){
 						</tr>
 					<?php endforeach; ?>
 					</table>
-					
-					<div id="map"></div>
 				</article><!-- #post-## -->
 <?php endwhile; ?>
 <?php //get_sidebar(); ?>

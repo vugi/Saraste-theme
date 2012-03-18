@@ -30,25 +30,7 @@ get_header(); ?>
 		})
 	}
 	
-	var init = 0
-	
-	jQuery(document).ready(function(){
-		jQuery("#map_container").hide()
-		
-		jQuery("#show_map").click(function(){
-			jQuery("#map_container").slideToggle()
-			
-			if(jQuery(this).text() == "▼ Näytä"){ //Entities didn't work :P
-				jQuery(this).text("▲ Piilota")
-			} else {
-				jQuery(this).text("▼ Näytä")
-			}
-			
-			if(!init){
-				mapInit()
-				init = 1
-			}
-		})
+	mapInit()
 	})
 </script>
 
