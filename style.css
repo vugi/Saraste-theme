@@ -384,46 +384,18 @@ body {
 
 body.bg-green {
 	background-image: url('images/bg-green.jpg');
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-    src='images/bg-green.jpg',
-    sizingMethod='scale');
-
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
-    src='images/bg-green.jpg',
-    sizingMethod='scale')";
 }
 
 body.bg-blue {
 	background-image: url('images/bg-blue.jpg');
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-    src='images/bg-blue.jpg',
-    sizingMethod='scale');
-
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
-    src='images/bg-blue.jpg',
-    sizingMethod='scale')";
 }
 
 body.bg-yellow {
 	background-image: url('images/bg-yellow.jpg');
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-    src='images/bg-yellow.jpg',
-    sizingMethod='scale');
-
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
-    src='images/bg-yellow.jpg',
-    sizingMethod='scale')";
 }
 
 body.bg-purple {
 	background-image: url('images/bg-purple.jpg');
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-    src='images/bg-purple.jpg',
-    sizingMethod='scale');
-
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
-    src='images/bg-purple.jpg',
-    sizingMethod='scale')";
 }
 
 /* Saraste fonts etc general */

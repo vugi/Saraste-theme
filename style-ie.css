@@ -10,21 +10,21 @@ body {
 }
 
 body.bg-green {
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.images/bg-green.jpg', sizingMethod='scale'); 
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-green.jpg', sizingMethod='scale'); 
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-green.jpg', sizingMethod='scale')"; 
 }
 
 body.bg-blue {
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.images/bg-blue.jpg', sizingMethod='scale'); 
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-blue.jpg', sizingMethod='scale'); 
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-blue.jpg', sizingMethod='scale')"; 
 }
 
 body.bg-yellow {
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.images/bg-yellow.jpg', sizingMethod='scale'); 
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-yellow.jpg', sizingMethod='scale'); 
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-yellow.jpg', sizingMethod='scale')"; 
 }
 
 body.bg-purple {
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.images/bg-purple.jpg', sizingMethod='scale'); 
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-purple.jpg', sizingMethod='scale'); 
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg-purple.jpg', sizingMethod='scale')"; 
 }
