@@ -3,7 +3,7 @@
 	Theme URI: http://www.saraste2012.fi
 	Github Theme URI: https://github.com/vugi/Saraste-theme
 	Description: Saraste theme, based on the boilerplate theme by Aaron T. Grogg (http://aarontgrogg.com/boilerplate/)
-	Author: Antti Vuorela, Lauri Lankinen, Ville Vuorenmaa
+	Author: Antti Vuorela, Lauri Lankinen, Ville-Pekka Reponen, Ville Vuorenmaa
 	Author URI: http://www.saraste2012.fi
 	Version: v1.1.0 master
 
@@ -384,18 +384,46 @@ body {
 
 body.bg-green {
 	background-image: url('images/bg-green.jpg');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='images/bg-green.jpg',
+    sizingMethod='scale');
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='images/bg-green.jpg',
+    sizingMethod='scale')";
 }
 
 body.bg-blue {
 	background-image: url('images/bg-blue.jpg');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='images/bg-blue.jpg',
+    sizingMethod='scale');
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='images/bg-blue.jpg',
+    sizingMethod='scale')";
 }
 
 body.bg-yellow {
 	background-image: url('images/bg-yellow.jpg');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='images/bg-yellow.jpg',
+    sizingMethod='scale');
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='images/bg-yellow.jpg',
+    sizingMethod='scale')";
 }
 
 body.bg-purple {
 	background-image: url('images/bg-purple.jpg');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='images/bg-purple.jpg',
+    sizingMethod='scale');
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='images/bg-purple.jpg',
+    sizingMethod='scale')";
 }
 
 /* Saraste fonts etc general */
