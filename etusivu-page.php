@@ -18,7 +18,7 @@ get_header();
 
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.countdown.pack.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/saraste-counter.js<?php echo '?' . filemtime( get_template_directory() . '/js/saraste-counter.js'); ?>"></script>
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/featured.css">
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/featured.css<?php echo '?' . filemtime( get_template_directory() . '/css/featured.css'); ?>">
 <!--[if lt IE 8]><style type="text/css">#countdown { display: none; }</style><![endif]-->
 
 <div id="featured-wrapper">
