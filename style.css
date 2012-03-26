@@ -435,9 +435,7 @@ a{
 
 header {
   position: absolute;
-	background: white;
 	width: 220px;
-	padding: 10px 20px;
 }
 
 header h1 {
@@ -473,6 +471,21 @@ header h1 a:hover {
 header p {
 	text-align:center;
 	margin: 10px 0;
+}
+
+#white-wrap {
+	background: #fff;
+	padding: 10px 20px;
+	width: 220px;
+}
+
+#papa {
+	background: #fff;
+	text-align: center;
+	width: 220px;
+	height: 138px;
+	padding: 10px 20px;
+	margin-top: 20px;
 }
 
 #featured-wrapper {
