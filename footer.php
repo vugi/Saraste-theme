@@ -34,7 +34,7 @@
 		$saraste = $sarasteet[$bg_color];
 		?>
 		<div id="colorselect">
-			<span class="<?php echo $bg_color; ?>"></span><strong>Nyt teemana:</strong> <?php echo $saraste; ?>
+			<span class="<?php echo $bg_color; ?> box"></span><strong>Nyt teemana:</strong> <span id="color_name"><?php echo $saraste; ?></span>
 			<div id="clear"></div>
 			<div id="colors">
 				<p>Voit myös valita teeman itse:</p>

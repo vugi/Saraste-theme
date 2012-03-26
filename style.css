@@ -759,7 +759,7 @@ article > h1 {
 		display: none;
 	}
 	
-	#colorselect span, #colorselect #colors a {
+	#colorselect .box, #colorselect #colors a {
 		display: inline-block;
 		height: 28px;
 		width: 28px;
