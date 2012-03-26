@@ -82,7 +82,7 @@
               </div>
               
 							<div id="papa">
-								<a href="http://www.papa.partio.fi"><img src="<?php bloginfo( 'template_directory' ); ?>/images/PAPA_logo_rgb_web_200px.jpg" alt="Pääkaupunkiseudun Partiolaiset ry" /></a>
+								<a href="http://www.papa.partio.fi"><img src="<?php bloginfo( 'template_directory' ); ?>/images/PAPA_logo_rgb_web_150px.jpg" alt="Pääkaupunkiseudun Partiolaiset ry" /></a>
 							</div>
             </header>
 						
