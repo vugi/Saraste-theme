@@ -25,7 +25,7 @@
 			wp_title( '|', true, 'right' );
 		?></title>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
 		/* We add some JavaScript to pages with the comment form
@@ -47,7 +47,7 @@
 		<!--[if IE ]><link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/style-ie.css" /><![endif]-->
 		<meta property="og:image" content="<?php bloginfo( 'template_directory' ); ?>/images/logo_facebook_like.gif"/>
 		
-		<script type='text/javascript' src='<?php bloginfo( 'template_directory' ); ?>/js/saraste.js'></script>
+		<script type='text/javascript' src='<?php bloginfo( 'template_directory' ); ?>/js/saraste.js<?php echo '?' . filemtime( get_template_directory() . '/js/saraste.js'); ?>'></script>
 	</head>
 	<body id="top" <?php 
 	date_default_timezone_set('Europe/Helsinki');
