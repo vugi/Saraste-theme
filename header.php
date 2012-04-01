@@ -46,6 +46,7 @@
 ?>
 		<!--[if IE ]><link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/style-ie.css" /><![endif]-->
 		<meta property="og:image" content="<?php if(empty(get_the_post_thumbnail())) { bloginfo( 'template_directory' ); echo '/images/logo_facebook_like.gif'; } else { get_the_post_thumbnail(); } ?>"/>
+
 		
 		<script type='text/javascript' src='<?php bloginfo( 'template_directory' ); ?>/js/saraste.js<?php echo '?' . filemtime( get_template_directory() . '/js/saraste.js'); ?>'></script>
 	</head>
