@@ -452,16 +452,16 @@ header h1 a {
 }
 
 	header h1 a#green {
-		background: url('images/logo-green.jpg');
+		background: url('images/logo-green.png');
 	}
 	header h1 a#blue {
-		background: url('images/logo-blue.jpg');
+		background: url('images/logo-blue.png');
 	}
 	header h1 a#yellow {
-		background: url('images/logo-yellow.jpg');
+		background: url('images/logo-yellow.png');
 	}
 	header h1 a#purple {
-		background: url('images/logo-purple.jpg');
+		background: url('images/logo-purple.png');
 	}
 
 header h1 a:hover {
