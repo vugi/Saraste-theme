@@ -56,7 +56,7 @@
 		<meta property="og:title" content="<?php single_post_title(''); ?>" />
 		<meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
 		<meta property="og:type" content="article" />
-		<meta property="og:image" content="<?php if (function_exists('wp_get_attachment_thumb_url')) {echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); } else { echo get_template_directory() . '/images/logo_facebook_like.gif' } ?>" />
+		<meta property="og:image" content="<?php if(has_post_thumbnail()) { echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); } else { echo get_template_directory() . '/images/logo_facebook_like.gif'; } ?>" />
 
 		<!-- if page is others -->
 		<?php } else { ?>
