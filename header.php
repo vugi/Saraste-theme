@@ -13,7 +13,7 @@
 <!--[if IE 7 ]><html <?php language_attributes(); ?> class="no-js ie ie7 lte7 lte8 lte9"><![endif]-->
 <!--[if IE 8 ]><html <?php language_attributes(); ?> class="no-js ie ie8 lte8 lte9"><![endif]-->
 <!--[if IE 9 ]><html <?php language_attributes(); ?> class="no-js ie ie9 lte9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" class="no-js">  <!--<![endif]-->
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<title><?php
@@ -45,8 +45,25 @@
 		wp_head();
 ?>
 		<!--[if IE ]><link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/style-ie.css" /><![endif]-->
-		<meta property="og:image" content="<?php if(empty(get_the_post_thumbnail())) { bloginfo( 'template_directory' ); echo '/images/logo_facebook_like.gif'; } else { get_the_post_thumbnail(); } ?>"/>
+		 
+		<?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
+		<!-- the default values -->
+		<meta property="fb:app_id" content="350352811668809" />
 
+		<!-- if page is content page -->
+		<?php if (is_single()) { ?>
+		<meta property="og:url" content="<?php the_permalink() ?>"/>
+		<meta property="og:title" content="<?php single_post_title(''); ?>" />
+		<meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="<?php if (function_exists('wp_get_attachment_thumb_url')) {echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); } else { echo get_template_directory() . '/images/logo_facebook_like.gif' } ?>" />
+
+		<!-- if page is others -->
+		<?php } else { ?>
+		<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="<?php echo get_template_directory() . '/images/logo_facebook_like.gif'; ?>" /> <?php } ?>		
 		
 		<script type='text/javascript' src='<?php bloginfo( 'template_directory' ); ?>/js/saraste.js<?php echo '?' . filemtime( get_template_directory() . '/js/saraste.js'); ?>'></script>
 	</head>
