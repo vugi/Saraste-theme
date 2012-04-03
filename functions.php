@@ -124,7 +124,7 @@ function purkit_taso($str){
 function purkit_tahdet($x){
 	$str = '';
 	for($i = $x; $i > 0; $i--){
-		$str .= '<a class="tahti2 blue"></a>';
+		$str .= '<a class="tahti2 sini"></a>';
 	}
 	for($i = 0; $i < 5 - $x; $i++){
 		$str .= '<a class="tahti2"></a>';

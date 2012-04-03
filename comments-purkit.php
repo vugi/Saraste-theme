@@ -72,7 +72,7 @@ $fields =  array(
 	'status' => '<p><label class="radio"><input type="radio" name="status" id="loytyi" value="1" checked="checked"> Löysin kätkön</label><br/><label class="radio"><input id="ei_loytynyt" type="radio" name="status" value="0"> En löytänyt kätköä</label><br/><label class="radio"><input id="ei_loytynyt" type="radio" name="status" value="-1"> Haluan vain kommentoida</label>',
 	'lippukunta' => '<p class="loytyi"><label for="lippukunta">Lippukunta</label><select name="lpk"' . $aria_req . '>' . $options . '</select></p>',
 	'loytopvm' => '<p class="ei_loytynyt"><label>Päivämäärä</label><input type="text" name="loytopvm" ' . $aria_req . ' value="' . date("j.n.Y") . '"></p>',
-	'arvio' => '<p class="loytyi"><label for="arvio">Arvio</label><a class="tahti blue" title="Ihan huono!" name="1"></a><a class="tahti" title="Ei kovin hyvä" name="2"></a><a class="tahti" title="Ihan ok..." name="3"></a><a class="tahti" title="Tämä oli kiva!" name="4"></a><a class="tahti" title="Loistava!" name="5"></a><input type="hidden" id="arvio" name="arvio" value="1" /></p>'
+	'arvio' => '<p class="loytyi"><label for="arvio">Arvio</label><a class="tahti sini" title="Ihan huono!" name="1"></a><a class="tahti" title="Ei kovin hyvä" name="2"></a><a class="tahti" title="Ihan ok..." name="3"></a><a class="tahti" title="Tämä oli kiva!" name="4"></a><a class="tahti" title="Loistava!" name="5"></a><input type="hidden" id="arvio" name="arvio" value="1" /></p>'
 );
 
 $args = array('fields' => $fields);
