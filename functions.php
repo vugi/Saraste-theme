@@ -143,7 +143,9 @@ function purkit_comments_meta($comment_id) {
 		add_comment_meta($comment_id, 'lippukunta', $_POST['lpk'], true);
 		add_comment_meta($comment_id, 'loytopvm', $_POST['loytopvm'], true);
 		
-		if($_POST["arvio"] < 6 && $_POST["arvio"] > 0){
+		if($_POST["arvio"] == 0){
+			wp_delete_comment($comment_id);
+		} elseif($_POST["arvio"] < 6 && $_POST["arvio"] > 0){
 			add_comment_meta($comment_id, 'arvio', $_POST['arvio'], true);
 			purkit_rate_up($post, $_POST["arvio"]);
 		}
