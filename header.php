@@ -13,7 +13,7 @@
 <!--[if IE 7 ]><html <?php language_attributes(); ?> class="no-js ie ie7 lte7 lte8 lte9"><![endif]-->
 <!--[if IE 8 ]><html <?php language_attributes(); ?> class="no-js ie ie8 lte8 lte9"><![endif]-->
 <!--[if IE 9 ]><html <?php language_attributes(); ?> class="no-js ie ie9 lte9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" class="no-js">  <!--<![endif]-->
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<title><?php
@@ -25,7 +25,7 @@
 			wp_title( '|', true, 'right' );
 		?></title>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
 		/* We add some JavaScript to pages with the comment form
@@ -45,9 +45,27 @@
 		wp_head();
 ?>
 		<!--[if IE ]><link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/style-ie.css" /><![endif]-->
-		<meta property="og:image" content="<?php bloginfo( 'template_directory' ); ?>/images/logo_facebook_like.gif"/>
+		 
+		<?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
+		<!-- the default values -->
+		<meta property="fb:app_id" content="350352811668809" />
+
+		<!-- if page is content page -->
+		<?php if (is_single()) { ?>
+		<meta property="og:url" content="<?php the_permalink() ?>"/>
+		<meta property="og:title" content="<?php single_post_title(''); ?>" />
+		<meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="<?php if(has_post_thumbnail()) { echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); } else { echo get_template_directory() . '/images/logo_facebook_like.gif'; } ?>" />
+
+		<!-- if page is others -->
+		<?php } else { ?>
+		<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="<?php echo get_template_directory() . '/images/logo_facebook_like.gif'; ?>" /> <?php } ?>		
 		
-		<script type='text/javascript' src='<?php bloginfo( 'template_directory' ); ?>/js/saraste.js'></script>
+		<script type='text/javascript' src='<?php bloginfo( 'template_directory' ); ?>/js/saraste.js<?php echo '?' . filemtime( get_template_directory() . '/js/saraste.js'); ?>'></script>
 	</head>
 	<body id="top" <?php 
 	date_default_timezone_set('Europe/Helsinki');
@@ -71,19 +89,21 @@
 	body_class("bg-" . $bg_color);
 	?>>
 		<nav id="access" role="navigation">
-        <?php 
-        // vaaditaan harmaata taustaa varten
-        ?>
         </nav><!-- #access -->
 
         <div id="header-wrap">
             <header role="banner">
+							<div id="white-wrap">
                 <h1><a id="<?php echo $bg_color; ?>" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                 <p><?php bloginfo( 'description' ); ?></p>
-                <a href="http://www.papa.partio.fi"><img src="<?php bloginfo( 'template_directory' ); ?>/images/PAPA_logo_rgb_web_transparent_100px.png" alt="Pääkaupunkiseudun Partiolaiset ry " style="display: block; margin: 10px auto;"/></a>
                 <p id="counter" style="display:none">Leiriin aikaa <b id="count"></b> päivää</p>
+              </div>
+              
+							<div id="papa">
+								<a href="http://www.papa.partio.fi"><img src="<?php bloginfo( 'template_directory' ); ?>/images/papa_logo_150px.png" title="Pääkaupunkiseudun Partiolaiset ry" alt="Pääkaupunkiseudun Partiolaiset ry" /></a>
+							</div>
             </header>
-
+						
             <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
         </div>
 

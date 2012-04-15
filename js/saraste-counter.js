@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
-	jQuery('#countdown').countdown({ until: new Date("March 24, 2012"), format: 'DHMS', layout: 
-								'<h3>Ilmoittautumisaikaa jäljellä</h3>' + 
+	jQuery('#countdown').countdown({ until: new Date("April 25, 2012"), format: 'DHMS', layout: 
+								'<h3>Jälki-ilmoittautumisaikaa</h3>' + 
 								'<div id="timer">' +
 									'<div id="timer_labels"><span>päivää</span><span>tuntia</span><span>minuuttia</span><span>sekuntia</span></div>' +
 									'<div id="timer_days" class="timer_numbers">{dnn}</div>'+

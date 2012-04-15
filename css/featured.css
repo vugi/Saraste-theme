@@ -5,7 +5,7 @@
 	padding: 25px 25px;
 	margin: -10px 0 -10px -20px;
 	z-index: 10;
-	background: url('../images/featured.jpg') center center;
+	background: url('../images/featured-green.jpg') center center;
 	font-family: "Helvetica";
 	font-size: 17px;
 	position: relative;
@@ -68,37 +68,23 @@
 		line-height: 60px;
 		text-align: center;
 		display: inline-block;
-		color: #2f6a95;
+		color: #6f8300;
 		text-decoration: none;
 		font-family: 'Helvetica';
 		font-size: 25px;
 		font-weight: bold;
 		border-radius: 15px;
-		border: 1px solid #4a7fad;
-		box-shadow: 0 0 15px #000;
+		border: 1px solid #3b4600;
+		box-shadow: 0 0 15px #000, inset 0 0 15px #97b200, inset 0 0 15px #97b200;
 		background-color: #fff;
-		
-		background-image: linear-gradient(bottom, rgb(109,143,173) 4%, rgb(255,255,255) 31%);
-		background-image: -o-linear-gradient(bottom, rgb(109,143,173) 4%, rgb(255,255,255) 31%);
-		background-image: -moz-linear-gradient(bottom, rgb(109,143,173) 4%, rgb(255,255,255) 31%);
-		background-image: -webkit-linear-gradient(bottom, rgb(109,143,173) 4%, rgb(255,255,255) 31%);
-		background-image: -ms-linear-gradient(bottom, rgb(109,143,173) 4%, rgb(255,255,255) 31%);
-
-		background-image: -webkit-gradient(
-			linear,
-			left bottom,
-			left top,
-			color-stop(0.04, rgb(109,143,173)),
-			color-stop(0.31, rgb(255,255,255))
-		);
 	}
 	
 		#featured #buy_now:hover {
-			box-shadow: 0 0 20px #000;
+			box-shadow: 0 0 20px #000, inset 0 0 15px #97b200, inset 0 0 15px #97b200, inset 0 0 15px #97b200;
 		}
 		
 		#featured #buy_now:active {
-			box-shadow: 0 0 10px #000;
+			box-shadow: 0 0 10px #000, inset 0 0 15px #97b200;
 		}
 
 /* timer general */
@@ -123,7 +109,7 @@
 	font-family: Helvetica, sans-serif;
 	font-weight: bold;
 	text-align: left;
-	color: #2f6a95;
+	color: #6f8300;
 	margin-right: 5px;
 	padding: 3px 8px;
 	background: #fff;

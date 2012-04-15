@@ -435,9 +435,7 @@ a{
 
 header {
   position: absolute;
-	background: white;
 	width: 220px;
-	padding: 10px 20px;
 }
 
 header h1 {
@@ -454,16 +452,16 @@ header h1 a {
 }
 
 	header h1 a#green {
-		background: url('images/logo-green.jpg');
+		background: url('images/logo-green.png');
 	}
 	header h1 a#blue {
-		background: url('images/logo-blue.jpg');
+		background: url('images/logo-blue.png');
 	}
 	header h1 a#yellow {
-		background: url('images/logo-yellow.jpg');
+		background: url('images/logo-yellow.png');
 	}
 	header h1 a#purple {
-		background: url('images/logo-purple.jpg');
+		background: url('images/logo-purple.png');
 	}
 
 header h1 a:hover {
@@ -473,6 +471,20 @@ header h1 a:hover {
 header p {
 	text-align:center;
 	margin: 10px 0;
+}
+
+#white-wrap {
+	background: #fff;
+	padding: 10px 20px;
+	width: 220px;
+}
+
+#papa {
+	background: #fff;
+	text-align: center;
+	width: 220px;
+	padding: 10px 20px;
+	margin-top: 20px;
 }
 
 #featured-wrapper {
@@ -747,7 +759,7 @@ article > h1,
 		display: none;
 	}
 	
-	#colorselect span, #colorselect #colors a {
+	#colorselect .box, #colorselect #colors a {
 		display: inline-block;
 		height: 28px;
 		width: 28px;
@@ -980,7 +992,7 @@ article > h1,
 	cursor: default;
 }
 
-	.loytyi .blue, .loytyi .blue2 {
+	.sini, .sini2 {
 		background: url('images/star-2.png') !important;
 	}
 	
