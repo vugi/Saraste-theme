@@ -67,8 +67,7 @@ jQuery(function(){
 						<?php
 						$comments = get_comments(array('number' => 5, 'post_type' => 'purkit'));
 						foreach($comments as $comment){
-							$status = get_comment_meta($comment->comment_ID, 'status', true);
-							echo '<p>' . ($status == -1 ? get_the_date('j.n.Y') : get_comment_meta($comment->comment_ID, 'loytopvm', true)) . '<br/><strong>' . $comment->comment_author . '</strong> ' . ($status == 1 ? 'löysi' : ($status == 0 ? 'ei löytänyt' : 'kommentoi')) . ' kätkö' . ($status == 1 ? 'n' : 'a') . ' <a href="' . get_permalink($comment->comment_post_ID) . '">' . get_the_title($comment->comment_post_ID) . '</a></p>';
+							echo '<p>' . get_the_date('j.n.Y') . '<br/><strong>' . $comment->comment_author . '</strong> ' . ($status == 1 ? 'löysi' : ($status == 0 ? 'ei löytänyt' : 'kommentoi')) . ' kätkö' . ($status == 1 ? 'n' : 'a') . ' <a href="' . get_permalink($comment->comment_post_ID) . '">' . get_the_title($comment->comment_post_ID) . '</a></p>';
 						}
 						?>
 					</div>
