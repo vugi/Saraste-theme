@@ -79,7 +79,7 @@ $purkit = $wpdb->get_results($query);
 if($purkit){
 	echo '<h3>Parhaiten arvioidut kätköt</h3><ol>';
 	foreach($purkit as $p){
-		echo '<li><a href="' . get_permalink($p->ID) . '">' . $p->purkki . ' . </a></li>';
+		echo '<li><a href="' . get_permalink($p->ID) . '">' . $p->purkki . '</a></li>';
 	}
 	echo '</ol>';
 }
