@@ -31,13 +31,13 @@ jQuery().ready(function() {
 		
 		jQuery(".tahti").hover(
 			function(){
-				jQuery(this).prevAll(".tahti").andSelf().addClass("blue")
-				jQuery(this).nextAll(".tahti").removeClass("blue")
+				jQuery(this).prevAll(".tahti").andSelf().addClass("sini")
+				jQuery(this).nextAll(".tahti").removeClass("sini")
 			},
 			function(){
-				jQuery(".tahti").removeClass("blue")
+				jQuery(".tahti").removeClass("sini")
 				var arvio = jQuery("#arvio").val()
-				jQuery(".tahti:lt(" + arvio + ")").addClass("blue")
+				jQuery(".tahti:lt(" + arvio + ")").addClass("sini")
 			}
 		)
 		
