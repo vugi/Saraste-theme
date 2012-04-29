@@ -1,20 +1,4 @@
 jQuery().ready(function() {
-    /*jQuery("#fb").delay(1000).animate({bottom:'-200px'}, "slow");
-    jQuery("#fb").hover(
-      function () {
-        jQuery(this).stop(true, true).animate({bottom:'0px',width:'320px'}, "slow");
-      },
-      function () {
-        jQuery(this).stop(true, true).delay(1000).animate({bottom:'-200px',width:'260px'}, "slow")
-      }
-    );*/
-    jQuery("header #white-wrap").hover(function(){
-        jQuery("#counter").stop(true, true).toggle("slow");
-    })
-    var startDate = new Date(2012,6,30,0,0,0);
-    var now = new Date();
-    var diff = Math.ceil((startDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24) );
-    jQuery("#count").html(diff)
 		
 		/* Purkit */
 		
