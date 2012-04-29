@@ -1,132 +1,40 @@
 @font-face { font-family: Memphis LT Std Medium; src: url('../fonts/MemphisLTStd-Bold.otf'); }
 
 #featured > div {
-	width: 550px;
-	padding: 25px 25px;
-	margin: -10px 0 -10px -20px;
 	z-index: 10;
-	background: url('../images/featured-green.jpg') center center;
-	font-family: "Helvetica";
-	font-size: 17px;
 	position: relative;
+	width: 620px;
+	margin: -20px 0 -20px -30px;
+	height: 300px;
 }
 
-	#featured p, #featured h2, #featured li, #featured h3, #featured span {
-		color: #fff !important;
-	}
-
-	#featured a {
-		color: #fff;
-		font-weight: bold;
-		text-decoration: underline;
-	}
-
-	#featured h2 {
-		margin: 0;
-		padding: 0;
-		font-family: "Memphis LT Std Medium", "Helvetica";
-		font-size: 40px;
-		display: inline-block;
-		line-height: 1;
-		font-weight: normal;
-	}
-	
-	#featured p {
-		width: 280px;
-		margin: 15px 0 0 0;
-		font-weight: bold;
-	}
-	
-	
-	#featured ul {
-		width: 270px;
-		padding-left: 20px;
-		font-size: 15px;
-		margin: 15px 0 0 0;
-		list-style-image: url('../images/arrow.png');
-	}
-		
-		#featured ul li {
-			line-height: 1.4;
-		}
-	
-	#featured #logo {
-		height: 96px;
-		width: 200px;
-		background: url('../images/logo-08.png');
+	#featured > div > .slide  {
 		position: absolute;
-		top: 5px;
-		right: 20px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 12;
+		display: none;
 	}
 	
-	#featured #buy_now {
+	#featured > div > .s1 { background: url('../images/slide1.png'); display: block; }
+	#featured > div > .s2 { background: url('../images/slide2.png'); }
+	#featured > div > .s3 { background: url('../images/slide3.png'); }
+	#featured > div > .s4 { background: url('../images/slide4.png'); }
+	#featured > div > .s5 { background: url('../images/slide5.png'); }
+	
+	#featured > div > .text {
+		background: rgba(0, 0, 0, 0.5);
 		position: absolute;
-		right: 25px;
-		bottom: 25px;
-		width: 230px;
-		height: 60px;
-		line-height: 60px;
-		text-align: center;
-		display: inline-block;
-		color: #6f8300;
-		text-decoration: none;
-		font-family: 'Helvetica';
-		font-size: 25px;
-		font-weight: bold;
-		border-radius: 15px;
-		border: 1px solid #3b4600;
-		box-shadow: 0 0 15px #000, inset 0 0 15px #97b200, inset 0 0 15px #97b200;
-		background-color: #fff;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 10px 20px;
+		z-index: 15;
 	}
 	
-		#featured #buy_now:hover {
-			box-shadow: 0 0 20px #000, inset 0 0 15px #97b200, inset 0 0 15px #97b200, inset 0 0 15px #97b200;
+		#featured > div > .text > h3, #featured > div > .text > #countdown {
+			color: white;
+			margin: 0;
 		}
-		
-		#featured #buy_now:active {
-			box-shadow: 0 0 10px #000, inset 0 0 15px #97b200;
-		}
-
-/* timer general */
-#timer {
-	position: absolute;
-	right: 20px;
-	top: 102px;
-}
-
-#featured h3 {
-	position: absolute;
-	right: 20px;
-	top: 72px;
-	font-size: 17px;
-	font-weight: bold;
-	width: 236px;
-	border-bottom: 1px dashed #fff;
-}
-
-.timer_numbers {
-	font-size: 35px;
-	font-family: Helvetica, sans-serif;
-	font-weight: bold;
-	text-align: left;
-	color: #6f8300;
-	margin-right: 5px;
-	padding: 3px 8px;
-	background: #fff;
-	display: inline-block;
-	border-radius: 8px;
-	line-height: 1;
-}
-
-#timer_seconds {
-	margin-right: 0;
-}
-
-#timer_labels span {
-	display: inline-block;
-	font-size: 10px;
-	width: 59px;
-	text-transform: uppercase;
-	font-weight: bold;
-	margin-bottom: 3px;
-}

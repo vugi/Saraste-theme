@@ -9,16 +9,24 @@ get_header();
 
 <article id="featured">
 	<div>
-	<?php while ( have_posts() ) : the_post(); ?>
-		<?php the_content(); ?>
-	<?php endwhile; ?>
+		<div class="slide s1"></div>
+		<div class="slide s2"></div>
+		<div class="slide s3"></div>
+		<div class="slide s4"></div>
+		<div class="slide s5"></div>
+		<div class="text">
+			<h3>Kohta sarastaa!</h3>
+			<div id="countdown"></div>
+		</div>
 	<div style="clear: both;"></div>
 	</div>
 </article>
 
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.countdown.pack.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/saraste-counter.js<?php echo '?' . filemtime( get_template_directory() . '/js/saraste-counter.js'); ?>"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/featured.js<?php echo '?' . filemtime( get_template_directory() . '/js/saraste-counter.js'); ?>"></script>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/featured.css<?php echo '?' . filemtime( get_template_directory() . '/css/featured.css'); ?>">
+
 <!--[if lt IE 8]><style type="text/css">#countdown { display: none; }</style><![endif]-->
 
 <div id="featured-wrapper">
