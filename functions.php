@@ -75,7 +75,7 @@ function saraste_polku($id = "") {
 			
 			if(get_post_type($post->ID) == 'purkit') {
 				// Linkit toimivat vain tuotantoversiossa
-				$pre .= '<a href="' . get_permalink(348) . '">Lippukunnille</a> &raquo ';
+				$pre .= '<a href="' . get_permalink(1008) . '">Leiriläisille</a> &raquo ';
 				$pre .= '<a href="' . get_permalink(430) . '">Saraste-kätköt</a> &raquo ';
 			}
 			
