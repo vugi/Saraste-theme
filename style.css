@@ -677,6 +677,10 @@ div.menu-header > ul > li > ul > li.current_page_item > a {
 	font-weight: bold;
 }
 
+div.menu-header > ul > li > ul > li > ul {
+	margin-bottom: 0;
+}
+
 /* Facebook */
 
 #fb {
