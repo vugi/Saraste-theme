@@ -225,6 +225,20 @@ function purkit_comments( $comment, $args, $depth ) {
 	endswitch;
 }
 
+//[alasivut]
+add_shortcode('alasivut', 'alasivut_func');
+function alasivut_func(){
+	if($post->post_parent) {
+		$children = wp_list_pages("title_li=&child_of=" . $post->post_parent . "&echo=0");
+  } else {
+		$children = wp_list_pages("title_li=&child_of=" . $post->ID . "&echo=0");
+  }
+  if($children){
+		$r = '<ul>' . $children . '</ul>';
+		return $r;
+  }
+}
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
