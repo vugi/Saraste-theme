@@ -108,6 +108,8 @@ a:hover { color: #036; }
 ul, ol { margin: 0 0 1em 2em; }
 ol { list-style-type: decimal; }
 
+ul li ul { margin-bottom: 0; }
+
 /* Remove margins for navigation lists */
 nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
 
