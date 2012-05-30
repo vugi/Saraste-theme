@@ -21,7 +21,7 @@ $query = "SELECT $wpdb->commentmeta.meta_value AS nimi, COUNT(DISTINCT $wpdb->co
 					WHERE $wpdb->comments.comment_approved = '1'
 						AND $wpdb->commentmeta.comment_id = $wpdb->comments.comment_ID
 						AND $wpdb->commentmeta.meta_key = 'lippukunta'
-						AND $wpdb->postmeta.post_id = $wpdb->comment.comment_post_ID
+						AND $wpdb->postmeta.post_id = $wpdb->comments.comment_post_ID
 						AND $wpdb->postmeta.meta_key = 'Lippukunta'
 						AND $wpdb->postmeta.meta_value != $wpdb->commentmeta.meta_key
 					GROUP BY $wpdb->commentmeta.meta_value
