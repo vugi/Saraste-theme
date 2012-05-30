@@ -17,10 +17,13 @@ get_header(); ?>
 <h1>Ranking</h1>
 <?php
 $query = "SELECT $wpdb->commentmeta.meta_value AS nimi, COUNT(DISTINCT $wpdb->comments.comment_post_ID) AS maara
-					FROM $wpdb->commentmeta, $wpdb->comments
+					FROM $wpdb->commentmeta, $wpdb->comments, $wpdb->postmeta
 					WHERE $wpdb->comments.comment_approved = '1'
 						AND $wpdb->commentmeta.comment_id = $wpdb->comments.comment_ID
 						AND $wpdb->commentmeta.meta_key = 'lippukunta'
+						AND $wpdb->postmeta.post_id = $wpdb->comment.comment_post_ID
+						AND $wpdb->postmeta.meta_key = 'Lippukunta'
+						AND $wpdb->postmeta.meta_value != $wpdb->commentmeta.meta_key
 					GROUP BY $wpdb->commentmeta.meta_value
 					ORDER BY maara DESC
 					LIMIT 10";
@@ -28,7 +31,7 @@ $query = "SELECT $wpdb->commentmeta.meta_value AS nimi, COUNT(DISTINCT $wpdb->co
 $lpkt = $wpdb->get_results($query);
 
 if($lpkt){
-	echo '<h3>Eniten kätköjä löytänyt lippukunta</h3><ol>';
+	echo '<h3>Eniten kätköjä löytäneet lippukunnat</h3><ol>';
 	foreach($lpkt as $lpk){
 		echo '<li>' . $lpk->nimi . ' (' . $lpk->maara . ')</li>';
 	}
