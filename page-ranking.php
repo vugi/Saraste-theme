@@ -30,10 +30,16 @@ $query = "SELECT $wpdb->commentmeta.meta_value AS nimi, COUNT(DISTINCT $wpdb->co
 					
 $lpkt = $wpdb->get_results($query);
 
+$i = $i2 = 0;
+
 if($lpkt){
 	echo '<h3>Eniten kätköjä löytäneet lippukunnat</h3><ol>';
 	foreach($lpkt as $lpk){
-		echo '<li>' . $lpk->nimi . ' (' . $lpk->maara . ')</li>';
+		if($lpk->maara < $i2){
+			$i++;
+		}
+		echo '<li value="' . $i . '">' . $lpk->nimi . ' (' . $lpk->maara . ')</li>';
+		$i2 = $lpk->maara;
 	}
 	echo '</ol>';
 }
