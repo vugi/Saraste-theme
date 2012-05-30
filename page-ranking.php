@@ -23,14 +23,14 @@ $query = "SELECT $wpdb->commentmeta.meta_value AS nimi, COUNT(DISTINCT $wpdb->co
 						AND $wpdb->commentmeta.meta_key = 'lippukunta'
 						AND $wpdb->postmeta.post_id = $wpdb->comments.comment_post_ID
 						AND $wpdb->postmeta.meta_key = 'Lippukunta'
-						AND $wpdb->postmeta.meta_value != $wpdb->commentmeta.meta_key
+						AND $wpdb->postmeta.meta_value != $wpdb->commentmeta.meta_value
 					GROUP BY $wpdb->commentmeta.meta_value
 					ORDER BY maara DESC
 					LIMIT 10";
 					
 $lpkt = $wpdb->get_results($query);
 
-$i = $i2 = 0;
+$i = $i2 = 1;
 
 if($lpkt){
 	echo '<h3>Eniten kätköjä löytäneet lippukunnat</h3><ol>';
