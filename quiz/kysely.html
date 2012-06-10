@@ -50,7 +50,6 @@
 			}
 			
 			function nextQuestion(event){
-				// Aaah, hyvää purkkaa!
 				if(event.target.id == "ans0") {
 					answers.push(0)
 				} else	if(event.target.id == "ans1") {
@@ -118,7 +117,7 @@
       function postToFeed(event) {
         var obj = {
           method: 'feed',
-          link: 'http://www.saraste2012.fi/2012/06/05/testaa-kuinka-valmis-olet-leirille/',
+          link: 'http://www.saraste2012.fi/2012/06/10/testaa-kuinka-valmis-olet-leirille/',
           picture: 'www.saraste2012.fi/wp-content/themes/Saraste-theme/quiz/kysely_medaljonki.png',
           name: 'Olen ' + event.data.result + '% valmis lähtemään Sarasteelle!',
 					description:  'Tee testi ja selvitä, kuinka valmis olet kesän parhaalle piirileirille.',
