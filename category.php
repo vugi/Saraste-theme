@@ -11,10 +11,12 @@ get_header(); ?>
 
 <article id="recent">
 	<h1><?php single_cat_title(); ?></h1>
+	<?php $count = 1; ?>
 	<?php $randomthumb = 0; ?>
-	<?php while (have_posts()) : the_post(); ?>
-		<?php if($first || $second) { ?> 
-			<div class="post-excerpt <?php if(!$first) echo 'second'; ?>">
+	<?php	$posts = get_posts(array('numberposts' => 10)); ?>
+	<?php	while (have_posts()) : the_post(); ?>
+		<div class="post-excerpt <?php if($count%2 == 0) echo 'second'; ?>">
+			<a href="<?php the_permalink(); ?>">
 				<?php if ( has_post_thumbnail() ) {
 					the_post_thumbnail('frontpage-thumb', array('title' => get_the_title()));
 				} else { 
@@ -28,22 +30,13 @@ get_header(); ?>
 						$randomthumb++;
 					}
 				?>
-				<?php } ?>
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<?php the_excerpt(); ?>
-			</div>
-			<?php
-				if(!$first) {
-					$second = 0;
-					echo '<br class="clear"><div id="titles">';
-				}
-				$first = 0;
-			?>
-		<?php } else { ?>
-			<p class="archive"><span><?php the_date(); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><p>
-		<?php } ?>
+				<?php } ?>			
+			</a>
+			<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+			<?php the_excerpt(); ?>
+		</div>
+		<?php $count++; ?>
 	<?php endwhile; ?>
-	</div>
 	<?php if (  $wp_query->max_num_pages > 1 ) : ?>
 		<nav id="nav-below" class="navigation">
 			<?php next_posts_link( __( '&larr; Vanhemmat artikkelit', 'boilerplate' ) ); ?>
