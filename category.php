@@ -13,7 +13,6 @@ get_header(); ?>
 	<h1><?php single_cat_title(); ?></h1>
 	<?php $count = 1; ?>
 	<?php $randomthumb = 0; ?>
-	<?php	$posts = get_posts(array('numberposts' => 10)); ?>
 	<?php	while (have_posts()) : the_post(); ?>
 		<div class="post-excerpt <?php if($count%2 == 0) echo 'second'; ?>">
 			<a href="<?php the_permalink(); ?>">
