@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <article id="recent">
-	<h1><?php single_cat_title( '', false ); ?></h1>
+	<h1><?php single_cat_title(); ?></h1>
 	<?php $randomthumb = 0; ?>
 	<?php while (have_posts()) : the_post(); ?>
 		<?php if($first || $second) { ?> 
@@ -51,6 +51,4 @@ get_header(); ?>
 		</nav><!-- #nav-below -->
 	<?php endif; ?>
 </article>
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
