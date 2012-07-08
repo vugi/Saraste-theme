@@ -9,20 +9,48 @@
 
 get_header(); ?>
 
-				<h1><?php
-					printf( __( 'Category Archives: %s', 'boilerplate' ), '' . single_cat_title( '', false ) . '' );
-				?></h1>
-				<?php
-					$category_description = category_description();
-					if ( ! empty( $category_description ) )
-						echo '' . $category_description . '';
-
-				/* Run the loop for the category page to output the posts.
-				 * If you want to overload this in a child theme then include a file
-				 * called loop-category.php and that will be used instead.
-				 */
-				get_template_part( 'loop', 'category' );
+<article id="recent">
+	<h1><?php single_cat_title( '', false ); ?></h1>
+	<?php $randomthumb = 0; ?>
+	<?php while (have_posts()) : the_post(); ?>
+		<?php if($first || $second) { ?> 
+			<div class="post-excerpt <?php if(!$first) echo 'second'; ?>">
+				<?php if ( has_post_thumbnail() ) {
+					the_post_thumbnail('frontpage-thumb', array('title' => get_the_title()));
+				} else { 
+					$thumbnails = array('blue',	'green', 'purple', 'yellow');
 				?>
+					<img src="<?php echo bloginfo('template_directory'); ?>/images/thumb_default_<?php echo $thumbnails[$randomthumb]; ?>.png" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" />
+				<?php	
+					if($randomthumb >= 3){
+						$randomthumb = 0;
+					} else {
+						$randomthumb++;
+					}
+				?>
+				<?php } ?>
+				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<?php the_excerpt(); ?>
+			</div>
+			<?php
+				if(!$first) {
+					$second = 0;
+					echo '<br class="clear"><div id="titles">';
+				}
+				$first = 0;
+			?>
+		<?php } else { ?>
+			<p class="archive"><span><?php the_date(); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><p>
+		<?php } ?>
+	<?php endwhile; ?>
+	</div>
+	<?php if (  $wp_query->max_num_pages > 1 ) : ?>
+		<nav id="nav-below" class="navigation">
+			<?php next_posts_link( __( '&larr; Vanhemmat artikkelit', 'boilerplate' ) ); ?>
+			<?php previous_posts_link( __( 'Uudemmat artikkelit &rarr;', 'boilerplate' ) ); ?>
+		</nav><!-- #nav-below -->
+	<?php endif; ?>
+</article>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
