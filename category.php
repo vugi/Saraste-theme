@@ -43,5 +43,6 @@ get_header(); ?>
 			<?php previous_posts_link( __( 'Uudemmat artikkelit &rarr;', 'boilerplate' ) ); ?>
 		</nav><!-- #nav-below -->
 	<?php endif; ?>
+	<div class="clear"></div>
 </article>
 <?php get_footer(); ?>
